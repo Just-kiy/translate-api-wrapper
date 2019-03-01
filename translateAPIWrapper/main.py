@@ -8,3 +8,4 @@ if __name__ == "__main__":
     ya_translate = factory.create("Yandex Translate", **ya_config)
     ya_translate.get_langs('ru')
     ya_translate.translate(text="Hello world!", lang="qq")
+    ya_translate.translate(text="Hello world!", lang="ru")
