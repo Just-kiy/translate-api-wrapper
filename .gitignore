@@ -1,4 +1,12 @@
 venv/
 .vscode/
+.idea
 
 __pycache__
+.pytest_cache_
+.cache
+
+*.pyc
+/dist/
+/*.egg-info
+.eggs
