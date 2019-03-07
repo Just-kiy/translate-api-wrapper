@@ -8,6 +8,7 @@ Currently implemented Yandex Translate, Bing and Google is under development
 Install
 _______
 .. code-block:: console
+
     $ pip install -e git+https://github.com/Just-kiy/translate-api-wrapper.git
 
 Usage
