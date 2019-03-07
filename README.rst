@@ -1,5 +1,5 @@
 =====================
-Wrapper-api-translate
+Translate API Wrapper
 =====================
 
 Library that wraps the most popular translate API's.
