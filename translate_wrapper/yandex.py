@@ -14,14 +14,14 @@ class YandexEngine(BaseEngine):
             return YandexResponse(response, body)
 
 
-    def translate(self, text, lang, format="plain"):
+    async def translate(self, text, lang, format="plain"):
         url = f"{self.endpoint_api}/translate?key={self.api_key}&lang={lang}&format={format}"
         body = {"text": text}
-        return self._send_request(url, body)
+        return await self._send_request(url, body)
 
-    def get_langs(self, lang):
+    async def get_langs(self, lang):
         url = f"{self.endpoint_api}/getLangs?key={self.api_key}&ui={lang}"
-        return self._send_request(url)
+        return await self._send_request(url)
 
 
 class YandexResponse(BaseResponseConverter):
