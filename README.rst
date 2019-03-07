@@ -11,7 +11,7 @@ _______
 
 Usage
 _____
-.. code-black:: python
+.. code-block:: python
     import translate_wrapper
 
     yandex = translate_wrapper.YandexEngine(*YOUR_API_KEY*)
