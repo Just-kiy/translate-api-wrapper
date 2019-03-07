@@ -1,1 +1,3 @@
-from translate_wrapper.yandex import YandexEngine
+from .yandex import YandexEngine
+
+__version__ = "0.1.0"
