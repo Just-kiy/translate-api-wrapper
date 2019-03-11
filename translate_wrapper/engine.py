@@ -10,6 +10,9 @@ class BaseEngine(ABC):
     def get_langs(self, **kwargs):
         pass
 
+    @abstractmethod
+    def _send_request(self, **kwargs):
+        pass
 
 class BaseResponseConverter(object):
     def __init__(self, response):
