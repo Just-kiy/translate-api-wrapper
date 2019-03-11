@@ -10,18 +10,18 @@ class YandexEngine(BaseEngine):
 
     async def _send_request(self, url, body=None):
         async with aiohttp.ClientSession() as session:
-            response =  session.post(url, data=body)
+            response = await session.post(url, data=body)
             body = await response.json()
             return YandexResponse(response, body)
 
-    def translate(self, text, lang, format="plain"):
+    async def translate(self, text, lang, format="plain"):
         url = f"{ENDPOINT_API}/translate?key={self.api_key}&lang={lang}&format={format}"
         body = {"text": text}
-        return self._send_request(url, body)
+        return await self._send_request(url, body)
 
-    def get_langs(self, lang):
+    async def get_langs(self, lang):
         url = f"{ENDPOINT_API}/getLangs?key={self.api_key}&ui={lang}"
-        return asyncio.wait(self._send_request(url))
+        return await self._send_request(url)
 
 
 class YandexResponse(BaseResponseConverter):
