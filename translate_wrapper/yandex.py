@@ -1,27 +1,27 @@
-from .engine import BaseEngine, BaseResponseConverter
-from pprint import pprint
+from engine import BaseEngine, BaseResponseConverter
 import aiohttp
+import asyncio
+
+ENDPOINT_API = "https://translate.yandex.net/api/v1.5/tr.json"
 
 class YandexEngine(BaseEngine):
     def __init__(self, api_key):
         self.api_key = api_key
-        self.endpoint_api = "https://translate.yandex.net/api/v1.5/tr.json"
 
     async def _send_request(self, url, body=None):
         async with aiohttp.ClientSession() as session:
-            response = await session.post(url, data=body)
+            response =  session.post(url, data=body)
             body = await response.json()
             return YandexResponse(response, body)
 
-
-    async def translate(self, text, lang, format="plain"):
-        url = f"{self.endpoint_api}/translate?key={self.api_key}&lang={lang}&format={format}"
+    def translate(self, text, lang, format="plain"):
+        url = f"{ENDPOINT_API}/translate?key={self.api_key}&lang={lang}&format={format}"
         body = {"text": text}
-        return await self._send_request(url, body)
+        return self._send_request(url, body)
 
-    async def get_langs(self, lang):
-        url = f"{self.endpoint_api}/getLangs?key={self.api_key}&ui={lang}"
-        return await self._send_request(url)
+    def get_langs(self, lang):
+        url = f"{ENDPOINT_API}/getLangs?key={self.api_key}&ui={lang}"
+        return asyncio.wait(self._send_request(url))
 
 
 class YandexResponse(BaseResponseConverter):
