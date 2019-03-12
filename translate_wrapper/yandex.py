@@ -1,4 +1,4 @@
-from engine import BaseEngine, BaseResponseConverter
+from translate_wrapper.engine import BaseEngine, BaseResponseConverter
 import aiohttp
 import asyncio
 
