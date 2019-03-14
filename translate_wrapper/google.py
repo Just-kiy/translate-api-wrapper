@@ -4,6 +4,7 @@ import asyncio
 
 ENDPOINT_API = "https://translation.googleapis.com/language/translate/v2"
 
+
 class GoogleEngine(BaseEngine):
     def __init__(self, api_key):
         self.api_key = api_key

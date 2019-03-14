@@ -4,6 +4,7 @@ import asyncio
 
 ENDPOINT_API = "https://translate.yandex.net/api/v1.5/tr.json"
 
+
 class YandexEngine(BaseEngine):
     def __init__(self, api_key):
         self.api_key = api_key
