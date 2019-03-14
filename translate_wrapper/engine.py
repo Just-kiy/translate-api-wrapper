@@ -14,12 +14,14 @@ class BaseEngine(ABC):
     def _send_request(self, **kwargs):
         pass
 
+
 class BaseResponseConverter(object):
     def __init__(self, response):
         self.status = response.status
         self.reason = response.reason
         self.method = response.method
         self.url = response.url
+        self.headers = response.headers
 
 
 class ObjectFactory():
