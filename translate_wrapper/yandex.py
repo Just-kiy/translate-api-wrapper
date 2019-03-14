@@ -9,20 +9,28 @@ class YandexEngine(BaseEngine):
     def __init__(self, api_key):
         self.api_key = api_key
 
-    async def _send_request(self, url, body=None):
+    async def _send_request(self, url, params, body=None):
         async with aiohttp.ClientSession() as session:
-            response = await session.post(url, data=body)
+            params["key"] = self.api_key
+            response = await session.post(url, params=params, data=body)
             body = await response.json()
             return YandexResponse(response, body)
 
     async def translate(self, text, lang, format="plain"):
-        url = f"{ENDPOINT_API}/translate?key={self.api_key}&lang={lang}&format={format}"
+        url = f"{ENDPOINT_API}/translate"
+        params = {
+            "lang": lang,
+            "format": format,
+        }
         body = {"text": text}
-        return await self._send_request(url, body)
+        return await self._send_request(url, params, body)
 
     async def get_langs(self, lang):
-        url = f"{ENDPOINT_API}/getLangs?key={self.api_key}&ui={lang}"
-        return await self._send_request(url)
+        url = f"{ENDPOINT_API}/getLangs"
+        params = {
+            "ui": lang
+        }
+        return await self._send_request(url, params)
 
 
 class YandexResponse(BaseResponseConverter):

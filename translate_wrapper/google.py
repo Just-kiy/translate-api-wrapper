@@ -31,7 +31,7 @@ class GoogleEngine(BaseEngine):
     async def get_langs(self, lang, model="nmt"):
         url = f"{ENDPOINT_API}/languages"
         params = {
-            "target": lang, 
+            "target": lang,
             "model": model,
             }
         return await self._send_request(url, params)
