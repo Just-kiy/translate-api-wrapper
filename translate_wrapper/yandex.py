@@ -1,6 +1,6 @@
-from translate_wrapper.engine import BaseEngine, BaseResponseConverter
 import aiohttp
-import asyncio
+
+from translate_wrapper.engine import BaseEngine, BaseResponseConverter
 
 ENDPOINT_API = "https://translate.yandex.net/api/v1.5/tr.json"
 

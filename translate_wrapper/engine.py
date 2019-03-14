@@ -15,7 +15,7 @@ class BaseEngine(ABC):
         pass
 
 
-class BaseResponseConverter(object):
+class BaseResponseConverter():
     def __init__(self, response):
         self.status = response.status
         self.reason = response.reason
