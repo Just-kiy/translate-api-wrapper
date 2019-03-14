@@ -12,7 +12,7 @@ class GoogleEngine(BaseEngine):
     async def _send_request(self, url, params):
         async with aiohttp.ClientSession() as session:
             params["key"] = self.api_key
-            response =  await session.post(url, params=params)
+            response = await session.post(url, params=params)
             body = await response.json()
             return GoogleResponse(response, body)
 
@@ -49,5 +49,5 @@ class GoogleServiceBuilder():
 
     def __call__(self, api_key):
         if not self._instance:
-            self._instance = GoogleEngine(api_key)
+            self._instance = Engine(api_key)
         return self._instance
