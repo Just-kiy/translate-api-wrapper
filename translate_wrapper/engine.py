@@ -1,18 +1,12 @@
-from abc import ABC, abstractmethod
-
-
-class BaseEngine(ABC):
-    @abstractmethod
+class BaseEngine():
     def translate(self, **kwargs):
-        pass
+        raise NotImplementedError
 
-    @abstractmethod
     def get_langs(self, **kwargs):
-        pass
+        raise NotImplementedError
 
-    @abstractmethod
     def _send_request(self, **kwargs):
-        pass
+        raise NotImplementedError
 
 
 class BaseResponseConverter():
