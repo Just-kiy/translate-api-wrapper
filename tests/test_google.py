@@ -4,7 +4,9 @@ from translate_wrapper.google import GoogleEngine
 
 env = Env()
 env.read_env()
-engine = GoogleEngine(api_key=env.str("GOOGLE_API_KEY"))
+ENDPOINT_API = "https://translation.googleapis.com/language/translate/v2"
+endpoint = env.str("GOOGLE_ENDPOINT", ENDPOINT_API)
+engine = GoogleEngine(api_key=env.str("GOOGLE_API_KEY"), api_endpoint=endpoint)
 
 
 async def test_get_langs():

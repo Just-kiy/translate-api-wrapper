@@ -2,13 +2,12 @@ import aiohttp
 
 from translate_wrapper.engine import BaseEngine, BaseResponseConverter
 
-ENDPOINT_API = "https://api.cognitive.microsofttranslator.com"
-API_V = "3.0"
-
 
 class BingEngine(BaseEngine):
-    def __init__(self, api_key):
+    def __init__(self, api_key, api_endpoint, api_v):
         self.api_key = api_key
+        self.endpoint = api_endpoint
+        self.api_v = api_v
 
     async def _send_request(self, method, url, params=None, body=None):
         async with aiohttp.ClientSession() as session:
@@ -20,7 +19,7 @@ class BingEngine(BaseEngine):
 
             if not params:
                 params = {}
-            params["api-version"] = API_V
+            params["api-version"] = self.api_v
 
             response = await session.request(
                 method=method,
@@ -34,7 +33,7 @@ class BingEngine(BaseEngine):
             return BingResponse(response, body)
 
     async def translate(self, text, target, source=None, format="plain"):
-        url = f"{ENDPOINT_API}/translate"
+        url = f"{self.endpoint}/translate"
         params = {
             "to": target,
             "format": format,
@@ -46,7 +45,7 @@ class BingEngine(BaseEngine):
         return await self._send_request("post", url, params, body)
 
     async def get_langs(self, lang):
-        url = f"{ENDPOINT_API}/languages"
+        url = f"{self.endpoint}/languages"
         return await self._send_request('get', url)
 
 

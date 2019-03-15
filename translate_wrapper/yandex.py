@@ -2,12 +2,11 @@ import aiohttp
 
 from translate_wrapper.engine import BaseEngine, BaseResponseConverter
 
-ENDPOINT_API = "https://translate.yandex.net/api/v1.5/tr.json"
-
 
 class YandexEngine(BaseEngine):
-    def __init__(self, api_key):
+    def __init__(self, api_key, api_endpoint):
         self.api_key = api_key
+        self.endpoint = api_endpoint
 
     async def _send_request(self, url, params, body=None):
         async with aiohttp.ClientSession() as session:
@@ -17,7 +16,7 @@ class YandexEngine(BaseEngine):
             return YandexResponse(response, body)
 
     async def translate(self, text, lang, format="plain"):
-        url = f"{ENDPOINT_API}/translate"
+        url = f"{self.endpoint}/translate"
         params = {
             "lang": lang,
             "format": format,
@@ -26,7 +25,7 @@ class YandexEngine(BaseEngine):
         return await self._send_request(url, params, body)
 
     async def get_langs(self, lang):
-        url = f"{ENDPOINT_API}/getLangs"
+        url = f"{self.endpoint}/getLangs"
         params = {
             "ui": lang
         }

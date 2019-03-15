@@ -2,12 +2,11 @@ import aiohttp
 
 from .engine import BaseEngine, BaseResponseConverter
 
-ENDPOINT_API = "https://translation.googleapis.com/language/translate/v2"
-
 
 class GoogleEngine(BaseEngine):
-    def __init__(self, api_key):
+    def __init__(self, api_key, api_endpoint):
         self.api_key = api_key
+        self.endpoint = api_endpoint
 
     async def _send_request(self, url, params):
         async with aiohttp.ClientSession() as session:
@@ -17,7 +16,7 @@ class GoogleEngine(BaseEngine):
             return GoogleResponse(response, body)
 
     async def translate(self, text, target, source=None, model=None):
-        url = f"{ENDPOINT_API}"
+        url = f"{self.endpoint}"
         params = {
             "q": text,
             "target": target,
@@ -29,7 +28,7 @@ class GoogleEngine(BaseEngine):
         return await self._send_request(url, params)
 
     async def get_langs(self, lang, model="nmt"):
-        url = f"{ENDPOINT_API}/languages"
+        url = f"{self.endpoint}/languages"
         params = {
             "target": lang,
             "model": model,

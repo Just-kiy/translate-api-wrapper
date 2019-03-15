@@ -2,9 +2,14 @@ from environs import Env
 
 from translate_wrapper.bing import BingEngine
 
+ENDPOINT_API = "https://api.cognitive.microsofttranslator.com"
+API_V = "3.0"
+
 env = Env()
 env.read_env()
-engine = BingEngine(api_key=env.str("BING_API_KEY"))
+endpoint = env.str("BING_ENDPOINT", ENDPOINT_API)
+api_v = env.str("BING_API_V", API_V)
+engine = BingEngine(api_key=env.str("BING_API_KEY"), api_endpoint=endpoint, api_v=api_v)
 
 
 async def test_get_langs():
