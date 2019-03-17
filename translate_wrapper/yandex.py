@@ -1,6 +1,6 @@
 import aiohttp
 
-from translate_wrapper.engine import BaseEngine, BaseResponseConverter
+from .engine import BaseEngine, BaseResponseConverter
 
 
 class YandexEngine(BaseEngine):

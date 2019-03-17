@@ -1,6 +1,11 @@
 aiohttp==3.5.4
-pytest==4.3.0
-pytest-aiohttp==0.3.0
+
+# NOTE: do not hardcode pytest-* package versions, it's unnecessary
+pytest
+pytest-aiohttp
+pytest-cov
+pytest-mock
+
 environs==4.1.0
 
 flake8

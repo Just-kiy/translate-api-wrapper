@@ -1,17 +1,21 @@
 import aiohttp
 
-from translate_wrapper.engine import BaseEngine, BaseResponseConverter
+from .engine import BaseEngine, BaseResponseConverter
 
 
 class BingEngine(BaseEngine):
-    def __init__(self, api_key, api_endpoint, api_v):
+    # TODO: use single-quoted stings please
+    # TODO: where's typing mate?
+    def __init__(self, api_key, api_endpoint, api_v, *, event_loop=None):
         self.api_key = api_key
         self.endpoint = api_endpoint
         self.api_v = api_v
 
-    async def _send_request(self, method, url, params=None, body=None):
-        async with aiohttp.ClientSession() as session:
+        self.event_loop = event_loop
 
+    async def _send_request(self, method, url, params=None, body=None):
+        # TODO: read more about event loop and follow python async rules
+        async with aiohttp.ClientSession(loop=self.event_loop) as session:
             headers = {
                 "Content-Type": "application/json",
                 "Ocp-Apim-Subscription-Key": self.api_key,
@@ -30,6 +34,7 @@ class BingEngine(BaseEngine):
             )
 
             body = await response.json()
+            # TODO: get rid of this, return pure body instead
             return BingResponse(response, body)
 
     async def translate(self, text, target, source=None, format="plain"):
@@ -44,6 +49,7 @@ class BingEngine(BaseEngine):
         print(body)
         return await self._send_request("post", url, params, body)
 
+    # TODO: langs == 5 letters, languages == 9, what's the point?
     async def get_langs(self, lang):
         url = f"{self.endpoint}/languages"
         return await self._send_request('get', url)
@@ -55,7 +61,7 @@ class BingResponse(BaseResponseConverter):
         self.body = body
 
 
-class BingServiceBuilder():
+class BingServiceBuilder:
     def __init__(self):
         self._instance = None
 

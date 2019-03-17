@@ -42,7 +42,7 @@ class GoogleResponse(BaseResponseConverter):
         self.body = body['data']
 
 
-class GoogleServiceBuilder():
+class GoogleServiceBuilder:
     def __init__(self):
         self._instance = None
 

@@ -1,4 +1,6 @@
-class BaseEngine():
+
+
+class BaseEngine:
     def translate(self, **kwargs):
         raise NotImplementedError
 
@@ -9,7 +11,7 @@ class BaseEngine():
         raise NotImplementedError
 
 
-class BaseResponseConverter():
+class BaseResponseConverter:
     def __init__(self, response):
         self.status = response.status
         self.reason = response.reason
@@ -18,7 +20,7 @@ class BaseResponseConverter():
         self.headers = response.headers
 
 
-class ObjectFactory():
+class ObjectFactory:
     def __init__(self):
         self._builders = {}
 
