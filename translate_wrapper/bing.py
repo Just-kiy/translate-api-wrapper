@@ -26,13 +26,13 @@ class BingEngine(BaseEngine):
         # TODO: read more about event loop and follow python async rules
         async with aiohttp.ClientSession(loop=self.event_loop) as session:
             headers = {
-                "Content-Type": "application/json",
-                "Ocp-Apim-Subscription-Key": self.api_key,
+                'Content-Type': 'application/json',
+                'Ocp-Apim-Subscription-Key': self.api_key,
             }
 
             if not params:
                 params = {}
-            params["api-version"] = self.api_v
+            params['api-version'] = self.api_v
 
             response = await session.request(
                 method=method,
@@ -49,20 +49,20 @@ class BingEngine(BaseEngine):
                         text: str,
                         target: str,
                         source: t.Optional[str] = None,
-                        format: str = "plain"):
-        url = f"{self.endpoint}/translate"
+                        format: str = 'plain'):
+        url = f'{self.endpoint}/translate'
         params = {
-            "to": target,
-            "format": format,
+            'to': target,
+            'format': format,
         }
         if source:
-            params["from"] = source
-        body = [{"Text": text}]
+            params['from'] = source
+        body = [{'Text': text}]
         print(body)
-        return await self._send_request("post", url, params, body)
+        return await self._send_request('post', url, params, body)
 
     async def get_langs(self):
-        url = f"{self.endpoint}/languages"
+        url = f'{self.endpoint}/languages'
         return await self._send_request('get', url)
 
 

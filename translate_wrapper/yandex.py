@@ -13,7 +13,7 @@ class YandexEngine(BaseEngine):
                             params: t.Dict[str, str],
                             body: t.Optional[t.Dict[str, str]] = None) -> t.Dict:
         async with aiohttp.ClientSession() as session:
-            params["key"] = self.api_key
+            params['key'] = self.api_key
             response = await session.post(url, params=params, data=body)
             body = await response.json()
             return body
@@ -21,19 +21,19 @@ class YandexEngine(BaseEngine):
     async def translate(self,
                         text: str,
                         lang: str,
-                        format: str = "plain") -> t.Dict:
-        url = f"{self.endpoint}/translate"
+                        format: str = 'plain') -> t.Dict:
+        url = f'{self.endpoint}/translate'
         params = {
-            "lang": lang,
-            "format": format,
+            'lang': lang,
+            'format': format,
         }
-        body = {"text": text}
+        body = {'text': text}
         return await self._send_request(url, params, body)
 
     async def get_langs(self, lang: str) -> t.Dict:
-        url = f"{self.endpoint}/getLangs"
+        url = f'{self.endpoint}/getLangs'
         params = {
-            "ui": lang
+            'ui': lang
         }
         return await self._send_request(url, params)
 

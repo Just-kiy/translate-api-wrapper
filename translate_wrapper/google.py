@@ -12,7 +12,7 @@ class GoogleEngine(BaseEngine):
                             url: str,
                             params: t.Dict[str, str]) -> t.Dict:
         async with aiohttp.ClientSession() as session:
-            params["key"] = self.api_key
+            params['key'] = self.api_key
             response = await session.post(url, params=params)
             body = await response.json()
             return body
@@ -21,23 +21,23 @@ class GoogleEngine(BaseEngine):
                         text: str,
                         target: str,
                         source: str = None,
-                        model: str = "nmt") -> t.Dict:
-        url = f"{self.endpoint}"
+                        model: str = 'nmt') -> t.Dict:
+        url = f'{self.endpoint}'
         params = {
-            "q": text,
-            "target": target,
+            'q': text,
+            'target': target,
             }
         if source:
-            params["source"] = source
+            params['source'] = source
         return await self._send_request(url, params)
 
     async def get_langs(self,
                         language: str,
-                        model: str = "nmt") -> t.Dict:
-        url = f"{self.endpoint}/languages"
+                        model: str = 'nmt') -> t.Dict:
+        url = f'{self.endpoint}/languages'
         params = {
-            "target": language,
-            "model": model,
+            'target': language,
+            'model': model,
             }
         return await self._send_request(url, params)
 
