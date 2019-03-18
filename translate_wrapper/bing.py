@@ -1,19 +1,28 @@
 import aiohttp
-
+import typing as t
 from .engine import BaseEngine, BaseResponseConverter
 
 
 class BingEngine(BaseEngine):
     # TODO: use single-quoted stings please
     # TODO: where's typing mate?
-    def __init__(self, api_key, api_endpoint, api_v, *, event_loop=None):
+    def __init__(self,
+                 api_key: str,
+                 api_endpoint: str,
+                 api_v: str,
+                 *,
+                 event_loop=None):
         self.api_key = api_key
         self.endpoint = api_endpoint
         self.api_v = api_v
 
         self.event_loop = event_loop
 
-    async def _send_request(self, method, url, params=None, body=None):
+    async def _send_request(self,
+                            method: str,
+                            url: str,
+                            params: t.Optional[t.Dict[str, str]] = None,
+                            body: t.Dict[str, str] = None):
         # TODO: read more about event loop and follow python async rules
         async with aiohttp.ClientSession(loop=self.event_loop) as session:
             headers = {
@@ -34,10 +43,13 @@ class BingEngine(BaseEngine):
             )
 
             body = await response.json()
-            # TODO: get rid of this, return pure body instead
-            return BingResponse(response, body)
+            return body
 
-    async def translate(self, text, target, source=None, format="plain"):
+    async def translate(self,
+                        text: str,
+                        target: str,
+                        source: t.Optional[str] = None,
+                        format: str = "plain"):
         url = f"{self.endpoint}/translate"
         params = {
             "to": target,
@@ -49,8 +61,7 @@ class BingEngine(BaseEngine):
         print(body)
         return await self._send_request("post", url, params, body)
 
-    # TODO: langs == 5 letters, languages == 9, what's the point?
-    async def get_langs(self, lang):
+    async def get_langs(self):
         url = f"{self.endpoint}/languages"
         return await self._send_request('get', url)
 

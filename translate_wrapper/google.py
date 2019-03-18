@@ -1,5 +1,5 @@
 import aiohttp
-
+import typing as t
 from .engine import BaseEngine, BaseResponseConverter
 
 
@@ -8,14 +8,20 @@ class GoogleEngine(BaseEngine):
         self.api_key = api_key
         self.endpoint = api_endpoint
 
-    async def _send_request(self, url, params):
+    async def _send_request(self,
+                            url: str,
+                            params: t.Dict[str, str]) -> t.Dict:
         async with aiohttp.ClientSession() as session:
             params["key"] = self.api_key
             response = await session.post(url, params=params)
             body = await response.json()
-            return GoogleResponse(response, body)
+            return body
 
-    async def translate(self, text, target, source=None, model=None):
+    async def translate(self,
+                        text: str,
+                        target: str,
+                        source: str = None,
+                        model: str = "nmt") -> t.Dict:
         url = f"{self.endpoint}"
         params = {
             "q": text,
@@ -23,14 +29,14 @@ class GoogleEngine(BaseEngine):
             }
         if source:
             params["source"] = source
-        if model:
-            params["model"] = model
         return await self._send_request(url, params)
 
-    async def get_langs(self, lang, model="nmt"):
+    async def get_langs(self,
+                        language: str,
+                        model: str = "nmt") -> t.Dict:
         url = f"{self.endpoint}/languages"
         params = {
-            "target": lang,
+            "target": language,
             "model": model,
             }
         return await self._send_request(url, params)
