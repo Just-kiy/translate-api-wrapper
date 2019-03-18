@@ -4,8 +4,6 @@ from .engine import BaseEngine, BaseResponseConverter
 
 
 class BingEngine(BaseEngine):
-    # TODO: use single-quoted stings please
-    # TODO: where's typing mate?
     def __init__(self,
                  api_key: str,
                  api_endpoint: str,
