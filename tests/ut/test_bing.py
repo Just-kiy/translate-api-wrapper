@@ -30,6 +30,6 @@ class BingEngineTest:
         mocked_send_request = mocker.Mock(return_value=mocked_result)
         bing_engine._send_request = mocked_send_request
 
-        assert await bing_engine.get_langs('ru')
+        assert await bing_engine.get_langs()
 
         mocked_send_request.assert_called_once_with('get', 'http://bing-server.test/languages')

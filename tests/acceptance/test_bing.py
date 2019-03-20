@@ -29,14 +29,14 @@ class BingEngineTest:
     async def test_bla(self, unused_tcp_port, bing_engine: 'BingEngine'):
         # NOTE: the testing echo server returns JSON Response
         # with only one key "echo" and reflected value
-        result = await bing_engine.get_langs('ru')
+        result = await bing_engine.get_langs()
 
         # TODO: write a HTTP Request parser and use it instead
-        assert result.body['echo'] == (
+        assert result['echo'] == (
             'GET /languages?api-version=v1 HTTP/1.1\r\n'
             f'Host: 127.0.0.1:{unused_tcp_port}\r\n'
             'Content-Type: application/json\r\n'
             'Ocp-Apim-Subscription-Key: api_key\r\n'
             'Accept: */*\r\nAccept-Encoding: gzip, deflate\r\n'
-            'User-Agent: Python/3.6 aiohttp/3.5.4\r\n\r\n'
+            'User-Agent: Python/3.7 aiohttp/3.5.4\r\n\r\n'
         )
