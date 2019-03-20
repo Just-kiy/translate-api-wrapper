@@ -2,7 +2,8 @@ aiohttp==3.5.4
 
 # NOTE: do not hardcode pytest-* package versions, it's unnecessary
 pytest
-pytest-aiohttp
+# pytest-aiohttp  # fuck this
+pytest-asyncio
 pytest-cov
 pytest-mock
 
