@@ -23,7 +23,6 @@ class BingEngine(BaseEngine):
                             url: str,
                             params: t.Optional[t.Dict[str, str]] = None,
                             body: t.Optional[t.List[t.Dict[str, str]]] = None):
-        # TODO: read more about event loop and follow python async rules
         async with aiohttp.ClientSession(loop=self.event_loop) as session:
             headers = {
                 'Content-Type': 'application/json',
