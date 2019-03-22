@@ -29,7 +29,36 @@ class BingEngineTest:
 
         expected = {
             'method': 'get',
-            'url': 'http://bing-server.test/languages',
+            'url': f'{bing_engine.endpoint}/languages',
         }
 
         mocked_send_request.assert_called_once_with(expected['method'], expected['url'])
+
+    @pytest.mark.parametrize('text, target, source', [
+        ('Hello', 'ru', 'en'),
+        ('Hello', 'de', None),
+        ('Hello', 'fr', 'en'),
+        ('Hello', 'it', None),
+    ])
+    async def test_translate(self, mocked_send_request, bing_engine, text, target, source):
+        bing_engine._send_request = mocked_send_request
+
+        assert await bing_engine.translate(text, target, source)
+
+        expected = {
+            'method': 'post',
+            'url': f'{bing_engine.endpoint}/translate',
+            'params': {
+                'to': target,
+            },
+            'body': [
+                {
+                    'Text': text,
+                }
+            ]
+        }
+        if source:
+            expected['params']['from'] = source
+
+        mocked_send_request.assert_called_once_with(expected['method'], expected['url'],
+                                                    expected['params'], expected['body'])
