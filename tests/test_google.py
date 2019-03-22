@@ -24,6 +24,6 @@ async def test_get_langs(google_engine):
 
 @pytest.mark.skipif(not os.getenv('TESTING_E2E'), reason='expensive tests')
 async def test_translate(google_engine):
-    response = await google_engine.translate(text='Hello, World!', target='ru')
+    response = await google_engine.translate(text='Hello, World!', target='ru')    
     assert response.status == 200
     assert 'translations' in response.body
