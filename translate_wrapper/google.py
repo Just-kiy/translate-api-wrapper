@@ -4,14 +4,19 @@ from .engine import BaseEngine, BaseResponseConverter
 
 
 class GoogleEngine(BaseEngine):
-    def __init__(self, api_key, api_endpoint):
+    def __init__(self,
+                 api_key: str,
+                 api_endpoint: str,
+                 *,
+                 event_loop=None):
         self.api_key = api_key
         self.endpoint = api_endpoint
+        self.event_loop = event_loop
 
     async def _send_request(self,
                             url: str,
                             params: t.Dict[str, str]) -> t.Dict:
-        async with aiohttp.ClientSession() as session:
+        async with aiohttp.ClientSession(loop=self.event_loop) as session:
             params['key'] = self.api_key
             response = await session.post(url, params=params)
             body = await response.json()
