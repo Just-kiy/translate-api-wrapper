@@ -1,5 +1,3 @@
-import asyncio
-
 import pytest
 
 from translate_wrapper.google import GoogleEngine

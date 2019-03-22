@@ -1,5 +1,3 @@
-import asyncio
-
 import pytest
 
 from translate_wrapper.yandex import YandexEngine

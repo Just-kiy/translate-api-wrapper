@@ -1,12 +1,9 @@
-import asyncio
-
 import pytest
 
 from translate_wrapper.bing import BingEngine
 
 pytestmark = [
     pytest.mark.ut,
-
     pytest.mark.engines,
     pytest.mark.bing,
 ]
