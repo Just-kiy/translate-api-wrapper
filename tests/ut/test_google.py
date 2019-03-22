@@ -21,13 +21,28 @@ def google_engine():
 
 
 class GoogleEngineTest:
-    async def test_get_langs(self, mocker, google_engine):
+    @pytest.mark.parametrize('target, model', [
+        ('ru', 'nmt'),
+        ('ru', 'base'),
+        ('en', 'nmt'),
+        ('en', 'base'),
+    ])
+    async def test_get_langs(self, mocker, google_engine, target, model):
         mocked_result = asyncio.Future()
         mocked_result.set_result(True)
 
         mocked_send_request = mocker.Mock(return_value=mocked_result)
         google_engine._send_request = mocked_send_request
 
-        assert await google_engine.get_langs('ru')
+        assert await google_engine.get_langs(target)
 
-        mocked_send_request.assert_called_once_with('get', 'http://google-server.test/languages')
+        expected = {
+            'url': 'http://google-server.test/languages',
+            'params': {
+                'target': target,
+                'model': model,
+                'key': google_engine.api_key,
+            }
+        }
+
+        mocked_send_request.assert_called_once_with(url=expected['url'], params=expected['params'])
