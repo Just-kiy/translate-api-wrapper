@@ -41,9 +41,9 @@ class GoogleEngineTest:
 
     @pytest.mark.parametrize('text, target, source, model', [
         ('Hello', 'ru', 'en', 'nmt'),
-        ('Hello', 'de', None, 'nmt'),
+        ('Hello', 'de', None, 'base'),
         ('Hello', 'fr', 'en', None),
-        ('Hello', 'it', None, None),
+        ('Hello', 'it', None, 'qwe'),
     ])
     async def test_translate(self, mocked_send_request, google_engine, text, target, source, model):
         google_engine._send_request = mocked_send_request
@@ -53,8 +53,12 @@ class GoogleEngineTest:
             'params': {
                 'q': text,
                 'target': target,
-                'source': source,
                 'model': model,
             }
         }
+        if source:
+            expected['params']['source'] = source
+        if model not in ('base', 'nmt'):
+            expected['params']['model'] = 'nmt'
+
         mocked_send_request.assert_called_once_with(expected['url'], expected['params'])
