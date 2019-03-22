@@ -25,11 +25,7 @@ def bing_engine(event_loop):
 class BingEngineTest:
     pytestmark = pytest.mark.asyncio
 
-    async def test_get_langs(self, mocker, bing_engine):
-        mocked_result = asyncio.Future()
-        mocked_result.set_result(True)
-
-        mocked_send_request = mocker.Mock(return_value=mocked_result)
+    async def test_get_langs(self, mocked_send_request, bing_engine):
         bing_engine._send_request = mocked_send_request
 
         assert await bing_engine.get_langs()

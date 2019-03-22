@@ -29,11 +29,7 @@ class GoogleEngineTest:
         ('en', 'nmt'),
         ('en', 'base'),
     ])
-    async def test_get_langs(self, mocker, google_engine, target, model):
-        mocked_result = asyncio.Future()
-        mocked_result.set_result(True)
-
-        mocked_send_request = mocker.Mock(return_value=mocked_result)
+    async def test_get_langs(self, mocked_send_request, google_engine, target, model):
         google_engine._send_request = mocked_send_request
 
         assert await google_engine.get_langs(target, model)
