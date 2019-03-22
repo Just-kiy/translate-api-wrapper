@@ -29,15 +29,32 @@ class GoogleEngineTest:
     ])
     async def test_get_langs(self, mocked_send_request, google_engine, target, model):
         google_engine._send_request = mocked_send_request
-
         assert await google_engine.get_langs(target, model)
-
         expected = {
-            'url': 'http://google-server.test/languages',
+            'url': f'{google_engine.endpoint}/languages',
             'params': {
                 'target': target,
                 'model': model,
             }
         }
+        mocked_send_request.assert_called_once_with(expected['url'], expected['params'])
 
+    @pytest.mark.parametrize('text, target, source, model', [
+        ('Hello', 'ru', 'en', 'nmt'),
+        ('Hello', 'de', None, 'nmt'),
+        ('Hello', 'fr', 'en', None),
+        ('Hello', 'it', None, None),
+    ])
+    async def test_translate(self, mocked_send_request, google_engine, text, target, source, model):
+        google_engine._send_request = mocked_send_request
+        assert await google_engine.translate(text, target, source, model)
+        expected = {
+            'url': google_engine.endpoint,
+            'params': {
+                'q': text,
+                'target': target,
+                'source': source,
+                'model': model,
+            }
+        }
         mocked_send_request.assert_called_once_with(expected['url'], expected['params'])
