@@ -13,16 +13,18 @@ pytestmark = [
 
 
 @pytest.fixture
-def bing_engine():
+def bing_engine(event_loop):
     return BingEngine(
         'api_key',
         'http://bing-server.test',
         'v1',
-        event_loop='event_loop'
+        event_loop=event_loop
     )
 
 
 class BingEngineTest:
+    pytestmark = pytest.mark.asyncio
+
     async def test_get_langs(self, mocker, bing_engine):
         mocked_result = asyncio.Future()
         mocked_result.set_result(True)
@@ -37,4 +39,4 @@ class BingEngineTest:
             'url': 'http://bing-server.test/languages',
         }
 
-        mocked_send_request.assert_called_once_with(method=expected['method'], url=expected['url'])
+        mocked_send_request.assert_called_once_with(expected['method'], expected['url'])
