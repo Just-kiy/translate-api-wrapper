@@ -48,19 +48,17 @@ class BingEngine(BaseEngine):
     async def translate(self,
                         text: str,
                         target: str,
-                        source: t.Optional[str] = None,
-                        format: str = 'plain'):
+                        source: t.Optional[str] = None) -> t.List[t.Dict]:
         url = f'{self.endpoint}/translate'
         params = {
             'to': target,
-            'format': format,
         }
         if source:
             params['from'] = source
         body = [{'Text': text}]
         return await self._send_request('post', url, params, body)
 
-    async def get_langs(self):
+    async def get_langs(self) -> t.List[t.Dict]:
         url = f'{self.endpoint}/languages'
         return await self._send_request('get', url)
 
