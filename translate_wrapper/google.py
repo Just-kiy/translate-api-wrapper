@@ -33,6 +33,7 @@ class GoogleEngine(BaseEngine):
         params = {
             'q': text,
             'target': target,
+            'model': model,
             }
         if source:
             params['source'] = source
