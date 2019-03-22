@@ -32,4 +32,9 @@ class BingEngineTest:
 
         assert await bing_engine.get_langs()
 
-        mocked_send_request.assert_called_once_with('get', 'http://bing-server.test/languages')
+        expected = {
+            'method': 'get',
+            'url': 'http://bing-server.test/languages',
+        }
+
+        mocked_send_request.assert_called_once_with(method=expected['method'], url=expected['url'])
