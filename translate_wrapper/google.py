@@ -35,6 +35,8 @@ class GoogleEngine(BaseEngine):
             'target': target,
             'model': model,
             }
+        if model not in ('base', 'nmt'):
+            params['model'] = 'nmt'
         if source:
             params['source'] = source
         return await self._send_request(url, params)
