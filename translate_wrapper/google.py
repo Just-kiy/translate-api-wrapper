@@ -27,16 +27,12 @@ class GoogleEngine(BaseEngine):
     async def translate(self,
                         text: str,
                         target: str,
-                        source: str = None,
-                        model: str = 'nmt') -> t.Dict:
+                        source: str = None) -> t.Dict:
         url = f'{self.endpoint}'
         params = {
             'q': text,
             'target': target,
-            'model': model,
             }
-        if model not in ('base', 'nmt'):
-            params['model'] = 'nmt'
         if source:
             params['source'] = source
         return await self._send_request(url, params)

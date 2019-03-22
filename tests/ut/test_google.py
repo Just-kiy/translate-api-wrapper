@@ -39,26 +39,23 @@ class GoogleEngineTest:
         }
         mocked_send_request.assert_called_once_with(expected['url'], expected['params'])
 
-    @pytest.mark.parametrize('text, target, source, model', [
-        ('Hello', 'ru', 'en', 'nmt'),
-        ('Hello', 'de', None, 'base'),
-        ('Hello', 'fr', 'en', None),
-        ('Hello', 'it', None, 'qwe'),
+    @pytest.mark.parametrize('text, target, source', [
+        ('Hello', 'ru', 'en'),
+        ('Hello', 'de', None),
+        ('Hello', 'fr', 'en'),
+        ('Hello', 'it', None),
     ])
-    async def test_translate(self, mocked_send_request, google_engine, text, target, source, model):
+    async def test_translate(self, mocked_send_request, google_engine, text, target, source):
         google_engine._send_request = mocked_send_request
-        assert await google_engine.translate(text, target, source, model)
+        assert await google_engine.translate(text, target, source)
         expected = {
             'url': google_engine.endpoint,
             'params': {
                 'q': text,
                 'target': target,
-                'model': model,
             }
         }
         if source:
             expected['params']['source'] = source
-        if model not in ('base', 'nmt'):
-            expected['params']['model'] = 'nmt'
 
         mocked_send_request.assert_called_once_with(expected['url'], expected['params'])
