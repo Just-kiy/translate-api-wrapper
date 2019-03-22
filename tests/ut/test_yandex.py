@@ -12,15 +12,17 @@ pytestmark = [
 
 
 @pytest.fixture
-def yandex_engine():
+def yandex_engine(event_loop):
     return YandexEngine(
         'api_key',
         'http://yandex-server.test',
-        event_loop='event_loop'
+        event_loop=event_loop
     )
 
 
 class YandexEngineTest:
+    pytestmark = pytest.mark.asyncio
+
     @pytest.mark.parametrize('ui', [
         'ru', 'en', 'fr'
     ])
@@ -37,8 +39,7 @@ class YandexEngineTest:
             'url': 'http://yandex-server.test/getLangs',
             'params': {
                 'ui': ui,
-                'key': yandex_engine.api_key
             }
         }
 
-        mocked_send_request.assert_called_once_with(url=expected['url'], params=expected['params'])
+        mocked_send_request.assert_called_once_with(expected['url'], expected['params'])
