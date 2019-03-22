@@ -21,13 +21,24 @@ def yandex_engine():
 
 
 class YandexEngineTest:
-    async def test_get_langs(self, mocker, yandex_engine):
+    @pytest.mark.parametrize('ui', [
+        'ru', 'en', 'fr'
+    ])
+    async def test_get_langs(self, mocker, yandex_engine, ui):
         mocked_result = asyncio.Future()
         mocked_result.set_result(True)
 
         mocked_send_request = mocker.Mock(return_value=mocked_result)
         yandex_engine._send_request = mocked_send_request
 
-        assert await yandex_engine.get_langs('ru')
+        assert await yandex_engine.get_langs(ui)
 
-        mocked_send_request.assert_called_once_with('get', 'http://yandex-server.test/languages?api_key=api_key?lang=ru')
+        expected = {
+            'url': 'http://yandex-server.test/getLangs',
+            'params': {
+                'ui': ui,
+                'key': yandex_engine.api_key
+            }
+        }
+
+        mocked_send_request.assert_called_once_with(url=expected['url'], params=expected['params'])
