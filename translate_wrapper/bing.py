@@ -22,7 +22,7 @@ class BingEngine(BaseEngine):
                             method: str,
                             url: str,
                             params: t.Optional[t.Dict[str, str]] = None,
-                            body: t.Dict[str, str] = None):
+                            body: t.Optional[t.List[t.Dict[str, str]]] = None):
         # TODO: read more about event loop and follow python async rules
         async with aiohttp.ClientSession(loop=self.event_loop) as session:
             headers = {
@@ -58,7 +58,6 @@ class BingEngine(BaseEngine):
         if source:
             params['from'] = source
         body = [{'Text': text}]
-        print(body)
         return await self._send_request('post', url, params, body)
 
     async def get_langs(self):
