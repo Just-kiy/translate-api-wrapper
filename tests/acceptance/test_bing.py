@@ -39,7 +39,6 @@ class BingEngineTest:
         assert result['Content-Type'] == 'application/json'
         assert result['Ocp-Apim-Subscription-Key'] == 'api_key'
 
-
     @pytest.mark.parametrize('text, target, source', [
         ('One', 'ru', 'en'),
         ('Two', 'de', None),
