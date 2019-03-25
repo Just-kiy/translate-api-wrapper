@@ -64,6 +64,6 @@ def parse_response(response: str):
     }
     fields = fields[1:]
     for field in fields:
-        key, value = field.split(':', maxsplit=1)
+        key, value = field.split(': ')
         parsed[key] = value
     return parsed
