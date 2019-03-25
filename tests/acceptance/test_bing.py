@@ -1,5 +1,7 @@
 import pytest
 
+from .conftest import parse_response
+
 from translate_wrapper.bing import BingEngine
 
 pytestmark = [
@@ -26,16 +28,17 @@ class BingEngineTest:
     pytestmark = pytest.mark.asyncio
 
     async def test_get_langs(self, unused_tcp_port, bing_engine: 'BingEngine'):
-        result = await bing_engine.get_langs()
+        response = await bing_engine.get_langs()
 
-        assert result['echo'] == (
-            'GET /languages?api-version=v1 HTTP/1.1\r\n'
-            f'Host: 127.0.0.1:{unused_tcp_port}\r\n'
-            'Content-Type: application/json\r\n'
-            'Ocp-Apim-Subscription-Key: api_key\r\n'
-            'Accept: */*\r\nAccept-Encoding: gzip, deflate\r\n'
-            'User-Agent: Python/3.7 aiohttp/3.5.4\r\n\r\n'
-        )
+        result = parse_response(response['echo'])
+
+        assert result['Method'] == 'GET'
+        assert result['URL'] == '/languages?api-version=v1'
+        assert result['Host'] == f'127.0.0.1:{unused_tcp_port}'
+        assert result['User-Agent'] == 'Python/3.7 aiohttp/3.5.4'
+        assert result['Content-Type'] == 'application/json'
+        assert result['Ocp-Apim-Subscription-Key'] == 'api_key'
+
 
     @pytest.mark.parametrize('text, target, source', [
         ('One', 'ru', 'en'),
@@ -45,7 +48,7 @@ class BingEngineTest:
     ])
     async def test_translate(self, unused_tcp_port, bing_engine: 'BingEngine',
                              text, target, source):
-        result = await bing_engine.translate(text, target, source)
+        response = await bing_engine.translate(text, target, source)
 
         content = [{'Text': text}]
         to = f'to={target}'
@@ -53,13 +56,14 @@ class BingEngineTest:
         api_v = 'api-version=v1'
         query = '&'.join((to, _from)) if _from else to
 
-        assert result['echo'] == (
-            f'POST /translate?{query}&{api_v} HTTP/1.1\r\n'
-            f'Host: 127.0.0.1:{unused_tcp_port}\r\n'
-            'Content-Type: application/json\r\n'
-            'Ocp-Apim-Subscription-Key: api_key\r\n'
-            'Accept: */*\r\nAccept-Encoding: gzip, deflate\r\n'
-            'User-Agent: Python/3.7 aiohttp/3.5.4\r\n'
-            f'Content-Length: {len(content.__str__())}\r\n\r\n'
-            f'{content}'
-        )
+        result = parse_response(response['echo'])
+
+        print(result)
+
+        assert result['Method'] == 'POST'
+        assert result['URL'] == f'/translate?{query}&{api_v}'
+        assert result['Host'] == f'127.0.0.1:{unused_tcp_port}'
+        assert result['Content-Type'] == 'application/json'
+        assert result['Ocp-Apim-Subscription-Key'] == 'api_key'
+        assert result['User-Agent'] == 'Python/3.7 aiohttp/3.5.4'
+        assert result['Content-Length'] == f'{len(content.__str__())}'
