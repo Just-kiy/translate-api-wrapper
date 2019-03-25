@@ -51,3 +51,19 @@ def echo_server(event_loop, unused_tcp_port):
 
     server.close()
     event_loop.run_until_complete(server.wait_closed())
+
+
+def parse_response(response: str):
+    fields = response.split('\r\n')
+    while fields.count('') > 0:
+        fields.remove('')
+    first_line = fields[0].split(' ')
+    parsed = {
+        'Method': first_line[0],
+        'URL': first_line[1],
+    }
+    fields = fields[1:]
+    for field in fields:
+        key, value = field.split(':', maxsplit=1)
+        parsed[key] = value
+    return parsed
