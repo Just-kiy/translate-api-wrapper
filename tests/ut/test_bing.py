@@ -10,6 +10,7 @@ pytestmark = [
 
 ENDPOINT = 'http://bing-server.test'
 
+
 @pytest.fixture
 def bing_engine(event_loop):
     return BingEngine(
