@@ -54,13 +54,14 @@ def echo_server(event_loop, unused_tcp_port):
 
 
 def parse_response(response: str):
-    fields = response.split('\r\n')
-    while fields.count('') > 0:
-        fields.remove('')
+    fields = response.split('\r\n\r\n')
+    body = fields[1]
+    fields = fields[0].split('\r\n')
     first_line = fields[0].split(' ')
     parsed = {
         'Method': first_line[0],
         'URL': first_line[1],
+        'Body': body,
     }
     fields = fields[1:]
     for field in fields:
