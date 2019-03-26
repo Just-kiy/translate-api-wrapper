@@ -1,10 +1,10 @@
 import pytest
 
-from .conftest import parse_response
-
 import urllib.parse
 
 from translate_wrapper.bing import BingEngine
+
+from .conftest import parse_response
 
 pytestmark = [
     pytest.mark.acceptance,
