@@ -35,19 +35,18 @@ class YandexEngineTest:
         }
         mocked_send_request.assert_called_once_with(expected['url'], expected['params'])
 
-    @pytest.mark.parametrize('text, lang, format', [
-        ('Hello', 'ru', 'plain'),
-        ('Darkness', 'fr', 'plain'),
-        ('My old good friend', 'de', 'html'),
+    @pytest.mark.parametrize('text, lang', [
+        ('Hello', 'ru'),
+        ('Darkness', 'fr'),
+        ('My old good friend', 'de'),
     ])
-    async def test_translate(self, mocked_send_request, yandex_engine, text, lang, format):
+    async def test_translate(self, mocked_send_request, yandex_engine, text, lang):
         yandex_engine._send_request = mocked_send_request
-        assert await yandex_engine.translate(text, lang, format)
+        assert await yandex_engine.translate(text, lang)
         expected = {
             'url': f'{yandex_engine.endpoint}/translate',
             'params': {
                 'lang': lang,
-                'format': format,
             },
             'body': {
                 'text': text
