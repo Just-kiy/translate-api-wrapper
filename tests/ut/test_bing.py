@@ -8,12 +8,13 @@ pytestmark = [
     pytest.mark.bing,
 ]
 
+ENDPOINT = 'http://bing-server.test'
 
 @pytest.fixture
 def bing_engine(event_loop):
     return BingEngine(
         'api_key',
-        'http://bing-server.test',
+        ENDPOINT,
         'v1',
         event_loop=event_loop
     )
@@ -29,7 +30,7 @@ class BingEngineTest:
 
         expected = {
             'method': 'get',
-            'url': f'{bing_engine.endpoint}/languages',
+            'url': ENDPOINT + '/languages',
         }
 
         mocked_send_request.assert_called_once_with(expected['method'], expected['url'])
@@ -47,7 +48,7 @@ class BingEngineTest:
 
         expected = {
             'method': 'post',
-            'url': f'{bing_engine.endpoint}/translate',
+            'url': ENDPOINT + '/translate',
             'params': {
                 'to': target,
             },
