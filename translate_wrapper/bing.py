@@ -1,25 +1,37 @@
+import typing as t
+
 import aiohttp
 
-from translate_wrapper.engine import BaseEngine, BaseResponseConverter
+from .engine import BaseEngine, BaseResponseConverter
 
 
 class BingEngine(BaseEngine):
-    def __init__(self, api_key, api_endpoint, api_v):
+    def __init__(self,
+                 api_key: str,
+                 api_endpoint: str,
+                 api_v: str,
+                 *,
+                 event_loop=None):
         self.api_key = api_key
         self.endpoint = api_endpoint
         self.api_v = api_v
 
-    async def _send_request(self, method, url, params=None, body=None):
-        async with aiohttp.ClientSession() as session:
+        self.event_loop = event_loop
 
+    async def _send_request(self,
+                            method: str,
+                            url: str,
+                            params: t.Optional[t.Dict[str, str]] = None,
+                            body: t.Optional[t.List[t.Dict[str, str]]] = None):
+        async with aiohttp.ClientSession(loop=self.event_loop) as session:
             headers = {
-                "Content-Type": "application/json",
-                "Ocp-Apim-Subscription-Key": self.api_key,
+                'Content-Type': 'application/json',
+                'Ocp-Apim-Subscription-Key': self.api_key,
             }
 
             if not params:
                 params = {}
-            params["api-version"] = self.api_v
+            params['api-version'] = self.api_v
 
             response = await session.request(
                 method=method,
@@ -30,22 +42,23 @@ class BingEngine(BaseEngine):
             )
 
             body = await response.json()
-            return BingResponse(response, body)
+            return body
 
-    async def translate(self, text, target, source=None, format="plain"):
-        url = f"{self.endpoint}/translate"
+    async def translate(self,
+                        text: str,
+                        target: str,
+                        source: t.Optional[str] = None) -> t.List[t.Dict]:
+        url = f'{self.endpoint}/translate'
         params = {
-            "to": target,
-            "format": format,
+            'to': target,
         }
         if source:
-            params["from"] = source
-        body = [{"Text": text}]
-        print(body)
-        return await self._send_request("post", url, params, body)
+            params['from'] = source
+        body = [{'Text': text}]
+        return await self._send_request('post', url, params, body)
 
-    async def get_langs(self, lang):
-        url = f"{self.endpoint}/languages"
+    async def get_langs(self) -> t.List[t.Dict]:
+        url = f'{self.endpoint}/languages'
         return await self._send_request('get', url)
 
 
@@ -55,7 +68,7 @@ class BingResponse(BaseResponseConverter):
         self.body = body
 
 
-class BingServiceBuilder():
+class BingServiceBuilder:
     def __init__(self):
         self._instance = None
 

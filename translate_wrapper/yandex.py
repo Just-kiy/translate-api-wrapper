@@ -1,33 +1,44 @@
+import typing as t
+
 import aiohttp
 
-from translate_wrapper.engine import BaseEngine, BaseResponseConverter
+from .engine import BaseEngine, BaseResponseConverter
 
 
 class YandexEngine(BaseEngine):
-    def __init__(self, api_key, api_endpoint):
+    def __init__(self,
+                 api_key: str,
+                 api_endpoint: str,
+                 *,
+                 event_loop=None):
         self.api_key = api_key
         self.endpoint = api_endpoint
+        self.event_loop = event_loop
 
-    async def _send_request(self, url, params, body=None):
-        async with aiohttp.ClientSession() as session:
-            params["key"] = self.api_key
+    async def _send_request(self,
+                            url: str,
+                            params: t.Dict[str, str],
+                            body: t.Optional[t.Dict[str, str]] = None) -> t.Dict:
+        async with aiohttp.ClientSession(loop=self.event_loop) as session:
+            params['key'] = self.api_key
             response = await session.post(url, params=params, data=body)
             body = await response.json()
-            return YandexResponse(response, body)
+            return body
 
-    async def translate(self, text, lang, format="plain"):
-        url = f"{self.endpoint}/translate"
+    async def translate(self,
+                        text: str,
+                        lang: str) -> t.Dict:
+        url = f'{self.endpoint}/translate'
         params = {
-            "lang": lang,
-            "format": format,
+            'lang': lang,
         }
-        body = {"text": text}
+        body = {'text': text}
         return await self._send_request(url, params, body)
 
-    async def get_langs(self, lang):
-        url = f"{self.endpoint}/getLangs"
+    async def get_langs(self, lang: str) -> t.Dict:
+        url = f'{self.endpoint}/getLangs'
         params = {
-            "ui": lang
+            'ui': lang
         }
         return await self._send_request(url, params)
 
@@ -38,7 +49,7 @@ class YandexResponse(BaseResponseConverter):
         self.body = body
 
 
-class YandexServiceBuilder():
+class YandexServiceBuilder:
     def __init__(self):
         self._instance = None
 
