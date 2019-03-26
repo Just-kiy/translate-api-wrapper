@@ -2,6 +2,8 @@ import pytest
 
 from .conftest import parse_response
 
+import urllib.parse
+
 from translate_wrapper.bing import BingEngine
 
 pytestmark = [
@@ -50,17 +52,19 @@ class BingEngineTest:
         response = await bing_engine.translate(text, target, source)
 
         content = [{'Text': text}]
-        to = f'to={target}'
-        _from = f'from={source}' if source else None
-        api_v = 'api-version=v1'
-        query = '&'.join((to, _from)) if _from else to
+        params = {
+            'to': [target],
+            'api-version': ['v1'],
+        }
+        if source:
+            params['from'] = [source]
 
         result = parse_response(response['echo'])
-
-        print(result)
+        q_result = urllib.parse.urlparse(result['URL'])
 
         assert result['Method'] == 'POST'
-        assert result['URL'] == f'/translate?{query}&{api_v}'
+        # assert result['URL'] == f'/translate?{query}'
+        assert urllib.parse.parse_qs(q_result[4]) == params
         assert result['Host'] == f'127.0.0.1:{unused_tcp_port}'
         assert result['Content-Type'] == 'application/json'
         assert result['Ocp-Apim-Subscription-Key'] == 'api_key'
