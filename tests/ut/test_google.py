@@ -8,12 +8,14 @@ pytestmark = [
     pytest.mark.google,
 ]
 
+ENDPOINT = 'http://google-server.test'
+
 
 @pytest.fixture
 def google_engine(event_loop):
     return GoogleEngine(
         'api_key',
-        'http://google-server.test',
+        ENDPOINT,
         event_loop=event_loop
     )
 
@@ -31,7 +33,7 @@ class GoogleEngineTest:
         google_engine._send_request = mocked_send_request
         assert await google_engine.get_langs(target, model)
         expected = {
-            'url': f'{google_engine.endpoint}/languages',
+            'url': ENDPOINT + '/languages',
             'params': {
                 'target': target,
                 'model': model,
@@ -49,7 +51,7 @@ class GoogleEngineTest:
         google_engine._send_request = mocked_send_request
         assert await google_engine.translate(text, target, source)
         expected = {
-            'url': google_engine.endpoint,
+            'url': ENDPOINT,
             'params': {
                 'q': text,
                 'target': target,
