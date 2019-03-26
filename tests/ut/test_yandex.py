@@ -8,12 +8,14 @@ pytestmark = [
     pytest.mark.yandex,
 ]
 
+ENDPOINT = 'http://yandex-server.test'
+
 
 @pytest.fixture
 def yandex_engine(event_loop):
     return YandexEngine(
         'api_key',
-        'http://yandex-server.test',
+        ENDPOINT,
         event_loop=event_loop
     )
 
@@ -28,7 +30,7 @@ class YandexEngineTest:
         yandex_engine._send_request = mocked_send_request
         assert await yandex_engine.get_langs(ui)
         expected = {
-            'url': f'{yandex_engine.endpoint}/getLangs',
+            'url': ENDPOINT + '/getLangs',
             'params': {
                 'ui': ui,
             }
@@ -44,7 +46,7 @@ class YandexEngineTest:
         yandex_engine._send_request = mocked_send_request
         assert await yandex_engine.translate(text, lang)
         expected = {
-            'url': f'{yandex_engine.endpoint}/translate',
+            'url': ENDPOINT + '/translate',
             'params': {
                 'lang': lang,
             },
