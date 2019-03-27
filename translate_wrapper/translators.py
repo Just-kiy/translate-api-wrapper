@@ -1,9 +1,14 @@
-from .bing import BingServiceBuilder
-from .engine import ObjectFactory
-from .google import GoogleServiceBuilder
-from .yandex import YandexServiceBuilder
+from .engine import BaseEngine
 
-factory = ObjectFactory()
-factory.register("Yandex", YandexServiceBuilder())
-factory.register("Google", GoogleServiceBuilder())
-factory.register("Bing", BingServiceBuilder)
+
+class TranslatorFactory:
+    _engines = {}
+
+    def register_engine(self, name: str, implementation: BaseEngine):
+        self._engines[name] = implementation
+
+    def get_translator(self, name: str):
+        translator = self._engines.get(name)
+        if not translator:
+            raise ValueError(name)
+        return translator
