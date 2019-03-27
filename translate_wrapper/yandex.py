@@ -47,13 +47,3 @@ class YandexResponse(BaseResponseConverter):
     def __init__(self, response, body):
         super().__init__(response)
         self.body = body
-
-
-class YandexServiceBuilder:
-    def __init__(self):
-        self._instance = None
-
-    def __call__(self, api_key):
-        if not self._instance:
-            self._instance = YandexEngine(api_key)
-        return self._instance
