@@ -49,7 +49,7 @@ class GoogleEngine(BaseEngine):
 
     def convert_response(self, response: t.Dict) -> t.Dict:
         '''
-        Convert response from Yandex representation to Base Schema
+        Convert response from Google representation to Base Schema
         :param (Dict) response: pure json containing info from server
         :return: (Dict) Base Schema Dict
         '''
