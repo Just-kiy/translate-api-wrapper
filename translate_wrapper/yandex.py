@@ -12,7 +12,7 @@ class YandexEngine(BaseEngine):
                  *,
                  event_loop=None):
         self.api_key = api_key
-        self.endpoint = api_endpoint
+        self.endpoint = api_endpoint or os.getenv('YANDEX_API_ENDPOINT')
         self.event_loop = event_loop
 
     async def _send_request(self,
