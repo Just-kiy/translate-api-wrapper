@@ -10,6 +10,8 @@ class BaseEngine:
     def _send_request(self, **kwargs):
         raise NotImplementedError
 
+    def convert_response(self, **kwargs):
+        raise NotImplementedError
 
 class BaseResponseConverter:
     def __init__(self, response):
