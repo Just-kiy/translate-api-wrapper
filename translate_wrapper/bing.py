@@ -61,6 +61,14 @@ class BingEngine(BaseEngine):
         url = f'{self.endpoint}/languages'
         return await self._send_request('get', url)
 
+    def convert_response(self, response: t.Dict) -> t.Dict:
+        '''
+        Convert response from Yandex representation to Base Schema
+        :param (Dict) response: pure json containing info from server
+        :return: (Dict) Base Schema Dict
+        '''
+        return response
+
 
 class BingResponse(BaseResponseConverter):
     def __init__(self, response, body):

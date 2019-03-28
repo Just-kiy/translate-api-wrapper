@@ -47,6 +47,14 @@ class GoogleEngine(BaseEngine):
             }
         return await self._send_request(url, params)
 
+    def convert_response(self, response: t.Dict) -> t.Dict:
+        '''
+        Convert response from Yandex representation to Base Schema
+        :param (Dict) response: pure json containing info from server
+        :return: (Dict) Base Schema Dict
+        '''
+        return response
+
 
 class GoogleResponse(BaseResponseConverter):
     def __init__(self, response, body):
