@@ -9,11 +9,11 @@ class Translator:
 
     def get_languages(self, **kwargs):
         response = self._engine.get_langs(**kwargs)
-        return response
+        return self._engine.convert_response(response)
 
     def translate(self, **kwargs):
         response = self._engine.translate(**kwargs)
-        return response
+        return self._engine.convert_response(response)
 
 
 class TranslatorFactory:
