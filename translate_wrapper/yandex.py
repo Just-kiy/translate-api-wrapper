@@ -30,6 +30,9 @@ class YandexEngine(BaseEngine):
                         text: str,
                         target: str,
                         source: t.Optional[str]) -> t.List:
+        """
+        reference: https://tech.yandex.ru/translate/doc/dg/reference/translate-docpage/
+        """
         url = f'{self.endpoint}/translate'
         lang = target
         if source:
@@ -42,6 +45,9 @@ class YandexEngine(BaseEngine):
         return self.convert_response('translate', response)
 
     async def get_langs(self, lang: str) -> t.List:
+        """
+        reference: https://tech.yandex.ru/translate/doc/dg/reference/getLangs-docpage/
+        """
         url = f'{self.endpoint}/getLangs'
         params = {
             'ui': lang
