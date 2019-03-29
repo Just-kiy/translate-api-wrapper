@@ -28,8 +28,12 @@ class YandexEngine(BaseEngine):
 
     async def translate(self,
                         text: str,
-                        lang: str) -> t.Dict:
+                        target: str,
+                        source: t.Optional[str]) -> t.Dict:
         url = f'{self.endpoint}/translate'
+        lang = target
+        if source:
+            lang = f'{lang}+{source}'
         params = {
             'lang': lang,
         }
@@ -41,7 +45,8 @@ class YandexEngine(BaseEngine):
         params = {
             'ui': lang
         }
-        return await self._send_request(url, params)
+        response = await self._send_request(url, params)
+        e
 
     def convert_response(self, response: t.Dict) -> t.Dict:
         '''
