@@ -1,3 +1,4 @@
+import os
 import typing as t
 
 import aiohttp
@@ -13,8 +14,8 @@ class BingEngine(BaseEngine):
                  *,
                  event_loop=None):
         self.api_key = api_key
-        self.endpoint = api_endpoint
-        self.api_v = api_v
+        self.endpoint = api_endpoint or os.getenv('BING_API_ENDPOINT')
+        self.api_v = api_v or os.getenv('BING_API_V_ENDPOINT')
 
         self.event_loop = event_loop
 
@@ -68,5 +69,3 @@ class BingEngine(BaseEngine):
         :return: (Dict) Base Schema Dict
         '''
         return response
-
-
