@@ -3,7 +3,7 @@ import typing as t
 
 import aiohttp
 
-from .engine import BaseEngine, BaseResponseConverter
+from .engine import BaseEngine
 
 
 class YandexEngine(BaseEngine):
@@ -29,29 +29,42 @@ class YandexEngine(BaseEngine):
     async def translate(self,
                         text: str,
                         target: str,
-                        source: t.Optional[str]) -> t.Dict:
+                        source: t.Optional[str]) -> t.List:
         url = f'{self.endpoint}/translate'
         lang = target
         if source:
-            lang = f'{lang}+{source}'
+            lang = f'{source}-{target}'
         params = {
             'lang': lang,
         }
         body = {'text': text}
-        return await self._send_request(url, params, body)
+        response = await self._send_request(url, params, body)
+        return self.convert_response('translate', response)
 
-    async def get_langs(self, lang: str) -> t.Dict:
+    async def get_langs(self, lang: str) -> t.List:
         url = f'{self.endpoint}/getLangs'
         params = {
             'ui': lang
         }
         response = await self._send_request(url, params)
-        e
+        return self.convert_response('get_langs', response)
 
-    def convert_response(self, response: t.Dict) -> t.Dict:
-        '''
-        Convert response from Yandex representation to Base Schema
+    def convert_response(self, method: str, response: t.Dict) -> t.List:
+        """
+        Wrapper. Takes method and dispatch response to it
+        :param (Str) method: 'get_langs'|'translate"
         :param (Dict) response: pure json containing info from server
-        :return: (Dict) Base Schema Dict
-        '''
-        return response
+        :return: (List) Converted response
+        """
+        if method == 'get_langs':
+            return self._convert_langs(response)
+        elif method == 'translate':
+            return self._convert_translate(response)
+
+    def _convert_langs(self, response: t.Dict) -> t.List:
+        result = response['dirs']
+        return result
+
+    def _convert_translate(self, response: t.Dict) -> t.List[str]:
+        result = response['text']
+        return result
