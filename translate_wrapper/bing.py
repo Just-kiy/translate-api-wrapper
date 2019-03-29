@@ -49,6 +49,9 @@ class BingEngine(BaseEngine):
                         text: str,
                         target: str,
                         source: t.Optional[str] = None) -> t.List[t.Dict]:
+        """
+        reference: https://docs.microsoft.com/ru-ru/azure/cognitive-services/translator/reference/v3-0-translate?tabs=curl
+        """
         url = f'{self.endpoint}/translate'
         params = {
             'to': target,
@@ -59,16 +62,13 @@ class BingEngine(BaseEngine):
         return await self._send_request('post', url, params, body)
 
     async def get_langs(self) -> t.List[t.Dict]:
+        """
+        reference: https://docs.microsoft.com/ru-ru/azure/cognitive-services/translator/reference/v3-0-languages?tabs=curl
+        """
         url = f'{self.endpoint}/languages'
         return await self._send_request('get', url)
 
     def convert_response(self, method: str, response: t.Dict) -> t.List:
-        """
-        Wrapper. Takes method and dispatch response to it
-        :param (Str) method: 'get_langs'|'translate"
-        :param (Dict) response: pure json containing info from server
-        :return: (List) Converted response
-        """
         if method == 'get_langs':
             return self._convert_langs(response)
         elif method == 'translate':

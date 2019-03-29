@@ -55,12 +55,6 @@ class GoogleEngine(BaseEngine):
         return await self._send_request(url, params)
 
     def convert_response(self, method: str, response: t.Dict) -> t.List:
-        """
-        Wrapper. Takes method and dispatch response to it
-        :param (Str) method: 'get_langs'|'translate"
-        :param (Dict) response: pure json containing info from server
-        :return: (List) Converted response
-        """
         if method == 'get_langs':
             return self._convert_langs(response)
         elif method == 'translate':
