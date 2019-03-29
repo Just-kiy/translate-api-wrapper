@@ -61,7 +61,7 @@ class GoogleEngine(BaseEngine):
             return self._convert_translate(response)
 
     def _convert_langs(self, response: t.Dict) -> t.List:
-        result = [language.value() for language in response['dirs']['languages']]
+        result = [language['language'] for language in response['data']['languages']]
         return result
 
     def _convert_translate(self, response: t.Dict) -> t.List[str]:
