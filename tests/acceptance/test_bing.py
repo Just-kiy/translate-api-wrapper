@@ -30,7 +30,7 @@ class BingEngineTest:
     pytestmark = pytest.mark.asyncio
 
     async def test_get_langs(self, unused_tcp_port, bing_engine: 'BingEngine'):
-        response = await bing_engine.get_langs()
+        response = await bing_engine.get_languages()
 
         result = parse_response(response['echo'])
 

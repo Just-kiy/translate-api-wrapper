@@ -27,7 +27,7 @@ class BingEngineTest:
     async def test_get_langs(self, mocked_send_request, bing_engine):
         bing_engine._send_request = mocked_send_request
 
-        assert await bing_engine.get_langs()
+        assert await bing_engine.get_languages()
 
         expected = {
             'method': 'get',

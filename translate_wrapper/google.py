@@ -41,9 +41,9 @@ class GoogleEngine(BaseEngine):
             params['source'] = source
         return await self._send_request(url, params)
 
-    async def get_langs(self,
-                        language: str,
-                        model: str = 'nmt') -> t.Dict:
+    async def get_languages(self,
+                            language: str,
+                            model: str = 'nmt') -> t.Dict:
         """
         reference: https://cloud.google.com/translate/docs/reference/languages
         """

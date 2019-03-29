@@ -44,7 +44,7 @@ class YandexEngine(BaseEngine):
         response = await self._send_request(url, params, body)
         return self.convert_response('translate', response)
 
-    async def get_langs(self, lang: str) -> t.List:
+    async def get_languages(self, lang: str) -> t.List:
         """
         reference: https://tech.yandex.ru/translate/doc/dg/reference/getLangs-docpage/
         """

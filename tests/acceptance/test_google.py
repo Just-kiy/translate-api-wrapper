@@ -38,7 +38,7 @@ class GoogleEngineTest:
                              target, model):
         # NOTE: the testing echo server returns JSON Response
         # with only one key "echo" and reflected value
-        response = await google_engine.get_langs(target, model)
+        response = await google_engine.get_languages(target, model)
 
         params = {
             'target': [target],

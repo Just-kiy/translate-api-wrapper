@@ -22,7 +22,7 @@ class BaseEngine:
         """
         raise NotImplementedError
 
-    def get_langs(self, language: t.Optional[str]) -> t.List[str]:
+    def get_languages(self, language: t.Optional[str]) -> t.List[str]:
         """
         Takes language and return list of languages (BCP-47), which are available as translate direction from given one
         :param language: Source language

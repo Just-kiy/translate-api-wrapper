@@ -31,7 +31,7 @@ class GoogleEngineTest:
     ])
     async def test_get_langs(self, mocked_send_request, google_engine, target, model):
         google_engine._send_request = mocked_send_request
-        assert await google_engine.get_langs(target, model)
+        assert await google_engine.get_languages(target, model)
         expected = {
             'url': ENDPOINT + '/languages',
             'params': {

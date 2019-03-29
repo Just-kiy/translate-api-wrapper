@@ -25,7 +25,7 @@ def google_engine(event_loop):
 
 @pytest.mark.skipif(not os.getenv('TESTING_E2E'), reason='expensive tests')
 async def test_get_langs(google_engine):
-    response = await google_engine.get_langs('ru')
+    response = await google_engine.get_languages('ru')
     assert 'data' in response
     assert 'languages' in response['data']
 

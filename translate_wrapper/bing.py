@@ -61,7 +61,7 @@ class BingEngine(BaseEngine):
         body = [{'Text': text}]
         return await self._send_request('post', url, params, body)
 
-    async def get_langs(self) -> t.List[t.Dict]:
+    async def get_languages(self) -> t.List[t.Dict]:
         """
         reference: https://docs.microsoft.com/ru-ru/azure/cognitive-services/translator/reference/v3-0-languages?tabs=curl
         """

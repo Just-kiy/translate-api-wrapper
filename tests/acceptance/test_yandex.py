@@ -32,7 +32,7 @@ class YandexEngineTest:
         'ru', 'en', 'fr'
     ])
     async def test_get_langs(self, unused_tcp_port, yandex_engine: 'YandexEngine', ui):
-        response = await yandex_engine.get_langs(ui)
+        response = await yandex_engine.get_languages(ui)
 
         params = {
             'ui': [ui],

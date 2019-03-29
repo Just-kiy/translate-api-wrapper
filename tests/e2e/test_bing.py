@@ -27,7 +27,7 @@ def bing_engine(event_loop):
 
 @pytest.mark.skipif(not os.getenv('TESTING_E2E'), reason='expensive tests')
 async def test_get_langs(bing_engine):
-    response = await bing_engine.get_langs()
+    response = await bing_engine.get_languages()
     assert 'translation' in response
     assert 'transliteration' in response
     assert 'dictionary' in response
