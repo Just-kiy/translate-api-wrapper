@@ -54,9 +54,3 @@ class GoogleEngine(BaseEngine):
         :return: (Dict) Base Schema Dict
         '''
         return response
-
-
-class GoogleResponse(BaseResponseConverter):
-    def __init__(self, response, body):
-        super().__init__(response)
-        self.body = body['data']

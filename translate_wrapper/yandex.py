@@ -49,9 +49,3 @@ class YandexEngine(BaseEngine):
         :return: (Dict) Base Schema Dict
         '''
         return response
-
-
-class YandexResponse(BaseResponseConverter):
-    def __init__(self, response, body):
-        super().__init__(response)
-        self.body = body

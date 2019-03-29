@@ -70,8 +70,3 @@ class BingEngine(BaseEngine):
         return response
 
 
-class BingResponse(BaseResponseConverter):
-    def __init__(self, response, body):
-        super().__init__(response)
-        self.body = body
-
