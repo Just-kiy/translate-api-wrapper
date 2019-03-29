@@ -29,6 +29,9 @@ class GoogleEngine(BaseEngine):
                         text: str,
                         target: str,
                         source: str = None) -> t.Dict:
+        """
+        reference: https://cloud.google.com/translate/docs/reference/translate
+        """
         url = f'{self.endpoint}'
         params = {
             'q': text,
@@ -41,6 +44,9 @@ class GoogleEngine(BaseEngine):
     async def get_langs(self,
                         language: str,
                         model: str = 'nmt') -> t.Dict:
+        """
+        reference: https://cloud.google.com/translate/docs/reference/languages
+        """
         url = f'{self.endpoint}/languages'
         params = {
             'target': language,
