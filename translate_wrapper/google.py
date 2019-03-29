@@ -3,7 +3,7 @@ import typing as t
 
 import aiohttp
 
-from .engine import BaseEngine, BaseResponseConverter
+from .engine import BaseEngine
 
 
 class GoogleEngine(BaseEngine):
