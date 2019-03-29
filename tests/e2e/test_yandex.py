@@ -26,11 +26,10 @@ def yandex_engine(event_loop):
 @pytest.mark.skipif(not os.getenv('TESTING_E2E'), reason='expensive tests')
 async def test_get_langs(yandex_engine):
     response = await yandex_engine.get_langs('ru')
-    assert 'dirs' in response
-    assert 'langs' in response
-
+    assert 'en-ru' in response
 
 @pytest.mark.skipif(not os.getenv('TESTING_E2E'), reason='expensive tests')
 async def test_translate(yandex_engine):
-    response = await yandex_engine.translate('Hello, World!', 'en-ru')
-    assert response['code'] == 200
+    response = await yandex_engine.translate(text='Hello, World!', source='en', target='ru')
+    assert len(response) == 1
+    assert response[0].lower() == 'привет, мир!'
