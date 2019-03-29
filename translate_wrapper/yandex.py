@@ -50,19 +50,13 @@ class YandexEngine(BaseEngine):
         return self.convert_response('get_langs', response)
 
     def convert_response(self, method: str, response: t.Dict) -> t.List:
-        """
-        Wrapper. Takes method and dispatch response to it
-        :param (Str) method: 'get_langs'|'translate"
-        :param (Dict) response: pure json containing info from server
-        :return: (List) Converted response
-        """
         if method == 'get_langs':
             return self._convert_langs(response)
         elif method == 'translate':
             return self._convert_translate(response)
 
     def _convert_langs(self, response: t.Dict) -> t.List:
-        result = response['dirs']
+        result = list(response['langs'].keys())
         return result
 
     def _convert_translate(self, response: t.Dict) -> t.List[str]:
