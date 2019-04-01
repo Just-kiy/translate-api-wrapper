@@ -48,7 +48,7 @@ class BingEngine(BaseEngine):
     async def translate(self,
                         text: str,
                         target: str,
-                        source: t.Optional[str] = None) -> t.List[t.Dict]:
+                        source: t.Optional[str] = None) -> t.List[str]:
         """
         reference: https://docs.microsoft.com/ru-ru/azure/cognitive-services/translator/reference/v3-0-translate?tabs=curl
         """
@@ -59,14 +59,16 @@ class BingEngine(BaseEngine):
         if source:
             params['from'] = source
         body = [{'Text': text}]
-        return await self._send_request('post', url, params, body)
+        response = await self._send_request('post', url, params, body)
+        return self.convert_response('translate', response)
 
-    async def get_languages(self) -> t.List[t.Dict]:
+    async def get_languages(self, *ignore) -> t.List[str]:
         """
         reference: https://docs.microsoft.com/ru-ru/azure/cognitive-services/translator/reference/v3-0-languages?tabs=curl
         """
         url = f'{self.endpoint}/languages'
-        return await self._send_request('get', url)
+        response = await self._send_request('get', url)
+        return self.convert_response('get_langs', response)
 
     def convert_response(self, method: str, response: t.Dict) -> t.List:
         if method == 'get_langs':
