@@ -28,7 +28,7 @@ class GoogleEngine(BaseEngine):
     async def translate(self,
                         text: str,
                         target: str,
-                        source: str = None) -> t.Dict:
+                        source: str = None) -> t.List[str]:
         """
         reference: https://cloud.google.com/translate/docs/reference/translate
         """
@@ -39,11 +39,12 @@ class GoogleEngine(BaseEngine):
             }
         if source:
             params['source'] = source
-        return await self._send_request(url, params)
+        response = await self._send_request(url, params)
+        return self.convert_response('translate', response)
 
     async def get_languages(self,
                             language: str,
-                            model: str = 'nmt') -> t.Dict:
+                            model: str = 'nmt') -> t.List[str]:
         """
         reference: https://cloud.google.com/translate/docs/reference/languages
         """
@@ -52,7 +53,8 @@ class GoogleEngine(BaseEngine):
             'target': language,
             'model': model,
             }
-        return await self._send_request(url, params)
+        response = await self._send_request(url, params)
+        return self.convert_response('get_langs', response)
 
     def convert_response(self, method: str, response: t.Dict) -> t.List:
         if method == 'get_langs':
