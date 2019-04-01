@@ -16,32 +16,19 @@ _____
 
 .. code-block:: python
 
-    import aiohttp
-    import asyncio
+    from pprint import pprint
 
-    from translate_wrapper import YandexEngine
+    from environs import Env
 
-    YANDEX_API_KEY="PASTE_YOUR_API_KEY_HERE"
+    from translate_wrapper.translators import Translator, translate_engines
+    from translate_wrapper.yandex import YandexEngine
 
-    engine = YandexEngine(YANDEX_API_KEY)
-
-    async def main():
-        async with aiohttp.ClientSession() as session:
-
-            #Getting available langs for given language
-            langs = await engine.get_langs("ru")
-
-            #Translate from lang to lang
-            translate1 = await engine.translate("Hello, world!", "en-ru")
-
-            # Detect lang and translate to given lang
-            translate2 = await engine.translate("Hello, world!", "ru")
-            print(langs.body)
-            print(translate1.body)
-            print(translate2.body)
-
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(main())
+    env = Env()
+    env.read_env()
+    translate_engines.register(translator_name='Yandex', engine=YandexEngine)
+    yandex_translator = Translator.get_translator('Yandex', env.str('YANDEX_API_KEY'))
+    response = yandex_translator.get_languages('ru')
+    pprint(response)
 
 Requirements
 ============
