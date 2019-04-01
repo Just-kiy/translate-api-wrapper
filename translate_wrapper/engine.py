@@ -12,12 +12,12 @@ class BaseEngine:
     def __init__(self, **kwargs):
         pass
 
-    def translate(self, text: t.Optional[str, t.List[str]], target: str, source: t.Optional[str]) -> t.List[str]:
+    def translate(self, text: t.Union[str, t.List[str]], target: str, source: t.Optional[str]) -> t.List[str]:
         """
         Translate given text (single string or list of strings) from source (optional) language to target one.
-        :param text:
-        :param target:
-        :param source:
+        :param text: string or list of strings that should be translated
+        :param target: target language
+        :param source: Optional - source language (usually auto-detects by Translation Service)
         :return: List of translated texts
         """
         raise NotImplementedError
