@@ -9,7 +9,7 @@ from .engine import BaseEngine
 class GoogleEngine(BaseEngine):
     def __init__(self,
                  api_key: str,
-                 api_endpoint: str,
+                 api_endpoint: t.Optional[str] = None,
                  *,
                  event_loop=None):
         self.api_key = api_key

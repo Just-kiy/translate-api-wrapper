@@ -9,8 +9,8 @@ from .engine import BaseEngine
 class BingEngine(BaseEngine):
     def __init__(self,
                  api_key: str,
-                 api_endpoint: str,
-                 api_v: str,
+                 api_endpoint: t.Optional[str] = None,
+                 api_v: t.Optional[str] = None,
                  *,
                  event_loop=None):
         self.api_key = api_key
