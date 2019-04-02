@@ -26,13 +26,11 @@ def google_engine(event_loop):
 @pytest.mark.skipif(not os.getenv('TESTING_E2E'), reason='expensive tests')
 async def test_get_langs(google_engine):
     response = await google_engine.get_languages('ru')
-    assert 'data' in response
-    assert 'languages' in response['data']
+    assert 'en' in response
 
 
 @pytest.mark.skipif(not os.getenv('TESTING_E2E'), reason='expensive tests')
 async def test_translate(google_engine):
     response = await google_engine.translate(text='Hello, World!', target='ru')
-    assert 'data' in response
-    assert 'translations' in response['data']
-    assert 'en' == response['data']['translations'][0]['detectedSourceLanguage']
+    assert len(response) == 1
+    assert response[0].lower() == 'привет, мир!'
