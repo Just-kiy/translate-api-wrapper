@@ -15,7 +15,7 @@ ENDPOINT = 'http://yandex-server.test'
 def mock_send_request(mocker):
     mocker_response = {
         'langs': {
-        'en': 'Английский'
+        'es': 'Испанский'
         },
         'text': [
             'привет'
@@ -44,7 +44,10 @@ class YandexEngineTest:
     ])
     async def test_get_langs(self, mocker, yandex_engine, ui):
         mocked_send_request = mock_send_request(mocker)
+        mocked_convert_response = mocker.Mock(return_value='es')
+
         yandex_engine._send_request = mocked_send_request
+        yandex_engine.convert_response = mocked_convert_response
         assert await yandex_engine.get_languages(ui)
         expected = {
             'url': ENDPOINT + '/getLangs',
@@ -53,6 +56,7 @@ class YandexEngineTest:
             }
         }
         mocked_send_request.assert_called_once_with(expected['url'], expected['params'])
+        mocked_convert_response.assert_called_once()
 
     @pytest.mark.parametrize('text, target, source', [
         ('Hello', 'ru', 'en'),
@@ -61,7 +65,10 @@ class YandexEngineTest:
     ])
     async def test_translate(self, mocker, yandex_engine, text, target, source):
         mocked_send_request = mock_send_request(mocker)
+        mocked_convert_response = mocker.Mock(return_value='Привет')
+
         yandex_engine._send_request = mocked_send_request
+        yandex_engine.convert_response = mocked_convert_response
         assert await yandex_engine.translate(source=source, target=target, text=text)
         expected = {
             'url': ENDPOINT + '/translate',
@@ -73,3 +80,4 @@ class YandexEngineTest:
             },
         }
         mocked_send_request.assert_called_once_with(expected['url'], expected['params'], expected['body'])
+        mocked_convert_response.assert_called_once()
