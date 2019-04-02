@@ -28,13 +28,11 @@ def bing_engine(event_loop):
 @pytest.mark.skipif(not os.getenv('TESTING_E2E'), reason='expensive tests')
 async def test_get_langs(bing_engine):
     response = await bing_engine.get_languages()
-    assert 'translation' in response
-    assert 'transliteration' in response
-    assert 'dictionary' in response
+    assert 'en' in response
 
 
 @pytest.mark.skipif(not os.getenv('TESTING_E2E'), reason='expensive tests')
 async def test_translate(bing_engine):
-    response = await bing_engine.translate(text='Hello, World!', target='ru')
-    assert 'translations' in response[0]
-    assert 'ru' == response[0]['translations'][0]['to']
+    response = await bing_engine.translate(text='Hello!', target='ru')
+    assert len(response) == 1
+    assert response[0].lower() == 'привет!'
