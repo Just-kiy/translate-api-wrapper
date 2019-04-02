@@ -26,7 +26,7 @@ def yandex_engine(event_loop):
 @pytest.mark.skipif(not os.getenv('TESTING_E2E'), reason='expensive tests')
 async def test_get_langs(yandex_engine):
     response = await yandex_engine.get_languages('ru')
-    assert 'en-ru' in response
+    assert 'en' in response
 
 
 @pytest.mark.skipif(not os.getenv('TESTING_E2E'), reason='expensive tests')
