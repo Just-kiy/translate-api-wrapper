@@ -1,3 +1,4 @@
+import asyncio
 import pytest
 
 from translate_wrapper.google import GoogleEngine
@@ -9,6 +10,26 @@ pytestmark = [
 ]
 
 ENDPOINT = 'http://google-server.test'
+
+
+def mock_send_request(mocker):
+    mocker_response = {
+        'data': {
+            'languages': [
+                    {'language': 'en'}, {'language': 'ru'}
+                ],
+            "translations": [
+              {
+                "translatedText": "Привет",
+                "model": "nmt"
+              }
+            ]
+        }
+    }
+    mocked_result = asyncio.Future()
+    mocked_result.set_result(mocker_response)
+    mocked_send_request = mocker.Mock(return_value=mocked_result)
+    return mocked_send_request
 
 
 @pytest.fixture
@@ -29,7 +50,8 @@ class GoogleEngineTest:
         ('en', 'nmt'),
         ('en', 'base'),
     ])
-    async def test_get_langs(self, mocked_send_request, google_engine, target, model):
+    async def test_get_langs(self, mocker, google_engine, target, model):
+        mocked_send_request = mock_send_request(mocker)
         google_engine._send_request = mocked_send_request
         assert await google_engine.get_languages(target, model)
         expected = {
@@ -47,7 +69,8 @@ class GoogleEngineTest:
         ('Hello', 'fr', 'en'),
         ('Hello', 'it', None),
     ])
-    async def test_translate(self, mocked_send_request, google_engine, text, target, source):
+    async def test_translate(self, mocker, google_engine, text, target, source):
+        mocked_send_request = mock_send_request(mocker)
         google_engine._send_request = mocked_send_request
         assert await google_engine.translate(text, target, source)
         expected = {
