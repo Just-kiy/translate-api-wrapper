@@ -1,6 +1,8 @@
 import os
 import typing as t
 
+from translate_wrapper.exceptions import EngineTranslationError, EngineGetLangsError
+
 import aiohttp
 
 from .engine import BaseEngine
@@ -63,9 +65,13 @@ class GoogleEngine(BaseEngine):
             return self._convert_translate(response)
 
     def _convert_langs(self, response: t.Dict) -> t.List:
+        if 'error' in response:
+            raise EngineGetLangsError('Google', response['error']['code'], response['error']['errors'][0])
         result = [language['language'] for language in response['data']['languages']]
         return result
 
     def _convert_translate(self, response: t.Dict) -> t.List[str]:
+        if 'error' in response:
+            raise EngineTranslationError('Google', response['error']['code'], response['error']['errors'][0])
         result = [translation['translatedText'] for translation in response['data']['translations']]
         return result

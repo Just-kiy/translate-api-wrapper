@@ -1,6 +1,8 @@
 import os
 import typing as t
 
+from translate_wrapper.exceptions import EngineTranslationError, EngineGetLangsError
+
 import aiohttp
 
 from .engine import BaseEngine
@@ -23,7 +25,7 @@ class BingEngine(BaseEngine):
                             method: str,
                             url: str,
                             params: t.Optional[t.Dict[str, str]] = None,
-                            body: t.Optional[t.List[t.Dict[str, str]]] = None):
+                            body: t.Optional[t.List[t.Dict[str, str]]] = None) -> t.Dict:
         async with aiohttp.ClientSession(loop=self.event_loop) as session:
             headers = {
                 'Content-Type': 'application/json',
@@ -49,9 +51,9 @@ class BingEngine(BaseEngine):
                         text: str,
                         target: str,
                         source: t.Optional[str] = None) -> t.List[str]:
-        """
+        '''
         reference: https://docs.microsoft.com/ru-ru/azure/cognitive-services/translator/reference/v3-0-translate?tabs=curl
-        """
+        '''
         url = f'{self.endpoint}/translate'
         params = {
             'to': target,
@@ -63,9 +65,9 @@ class BingEngine(BaseEngine):
         return self.convert_response('translate', response)
 
     async def get_languages(self, *ignore) -> t.List[str]:
-        """
+        '''
         reference: https://docs.microsoft.com/ru-ru/azure/cognitive-services/translator/reference/v3-0-languages?tabs=curl
-        """
+        '''
         url = f'{self.endpoint}/languages'
         response = await self._send_request('get', url)
         return self.convert_response('get_langs', response)
@@ -77,9 +79,13 @@ class BingEngine(BaseEngine):
             return self._convert_translate(response)
 
     def _convert_langs(self, response: t.Dict) -> t.List:
+        if 'error' in response:
+            raise EngineGetLangsError('Bing', response['error']['code'], response['error']['message'])
         result = list(response['translation'].keys())
         return result
 
     def _convert_translate(self, response: t.Dict) -> t.List[str]:
+        if 'error' in response:
+            raise EngineTranslationError('Bing', response['error']['code'], response['error']['message'])
         result = [item['translations'][0]['text'] for item in response]
         return result
