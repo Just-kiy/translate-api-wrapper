@@ -1,8 +1,9 @@
-import asyncio
 import pytest
 
+import asyncio
+
 from translate_wrapper.engines.bing import BingEngine
-from translate_wrapper.exceptions import EngineTranslationError, EngineGetLangsError
+from translate_wrapper.exceptions import EngineGetLangsError, EngineTranslationError
 
 pytestmark = [
     pytest.mark.ut,
@@ -106,7 +107,7 @@ class BingEngineTest:
         mocked_convert_response.assert_called_once()
 
     def test_convert_response_get_langs(self, bing_engine):
-        response_from_server ={
+        response_from_server = {
             'translation': {
                 'af': {
                     'name': 'Afrikaans',

@@ -1,9 +1,9 @@
 import os
 import typing as t
 
-from translate_wrapper.exceptions import EngineTranslationError, EngineGetLangsError
-
 import aiohttp
+
+from translate_wrapper.exceptions import EngineGetLangsError, EngineTranslationError
 
 from .engine import BaseEngine
 
@@ -51,9 +51,10 @@ class BingEngine(BaseEngine):
                         text: str,
                         target: str,
                         source: t.Optional[str] = None) -> t.List[str]:
-        '''
-        reference: https://docs.microsoft.com/ru-ru/azure/cognitive-services/translator/reference/v3-0-translate?tabs=curl
-        '''
+        """
+        reference:
+        https://docs.microsoft.com/ru-ru/azure/cognitive-services/translator/reference/v3-0-translate?tabs=curl
+        """
         url = f'{self.endpoint}/translate'
         params = {
             'to': target,
@@ -65,9 +66,10 @@ class BingEngine(BaseEngine):
         return self.convert_response('translate', response)
 
     async def get_languages(self, *ignore) -> t.List[str]:
-        '''
-        reference: https://docs.microsoft.com/ru-ru/azure/cognitive-services/translator/reference/v3-0-languages?tabs=curl
-        '''
+        """
+        reference:
+        https://docs.microsoft.com/ru-ru/azure/cognitive-services/translator/reference/v3-0-languages?tabs=curl
+        """
         url = f'{self.endpoint}/languages'
         response = await self._send_request('get', url)
         return self.convert_response('get_langs', response)

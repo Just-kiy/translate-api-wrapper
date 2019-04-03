@@ -44,9 +44,9 @@ class _TranslateEngines:
     Translate Engines is an object that register translation engines for factory purposes.
 
     >>> from translate_wrapper.translators import translate_engines
-    >>> from translate_wrapper.yandex import YandexEngine
+    >>> from translate_wrapper.engines.yandex import YandexEngine
     >>> translate_engines.register(translator_name='Yandex', engine=YandexEngine)
-    >>> from translate_wrapper.google import GoogleEngine
+    >>> from translate_wrapper.engines.google import GoogleEngine
     >>> translate_engines.register(translator_name='Google', engine=GoogleEngine)  # ok
     """
 

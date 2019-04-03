@@ -1,9 +1,9 @@
 import os
 import typing as t
 
-from translate_wrapper.exceptions import EngineTranslationError, EngineGetLangsError
-
 import aiohttp
+
+from translate_wrapper.exceptions import EngineGetLangsError, EngineTranslationError
 
 from .engine import BaseEngine
 

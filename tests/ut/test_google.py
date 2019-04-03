@@ -1,8 +1,9 @@
-import asyncio
 import pytest
 
+import asyncio
+
 from translate_wrapper.engines.google import GoogleEngine
-from translate_wrapper.exceptions import EngineTranslationError, EngineGetLangsError
+from translate_wrapper.exceptions import EngineGetLangsError, EngineTranslationError
 
 pytestmark = [
     pytest.mark.ut,
@@ -151,9 +152,9 @@ class GoogleEngineTest:
                 'message': 'Missing required field target',
                 'errors': [
                     {
-                    'message': 'Missing required field target',
-                    'domain': 'global',
-                    'reason': 'badRequest'
+                        'message': 'Missing required field target',
+                        'domain': 'global',
+                        'reason': 'badRequest'
                     }
                 ],
                 'status': 'INVALID_ARGUMENT'

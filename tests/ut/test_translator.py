@@ -1,9 +1,9 @@
 import pytest
 
-from translate_wrapper.translators import Translator, translate_engines
-from translate_wrapper.engines.yandex import YandexEngine
-from translate_wrapper.engines.google import GoogleEngine
 from translate_wrapper.engines.bing import BingEngine
+from translate_wrapper.engines.google import GoogleEngine
+from translate_wrapper.engines.yandex import YandexEngine
+from translate_wrapper.translators import Translator, translate_engines
 
 
 @pytest.fixture

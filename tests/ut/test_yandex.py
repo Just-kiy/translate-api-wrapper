@@ -1,5 +1,6 @@
-import asyncio
 import pytest
+
+import asyncio
 
 from translate_wrapper.engines.yandex import YandexEngine
 from translate_wrapper.exceptions import EngineGetLangsError, EngineTranslationError
