@@ -2,7 +2,7 @@ import typing as t
 
 import asyncio
 
-from .engine import BaseEngine
+from .engines.engine import BaseEngine
 
 
 class Translator:
