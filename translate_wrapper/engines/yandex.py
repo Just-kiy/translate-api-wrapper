@@ -1,6 +1,8 @@
 import os
 import typing as t
 
+from translate_wrapper.exceptions import EngineGetLangsError, EngineTranslationError
+
 import aiohttp
 
 from .engine import BaseEngine
@@ -15,6 +17,8 @@ class YandexEngine(BaseEngine):
         self.api_key = api_key
         self.endpoint = api_endpoint or os.getenv('YANDEX_API_ENDPOINT')
         self.event_loop = event_loop
+
+        self.error_codes = [401, 402, 404, 413, 422, 501]
 
     async def _send_request(self,
                             url: str,
@@ -62,9 +66,13 @@ class YandexEngine(BaseEngine):
             return self._convert_translate(response)
 
     def _convert_langs(self, response: t.Dict) -> t.List:
+        if response['code'] in self.error_codes:
+            raise EngineGetLangsError('Yandex', response['code'], response['message'])
         result = list(response['langs'].keys())
         return result
 
     def _convert_translate(self, response: t.Dict) -> t.List[str]:
+        if response['code'] in self.error_codes:
+            raise EngineTranslationError('Yandex', response['code'], response['message'])
         result = response['text']
         return result
