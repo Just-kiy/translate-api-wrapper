@@ -1,7 +1,13 @@
 import typing as t
 
 
-class BaseEngineError(Exception):
+class TranslateWrapperBaseError(Exception):
+    pass
+
+
+class BaseEngineError(TranslateWrapperBaseError):
+    detail: str = 'Ahtung'
+
     def get_template(self):
         raise NotImplementedError
 
@@ -10,6 +16,8 @@ class BaseEngineError(Exception):
 
 
 class EngineGetLangsError(BaseEngineError):
+    tmp = ''
+    
     def __init__(self, service_name: str = '',
                  code: str = None,
                  msg: t.Dict = None):

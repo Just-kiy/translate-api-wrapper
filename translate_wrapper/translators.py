@@ -13,10 +13,16 @@ class Translator:
     It delegates responsibility to communicate with real outer translation services to engines.
 
     >>> translator = Translator.get_translator('yandex', api_key='some_key')
-    >>> translator.get_languages('es') # NOTE: (Only BCP-47 codes!)
+    >>> translator.get_languages('es')  # NOTE: (Only BCP-47 codes!)
     ['en', 'ru']
     >>> translator.translate(source='en', target='es', text='Hello, word!')
     'Hola palabra'
+
+    >>> translate.translate(source='en', target='es', text='Hello, word!')
+
+
+    >>> translate.translate('hello <div bla=1/> mr black', 'bla')
+    'привет <div bla=1/> мистер блэк'
     """
     def __init__(self, engine: t.Type['BaseEngine'], config: dict):
         self._engine = engine(**config)
@@ -25,8 +31,10 @@ class Translator:
         response = self._engine.get_languages(target_language)
         return asyncio.run(response)
 
-    def translate(self, *, source: t.Optional[str], target: str, text: t.Union[str, t.List[str]]) -> t.List[str]:
+    def translate(self, *text: str, source: t.Optional[str], target: str) -> t.List[str]:
         response = self._engine.translate(source=source, target=target, text=text)
+        for chunk in funcy.chunk(*text, chunk_size=10):
+            pass
         return asyncio.run(response)
 
     @classmethod

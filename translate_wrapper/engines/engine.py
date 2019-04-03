@@ -9,9 +9,6 @@ class BaseEngine:
 
     All specific settings instances of `TranslateMachine` should get from ENV.
     """
-    def __init__(self, **kwargs):
-        pass
-
     def translate(self, text: t.Union[str, t.List[str]], target: str, source: t.Optional[str]) -> t.List[str]:
         """
         Translate given text (single string or list of strings) from source (optional) language to target one.
