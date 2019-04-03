@@ -4,7 +4,7 @@ import os
 
 from environs import Env
 
-from translate_wrapper.google import GoogleEngine
+from translate_wrapper.engines.google import GoogleEngine
 
 pytestmark = [
     pytest.mark.asyncio,

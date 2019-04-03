@@ -4,7 +4,7 @@ import os
 
 from environs import Env
 
-from translate_wrapper.bing import BingEngine
+from translate_wrapper.engines.bing import BingEngine
 
 pytestmark = [
     pytest.mark.asyncio,

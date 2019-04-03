@@ -4,7 +4,7 @@ import os
 
 from environs import Env
 
-from translate_wrapper.yandex import YandexEngine
+from translate_wrapper.engines.yandex import YandexEngine
 
 pytestmark = [
     pytest.mark.asyncio,
