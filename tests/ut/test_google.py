@@ -1,7 +1,8 @@
 import asyncio
 import pytest
 
-from translate_wrapper.google import GoogleEngine
+from translate_wrapper.engines.google import GoogleEngine
+from translate_wrapper.exceptions import EngineTranslationError, EngineGetLangsError
 
 pytestmark = [
     pytest.mark.ut,
@@ -18,10 +19,10 @@ def mock_send_request(mocker):
             'languages': [
                     {'language': 'en'}, {'language': 'ru'}
                 ],
-            "translations": [
+            'translations': [
               {
-                "translatedText": "Привет",
-                "model": "nmt"
+                'translatedText': 'Привет',
+                'model': 'nmt'
               }
             ]
         }
@@ -42,8 +43,7 @@ def google_engine(event_loop):
 
 
 class GoogleEngineTest:
-    pytestmark = pytest.mark.asyncio
-
+    @pytest.mark.asyncio
     @pytest.mark.parametrize('target, model', [
         ('ru', 'nmt'),
         ('ru', 'base'),
@@ -67,6 +67,7 @@ class GoogleEngineTest:
         mocked_send_request.assert_called_once_with(expected['url'], expected['params'])
         mocked_convert_response.assert_called_once()
 
+    @pytest.mark.asyncio
     @pytest.mark.parametrize('text, target, source', [
         ('Hello', 'ru', 'en'),
         ('Hello', 'de', None),
@@ -92,3 +93,71 @@ class GoogleEngineTest:
 
         mocked_send_request.assert_called_once_with(expected['url'], expected['params'])
         mocked_convert_response.assert_called_once()
+
+    def test_convert_response_get_langs(self, google_engine):
+        response_from_server = {
+            'data': {
+                'languages': [
+                    {
+                        'language': 'az',
+                        'name': 'азербайджанский'
+                    },
+                    {
+                        'language': 'sq',
+                        'name': 'албанский'
+                    }
+                ]
+            }
+        }
+        result = google_engine.convert_response('get_langs', response_from_server)
+        assert result == ['az', 'sq']
+
+    def test_convert_response_get_langs_error(self, google_engine):
+        response_from_server = {
+            'error': {
+                'code': 400,
+                'message': 'API key not valid. Please pass a valid API key.',
+                'errors': [
+                    {
+                        'message': 'API key not valid. Please pass a valid API key.',
+                        'domain': 'usageLimits',
+                        'reason': 'rateLimitExceeded'
+                    }
+                    ],
+                'status': 'INVALID_ARGUMENT'
+            }
+        }
+        with pytest.raises(EngineGetLangsError):
+            google_engine.convert_response('get_langs', response_from_server)
+
+    def test_convert_response_translate(self, google_engine):
+        response_from_server = {
+            'data': {
+                'translations': [
+                    {
+                        'translatedText': 'Привет',
+                        'model': 'nmt'
+                    }
+                ]
+            }
+        }
+        result = google_engine.convert_response('translate', response_from_server)
+        assert result == ['Привет']
+
+    def test_convert_response_translate_error(self, google_engine):
+        response_from_server = {
+            'error': {
+                'code': 400,
+                'message': 'Missing required field target',
+                'errors': [
+                    {
+                    'message': 'Missing required field target',
+                    'domain': 'global',
+                    'reason': 'badRequest'
+                    }
+                ],
+                'status': 'INVALID_ARGUMENT'
+            }
+        }
+        with pytest.raises(EngineTranslationError):
+            google_engine.convert_response('translate', response_from_server)

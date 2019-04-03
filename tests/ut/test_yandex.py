@@ -1,7 +1,8 @@
 import asyncio
 import pytest
 
-from translate_wrapper.yandex import YandexEngine
+from translate_wrapper.engines.yandex import YandexEngine
+from translate_wrapper.exceptions import EngineGetLangsError, EngineTranslationError
 
 pytestmark = [
     pytest.mark.ut,
@@ -15,7 +16,7 @@ ENDPOINT = 'http://yandex-server.test'
 def mock_send_request(mocker):
     mocker_response = {
         'langs': {
-        'es': 'Испанский'
+            'es': 'Испанский'
         },
         'text': [
             'привет'
@@ -37,8 +38,7 @@ def yandex_engine(event_loop):
 
 
 class YandexEngineTest:
-    pytestmark = pytest.mark.asyncio
-
+    @pytest.mark.asyncio
     @pytest.mark.parametrize('ui', [
         'ru', 'en', 'fr'
     ])
@@ -58,6 +58,7 @@ class YandexEngineTest:
         mocked_send_request.assert_called_once_with(expected['url'], expected['params'])
         mocked_convert_response.assert_called_once()
 
+    @pytest.mark.asyncio
     @pytest.mark.parametrize('text, target, source', [
         ('Hello', 'ru', 'en'),
         ('Darkness', 'fr', 'en'),
@@ -81,3 +82,41 @@ class YandexEngineTest:
         }
         mocked_send_request.assert_called_once_with(expected['url'], expected['params'], expected['body'])
         mocked_convert_response.assert_called_once()
+
+    def test_convert_response_get_langs(self, yandex_engine):
+        response_from_server = {'langs': {
+                'en': 'Английски',
+                'es': 'Испанский',
+                'ru': 'Русский',
+            }
+        }
+        result = yandex_engine.convert_response('get_langs', response_from_server)
+        assert result == ['en', 'es', 'ru']
+
+    def test_convert_response_get_langs_error(self, yandex_engine):
+        response_from_server = {
+            'code': 401,
+            'message': 'API key is invalid'
+        }
+        with pytest.raises(EngineGetLangsError):
+            yandex_engine.convert_response('get_langs', response_from_server)
+
+    def test_convert_response_translate(self, yandex_engine):
+        response_from_server = {
+                'code': 200,
+                'lang': 'en-ru',
+                'text': [
+                    'привет',
+                    'мир'
+                ]
+            }
+        result = yandex_engine.convert_response('translate', response_from_server)
+        assert result == ['привет', 'мир']
+
+    def test_convert_response_translate_error(self, yandex_engine):
+        response_from_server = {
+            'code': 501,
+            'message': 'The specified translation direction is not supported'
+        }
+        with pytest.raises(EngineTranslationError):
+            yandex_engine.convert_response('translate', response_from_server)

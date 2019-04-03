@@ -1,7 +1,8 @@
 import asyncio
 import pytest
 
-from translate_wrapper.bing import BingEngine
+from translate_wrapper.engines.bing import BingEngine
+from translate_wrapper.exceptions import EngineTranslationError, EngineGetLangsError
 
 pytestmark = [
     pytest.mark.ut,
@@ -51,8 +52,7 @@ def bing_engine(event_loop):
 
 
 class BingEngineTest:
-    pytestmark = pytest.mark.asyncio
-
+    @pytest.mark.asyncio
     async def test_get_langs(self, mocker, bing_engine):
         mocked_send_request = mock_send_request(mocker)
         mocked_convert_response = mocker.Mock(return_value='en')
@@ -70,6 +70,7 @@ class BingEngineTest:
         mocked_send_request.assert_called_once_with(expected['method'], expected['url'])
         mocked_convert_response.assert_called_once()
 
+    @pytest.mark.asyncio
     @pytest.mark.parametrize('text, target, source', [
         ('Hello', 'ru', 'en'),
         ('Hello', 'de', None),
@@ -103,3 +104,59 @@ class BingEngineTest:
         mocked_send_request.assert_called_once_with(expected['method'], expected['url'],
                                                     expected['params'], expected['body'])
         mocked_convert_response.assert_called_once()
+
+    def test_convert_response_get_langs(self, bing_engine):
+        response_from_server ={
+            'translation': {
+                'af': {
+                    'name': 'Afrikaans',
+                    'nativeName': 'Afrikaans',
+                    'dir': 'ltr'
+                },
+                'ar': {
+                    'name': 'Arabic',
+                    'nativeName': 'العربية',
+                    'dir': 'rtl'
+                },
+            }
+        }
+        result = bing_engine.convert_response('get_langs', response_from_server)
+        assert result == ['af', 'ar']
+
+    def test_convert_response_get_langs_error(self, bing_engine):
+        response_from_server = {
+            'error': {
+                'code': 400021,
+                'message': 'The API version parameter is not valid.'
+            }
+        }
+        with pytest.raises(EngineGetLangsError):
+            bing_engine.convert_response('get_langs', response_from_server)
+
+    def test_convert_response_translate(self, bing_engine):
+        response_from_server = [
+          {
+            'detectedLanguage': {
+              'language': 'ru',
+              'score': 1.0
+            },
+            'translations': [
+              {
+                'text': 'Test',
+                'to': 'en'
+              }
+            ]
+          }
+        ]
+        result = bing_engine.convert_response('translate', response_from_server)
+        assert result == ['Test']
+
+    def test_convert_response_translate_error(self, bing_engine):
+        response_from_server = {
+            'error': {
+                'code': 400036,
+                'message': 'The To field is required.'
+            }
+        }
+        with pytest.raises(EngineTranslationError):
+            bing_engine.convert_response('translate', response_from_server)
