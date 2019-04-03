@@ -66,13 +66,13 @@ class YandexEngine(BaseEngine):
             return self._convert_translate(response)
 
     def _convert_langs(self, response: t.Dict) -> t.List:
-        if response['code'] in self.error_codes:
+        if 'code' in response and response['code'] in self.error_codes:
             raise EngineGetLangsError('Yandex', response['code'], response['message'])
         result = list(response['langs'].keys())
         return result
 
     def _convert_translate(self, response: t.Dict) -> t.List[str]:
-        if response['code'] in self.error_codes:
+        if 'code' in response and response['code'] in self.error_codes:
             raise EngineTranslationError('Yandex', response['code'], response['message'])
         result = response['text']
         return result
