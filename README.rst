@@ -3,7 +3,7 @@ Translate API Wrapper
 =====================
 
 Library that wraps the most popular translate API's.
-Currently implemented Yandex Translate, Bing and Google is under development
+Currently implemented Yandex Translate, Bing and Google.
 
 Install
 _______
