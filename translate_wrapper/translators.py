@@ -1,5 +1,5 @@
 import typing as t
-
+import funcy
 import asyncio
 
 from .engines.engine import BaseEngine
@@ -26,9 +26,9 @@ class Translator:
         return response
 
     async def translate(self, *text: str, source: t.Optional[str], target: str) -> t.List[str]:
+        for chunk in funcy.chunks(10, *text):
+            print(chunk)
         response = await self._engine.translate(source=source, target=target, text=text)
-        # for chunk in funcy.chunk(*text, chunk_size=10):
-        #     pass
         return response
 
     @classmethod
