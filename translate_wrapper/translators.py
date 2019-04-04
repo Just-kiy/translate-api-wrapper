@@ -21,18 +21,19 @@ class Translator:
 
     def __init__(self, engine: BaseEngine):
         self._engine = engine
-        self.TRANSLATE_TEXT_CHUNK_SIZE = 10
 
     async def get_languages(self, target_language: t.Optional[str]) -> t.List[str]:
         response = await self._engine.get_languages(target_language)
         return response
 
-    async def translate(self, *text: str, source: t.Optional[str], target: str) -> t.List[str]:
-        response = []
-        for chunk in funcy.chunks(self.TRANSLATE_TEXT_CHUNK_SIZE, *text):
-            response_chunk = self._engine.translate(chunk, source=source, target=target)
-            response.append(await response_chunk)
-        return response
+    async def translate(self, *text: str, source: t.Optional[str],
+                        target: str, chunk_size: t.Optional[int] = 10) -> t.List[str]:
+        aws = []
+        for chunk in funcy.chunks(chunk_size, *text):
+            aws.append(self._engine.translate(chunk, source=source, target=target))
+
+        results = await asyncio.gather(*aws)
+        return results
 
     @classmethod
     def get_translator(cls, translator_name: str, api_key: str) -> 'Translator':
