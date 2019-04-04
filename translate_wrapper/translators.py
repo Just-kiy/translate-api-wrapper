@@ -17,25 +17,19 @@ class Translator:
     ['en', 'ru']
     >>> translator.translate(source='en', target='es', text='Hello, word!')
     'Hola palabra'
-
-    >>> translate.translate(source='en', target='es', text='Hello, word!')
-
-
-    >>> translate.translate('hello <div bla=1/> mr black', 'bla')
-    'привет <div bla=1/> мистер блэк'
     """
-    def __init__(self, engine: t.Type['BaseEngine'], config: dict):
-        self._engine = engine(**config)
+    def __init__(self, engine: BaseEngine):
+        self._engine = engine
 
     def get_languages(self, target_language: t.Optional[str]) -> t.List[str]:
         response = self._engine.get_languages(target_language)
-        return asyncio.run(response)
+        return response
 
     def translate(self, *text: str, source: t.Optional[str], target: str) -> t.List[str]:
         response = self._engine.translate(source=source, target=target, text=text)
-        for chunk in funcy.chunk(*text, chunk_size=10):
-            pass
-        return asyncio.run(response)
+        # for chunk in funcy.chunk(*text, chunk_size=10):
+        #     pass
+        return response
 
     @classmethod
     def get_translator(cls, translator_name: str, api_key: str) -> 'Translator':
@@ -43,8 +37,9 @@ class Translator:
         assert translator_name in translate_engines, \
             f"{translator_name} is not registered Translate Engine! Use translate_engines.register first."
 
-        engine = translate_engines[translator_name]
-        return cls(engine=engine, config={'api_key': api_key})
+        engine_class = translate_engines[translator_name]
+        engine = engine_class(api_key)
+        return cls(engine=engine)
 
 
 class _TranslateEngines:
