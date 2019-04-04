@@ -1,0 +1,603 @@
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p/w_r[1]"/><span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p/w_r[2]"/><span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p/w_r[2]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p/w_r[1]"/><span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p/w_r[2]"/><span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p/w_r[2]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p[1]/w_r[1]"/>ECONOMICS <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p[1]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p[1]/w_r[2]"/>● <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p[1]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p[1]/w_r[3]"/>UNITED KINGDOM<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p[1]/w_r[3]"/>
+23 January 2019
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p[1]/w_r[1]"/>ECONOMICS <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p[1]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p[1]/w_r[2]"/>● <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p[1]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p[1]/w_r[3]"/>UNITED KINGDOM<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p[1]/w_r[3]"/>
+23 January 2019
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p/w_r[1]"/><span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p/w_r[2]"/><span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p/w_r[2]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p/w_r[1]"/><span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p/w_r[2]"/><span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p/w_r[2]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p[1]/w_r[1]"/>ECONOMICS <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p[1]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p[1]/w_r[2]"/>● <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p[1]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p[1]/w_r[3]"/>UNITED KINGDOM<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p[1]/w_r[3]"/>
+23 January 2019
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p[1]/w_r[1]"/>ECONOMICS <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p[1]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p[1]/w_r[2]"/>● <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p[1]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p[1]/w_r[3]"/>UNITED KINGDOM<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_hdr/w_p/w_r[2]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p[1]/w_r[3]"/>
+23 January 2019
+23 January 2019
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[1]/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p/w_r[1]"/><span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[1]/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[1]/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p/w_r[2]"/><span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[1]/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_p/w_r[2]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[1]/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p/w_r[1]"/><span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[1]/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[1]/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p/w_r[2]"/><span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[1]/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_p/w_r[2]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[8]/w_r[2]"/>Forecasting Brexit<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[8]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[8]/w_r[4]"/>ECONOMICS<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[8]/w_r[4]"/>
+UNITED KINGDOM
+UNITED KINGDOM
+What we've learnt about the Brexit effect on the UK
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[15]/w_r[3]"/> <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[15]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[15]/w_r[4]"/>Economists' w<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[15]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[15]/w_r[5]"/>arnings about 'no deal' Brexit have led to accusations of another 'Project Fear'…<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[15]/w_r[5]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[17]/w_r[1]"/> <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[17]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[17]/w_r[2]"/>…but Brexit headwinds, partly masked by global tailwinds, have turned out to be large and persistent…<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[17]/w_r[2]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[19]/w_r[1]"/> <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[19]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[19]/w_r[2]"/>…and, particularly as global growth has slowed, disruption from 'no deal' Brexit could cause a UK recession<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[19]/w_r[2]"/>
+Too much pessimism?
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[22]/w_r[1]"/>Warnings about 'no deal' Brexit have been dubbed by some commentators, including<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[22]/w_r[1]"/>
+former Brexit Secretary David Davis, as 'Project Fear 2.0' (BBC, 28 November 2018). 
+The idea is that, just as forecasts for UK growth following June 2016's Brexit vote proved too downbeat, so are predictions of the fallout from 'no deal' Brexit.
+True, economists were too gloomy about the aftermath of the vote in 2016. 
+But the past year or two offers some redemption. 
+While the initial slowdown didn't happen, predictions of sluggish growth from mid-2017 onwards have broadly come true.
+Four surprises since June 2016
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[29]/w_r[1]"/>So what did economists get wrong <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[29]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[29]/w_r[2]"/>– <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[29]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[29]/w_r[3]"/>or not so wrong? 
+We think there have been two big upside surprises to the drivers of growth since 2016:<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[29]/w_r[3]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[30]/w_r[1]"/> <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[30]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[30]/w_r[2]"/>The initial uncertainty-related hit to investment and household spending was surprisingly mild. 
+Most strikingly, the household saving ratio fell sharply. 
+But business spending has remained weak, pointing to a slow-burn uncertainty drag.<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[30]/w_r[2]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[31]/w_r[1]"/> <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[31]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[31]/w_r[2]"/>World <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[31]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[31]/w_r[3]"/>– <span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[31]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[31]/w_r[4]"/>particularly eurozone <span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[31]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[31]/w_r[5]"/>– <span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[31]/w_r[5]"/><span class="xml-tag docx-tag open-tag" data-id="6" data-tag="w_r" data-xpath="/w_document/w_body/w_p[31]/w_r[6]"/>growth has been much stronger than expected.<span class="xml-tag docx-tag close-tag" data-id="6" data-tag="w_r" data-xpath="/w_document/w_body/w_p[31]/w_r[6]"/>
+Without this, UK growth might have been materially weaker.
+There have been two big disappointments though:
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[35]/w_r[1]"/> <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[35]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[35]/w_r[2]"/>Net trade has flat-lined, despite sterling weakness and eurozone strength.<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[35]/w_r[2]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[37]/w_r[1]"/> <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[37]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[37]/w_r[2]"/>The real income squeeze, mainly driven by the post-referendum sterling slump, has been more severe than we feared. 
+Overall, we think the drop in sterling has had a net negative impact on UK growth.<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[37]/w_r[2]"/>
+Lessons for a 'no deal' Brexit
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[40]/w_r[1]"/>We think there has been a tangible drag on the economy from Brexit, before it has even happened. 
+Granted, the <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[40]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[40]/w_r[2]"/>initial <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[40]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[40]/w_r[3]"/>uncertainty effect was modest, and global tailwinds masked some of the fallout. 
+But we think a big headwind has built up over time, via weak investment, the inflation squeeze and disappointing net exports.<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[40]/w_r[3]"/>
+In the event of a 'no deal' Brexit, these headwinds would almost certainly intensify. 
+And of course, unlike in 2016, 'no deal' would involve tangible economic disruption at a time when the world economy is likely to be much less supportive. 
+So unlike in 2016, we think 'no deal' would lead to a UK recession.
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[44]/w_r[1]"/>Chris Hare <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[44]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[44]/w_r[2]"/>Economist <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[44]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[44]/w_r[3]"/>HSBC Bank plc<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[44]/w_r[3]"/>
+<span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[45]/w_hyperlink"/>chris.hare@hsbc.com<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[45]/w_hyperlink"/>
++44 20 7991 2995
+Disclosures &amp; Disclaimer
+This report must be read with the disclosures and the analyst certifications in the Disclosure appendix, and with the Disclaimer, which forms part of it.
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[53]/w_r[2]"/>Issuer of report: <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[53]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[53]/w_r[3]"/>HSBC Bank plc<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[53]/w_r[3]"/>
+View HSBC Global Research at:
+<span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[56]/w_hyperlink"/>https://www.research.hsbc.com<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[56]/w_hyperlink"/>
+'Project Fear 2.0'?
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[69]/w_r[1]"/> <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[69]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[69]/w_r[2]"/>Economists' warnings about 'no deal' Brexit have led to accusations <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[69]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[69]/w_r[3]"/>of another 'Project Fear'…<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[69]/w_r[3]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[71]/w_r[1]"/>  <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[71]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[71]/w_r[2]"/>…but Brexit headwinds, partly masked by global tailwinds, have turned out to be large and persistent…<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[71]/w_r[2]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[73]/w_r[1]"/> <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[73]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[73]/w_r[2]"/>...consistent with our view that 'no deal' could cause a recession via trade disruption, uncertainty and a sterling-driven inflation squeeze<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[73]/w_r[2]"/>
+Fishy forecasts?
+Too pessimistic at first
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[81]/w_r[1]"/>Around the time of the UK's vote to leave the EU in June 2016, almost every UK forecaster predicted an immediate, and sharp, slowdown in UK growth. 
+In July 2016 we <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[81]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[81]/w_r[2]"/>– <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[81]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[81]/w_r[3]"/>and, we suspect, most economists <span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[81]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[81]/w_r[4]"/>– <span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[81]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[81]/w_r[5]"/>made a judgement that the intense political uncertainty triggered by the referendum would lead to a sharp contraction in business investment, alongside a greater degree of caution among households <span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[81]/w_r[5]"/><span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="6" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[81]/w_hyperlink[1]"/>(Unprecedented, uncertain: The post-referendum UK<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="6" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[81]/w_hyperlink[1]"/><span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="7" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[81]/w_hyperlink[2]"/>outlook, <span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="7" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[81]/w_hyperlink[2]"/><span class="xml-tag docx-tag open-tag" data-id="8" data-tag="w_r" data-xpath="/w_document/w_body/w_p[81]/w_r[7]"/>4 July 2016). 
+That in turn would lead the UK to flirt with recession in late-2016.<span class="xml-tag docx-tag close-tag" data-id="8" data-tag="w_r" data-xpath="/w_document/w_body/w_p[81]/w_r[7]"/>
+UK growth didn't slow as economists had expected in late-2016…
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[86]/w_r[2]"/>But this immediate slowdown didn't happen and economists' UK growth forecasts turned out to be much too pessimistic (Chart 1). 
+In January 2017, BoE Chief Economist Andy Haldane likened economists' failure to predict the 2008 financial crisis as a 'Michael Fish moment', leading commentators to wonder whether post-referendum forecasts were similarly 'fishy'<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[86]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[86]/w_hyperlink"/> ('Fishy' forecasts: Assessing economists' post-referendum predictions, <span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[86]/w_hyperlink"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[86]/w_r[3]"/>20 January 2017).<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[86]/w_r[3]"/>
+Forecasters were too bearish about the immediate post-referendum weakness...
+…such that the level of GDP is more than 1ppt higher than many expected
+% Qtr
+1.0
+0.8
+0.6
+0.4
+0.2
+0.0
+UK GDP
+Average error = 0.19ppts
+% Qtr
+1.0
+0.8
+0.6
+0.4
+0.2
+0.0
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[124]/w_r[2]"/>ppts  <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[124]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[124]/w_r[3]"/>Cumulative UK GDP growth forecast errors <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[124]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[124]/w_r[4]"/>2.5<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[124]/w_r[4]"/>
+2.0
+1.5
+1.0
+0.5
+0.0
+ppts 2.5
+2.0
+1.5
+1.0
+0.5
+0.0
+-0.2
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[150]/w_r[3]"/>14<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[150]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[150]/w_r[5]"/>15<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[150]/w_r[5]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[150]/w_r[7]"/>16<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[150]/w_r[7]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[150]/w_r[9]"/>17<span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[150]/w_r[9]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[150]/w_r[11]"/>18<span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[150]/w_r[11]"/>
+-0.2
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[152]/w_r[2]"/>May-16<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[152]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[152]/w_r[4]"/>Nov-16<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[152]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[152]/w_r[5]"/>M<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[152]/w_r[5]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[152]/w_r[6]"/>ay-17<span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[152]/w_r[6]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[152]/w_r[8]"/>Nov-17<span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[152]/w_r[8]"/><span class="xml-tag docx-tag open-tag" data-id="6" data-tag="w_r" data-xpath="/w_document/w_body/w_p[152]/w_r[9]"/>M<span class="xml-tag docx-tag close-tag" data-id="6" data-tag="w_r" data-xpath="/w_document/w_body/w_p[152]/w_r[9]"/><span class="xml-tag docx-tag open-tag" data-id="7" data-tag="w_r" data-xpath="/w_document/w_body/w_p[152]/w_r[10]"/>ay-18<span class="xml-tag docx-tag close-tag" data-id="7" data-tag="w_r" data-xpath="/w_document/w_body/w_p[152]/w_r[10]"/>
+Consensus economics (Sep 2016)
+Consensus Economics (Sep 2016)
+Outturn
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_tbl/w_tr[1]/w_tc[3]/w_p/w_r[3]"/>BoE (Aug 2016)<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_tbl/w_tr[1]/w_tc[3]/w_p/w_r[3]"/>
+Source: ONS, Consensus Economics
+Source: ONS, Consensus Economics, Bank of England, HSBC calculations
+Partial redemption
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[163]/w_r[1]"/>The passage of another couple of years has been a little kinder to these post-referendum predictions. 
+After the surprising strength of the UK economy in late-2016, growth slowed over subsequent quarters, which is particularly notable at a time when world <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[163]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[163]/w_r[2]"/>– <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[163]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[163]/w_r[3]"/>and eurozone <span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[163]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[163]/w_r[4]"/>– <span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[163]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[163]/w_r[5]"/>growth was accelerating sharply (discussed below).<span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[163]/w_r[5]"/>
+…but growth in 2017 and 2018 has been more in line with expectations
+We have seen two upside and two downside surprises to the drivers of growth
+We think these more accurate growth forecasts for 2017 and 2018 partially redeem economists' over-pessimism about late-2016. 
+Chart 2 cumulates errors made by consensus and the Bank of England in their immediate post-referendum forecasts. 
+It suggests that, although the level of UK GDP is still more than 1% higher than expected by consensus in September 2016, the cumulative error is no wider now than it was in early 2017. 
+In other words, some of the post- referendum gloominess among economists, at least for 2017 and 2018, was well-founded.
+Four surprises since June 2016
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[189]/w_r[1]"/>Looking at these forecasts is not just an exercise in reopening old wounds. 
+Instead, we think economists can learn about what they got wrong (or not so wrong) about how the UK economy would perform after the referendum. 
+That in turn can provide lessons for how Brexit <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[189]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[189]/w_r[2]"/>– <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[189]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[189]/w_r[3]"/>including a 'no deal' Brexit <span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[189]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[189]/w_r[4]"/>– <span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[189]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[189]/w_r[5]"/>might affect the economy, if and when it takes place.<span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[189]/w_r[5]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[191]/w_r[1]"/>Relative to our expectations <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[191]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[191]/w_r[2]"/>– <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[191]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[191]/w_r[3]"/>and, we think, most of consensus and the BoE <span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[191]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[191]/w_r[4]"/>– <span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[191]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[191]/w_r[5]"/>we have identified four surprises, two upside and two downside, to the drivers of growth since June 2016.<span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[191]/w_r[5]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[193]/w_r[1]"/>The initial impact of uncertainty on domestic demand was smaller than expected <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[193]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[193]/w_r[2]"/>As we alluded to above, the clearest upside surprise relates to the resilience of growth in late-2016. 
+Much of that reflects the surprising resilience of business investment and, to an extent, household spending, in the face of political uncertainty.<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[193]/w_r[2]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[195]/w_r[1]"/>Indeed, the slump in the PMI survey in July 2016 <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[195]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[195]/w_r[2]"/>– <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[195]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[195]/w_r[3]"/>which had many forecasters worried in the weeks following the referendum <span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[195]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[195]/w_r[4]"/>– <span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[195]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[195]/w_r[5]"/>turned out to be a short-lived knee-jerk reaction (Chart 3). 
+The Bank of England, like us and many other forecasters, expected business investment to slump in 2016 and 2017. 
+This was an important part of the MPC's decision to cut rates and extend its QE programme in August 20<span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[195]/w_r[5]"/><span class="xml-tag docx-tag open-tag" data-childcount="2" data-id="6" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[195]/w_hyperlink"/><span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[195]/w_hyperlink/w_r[1]"/>16 (<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[195]/w_hyperlink/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[195]/w_hyperlink/w_r[2]"/>UK MPC announcement: The BoE's big package,<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[195]/w_hyperlink/w_r[2]"/><span class="xml-tag docx-tag close-tag" data-childcount="2" data-id="6" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[195]/w_hyperlink"/>
+4 August 2016). 
+But the data, as incorporated into the BoE's November 2018 forecast, has held up much better than expected (Chart 4).
+Business sentiment rebounded after July 2016 but has softened again recently
+Investment didn't slump like the BoE feared, but it has been very weak
+Index 75
+70
+65
+60
+55
+50
+45
+UK composite PMI
+Index
+75
+70
+65
+60
+55
+50
+45
+% change since 2015
+8
+6
+4
+2
+0
+-2
+-4
+-6
+BoE forecasts for business investment
+% change since 2015
+8
+6
+4
+2
+0
+-2
+-4
+-6
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[257]/w_r[1]"/>Jan-15    <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[257]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[257]/w_r[2]"/>Oct-15    Jul-16    Apr-17    Jan-18    Oct-18<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[257]/w_r[2]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[258]/w_r[2]"/>Headline<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[258]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[258]/w_r[4]"/>Future Output<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[258]/w_r[4]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[259]/w_r[2]"/>2015<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[259]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[259]/w_r[4]"/>2016<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[259]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[259]/w_r[6]"/>2017<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[259]/w_r[6]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[259]/w_r[8]"/>2018<span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[259]/w_r[8]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[261]/w_r[5]"/>Long run average<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[261]/w_r[5]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[262]/w_r[4]"/>Long run average<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[262]/w_r[4]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[263]/w_r[2]"/>May-16<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[263]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[263]/w_r[4]"/>Aug-16<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[263]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[263]/w_r[6]"/>Nov-18<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[263]/w_r[6]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[265]/w_r[6]"/>Source: IHS Markit<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[265]/w_r[6]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[265]/w_r[8]"/>Source: ONS, Bank of England, HSBC calculations<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[265]/w_r[8]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[273]/w_r[1]"/>What's more, there was no evidence in an uncertainty-related increase in precautionary savings among households. 
+Contrary to many forecasters' expectations, the household saving rate <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[273]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[273]/w_r[2]"/>fell <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[273]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[273]/w_r[3]"/>sharply after the referendum. 
+In Q1 2017, it fell to its lowest level since comparable records began in 1963 (Chart 5). 
+We think this represents an astonishing willingness of UK households to 'smooth through' the hit to their real incomes following the post-referendum slump in sterling <span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[273]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[273]/w_r[4]"/>– <span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[273]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[273]/w_r[5]"/>consumers continued to increase spending, perhaps under an assumption that the inflation squeeze would prove temporary.<span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[273]/w_r[5]"/>
+The drag on investment did come through, but more slowly than anticipated
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[278]/w_r[1]"/>The household saving ratio remains low and we think the effect of Brexit uncertainty on consumption has remained limited. 
+But we do think uncertainty has weighted on business spending, albeit with more of a lag that we previously thought. 
+While investment hasn't slumped, it has been weak, particularly compared to other countries (Chart 6). 
+The 2018 improvement in investment forecast by the BoE in the gloomy days of 2016 did not materialise (Chart 4). 
+And as we move closer to the set Brexit date of 29 March, business sentiment appears to have taken another leg down <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[278]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[278]/w_r[2]"/>– <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[278]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[278]/w_r[3]"/>annual growth has turned negative and the PMIs dropped sharply at the tail end of last year (Chart 3).<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[278]/w_r[3]"/>
+The household saving ratio fell surprisingly sharply after the referendum
+Business investment has been much weaker than in other countries
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[287]/w_r[1]"/>%<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[287]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[287]/w_r[3]"/>UK household saving ratio<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[287]/w_r[3]"/>
+14
+12
+10
+8
+6
+4
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[299]/w_r[2]"/>%% y-o-y<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[299]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[299]/w_r[4]"/>Business investment <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[299]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[299]/w_r[5]"/>14<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[299]/w_r[5]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[299]/w_r[7]"/>15<span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[299]/w_r[7]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[301]/w_r[2]"/>12<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[301]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[301]/w_r[4]"/>10<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[301]/w_r[4]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[303]/w_r[1]"/>10<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[303]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[303]/w_r[3]"/>5<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[303]/w_r[3]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[305]/w_r[1]"/>8<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[305]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[305]/w_r[3]"/>0<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[305]/w_r[3]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[306]/w_r[1]"/>6<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[306]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[306]/w_r[3]"/>-5<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[306]/w_r[3]"/>
+4
+-10
+% y-o-y
+15
+10
+5
+0
+-5
+-10
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[323]/w_r[1]"/>2<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[323]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[323]/w_r[2]"/>2<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[323]/w_r[2]"/>
+2001     2004     2007     2010     2013     2016     2019
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[2]"/>12<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[4]"/>13<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[6]"/>14<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[6]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[8]"/>15<span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[8]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[10]"/>16<span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[10]"/><span class="xml-tag docx-tag open-tag" data-id="6" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[12]"/>17<span class="xml-tag docx-tag close-tag" data-id="6" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[12]"/><span class="xml-tag docx-tag open-tag" data-id="7" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[14]"/>18<span class="xml-tag docx-tag close-tag" data-id="7" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[14]"/><span class="xml-tag docx-tag open-tag" data-id="8" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[16]"/>19<span class="xml-tag docx-tag close-tag" data-id="8" data-tag="w_r" data-xpath="/w_document/w_body/w_p[325]/w_r[16]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[326]/w_r[5]"/>US*<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[326]/w_r[5]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[326]/w_r[7]"/>UK<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[326]/w_r[7]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[326]/w_r[9]"/>France<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[326]/w_r[9]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[326]/w_r[10]"/>G<span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[326]/w_r[10]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[326]/w_r[11]"/>ermany<span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[326]/w_r[11]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[328]/w_r[3]"/>Source: ONS<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[328]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[328]/w_r[5]"/>Source: Refinitiv Datastream, BEA, ONS, Eurostat, HSBC calculations<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[328]/w_r[5]"/>
+*Excluding energy
+Global growth has been stronger than expected
+The second upside surprise on the growth front since mid-2016 has been in the external environment, eurozone growth in particular. 
+Strikingly, the upside surprise to eurozone growth (relative to Consensus Economics forecasts made in September 2016) has been larger than for UK growth (Chart 7 versus Chart 1).
+Stronger eurozone growth might have masked Brexit- related headwinds…
+We think this acceleration in eurozone growth would have provided material support to the UK economy via trade and confidence. 
+In its absence, UK growth might otherwise have been weaker and more in line with economists' forecasts. 
+This would also chime with the notion that Brexit related headwinds did indeed weigh on the UK economy but, at least to some extent, they were masked by global tailwinds.
+Net exports have disappointed
+Given the strengthening in global demand, combined with the post-referendum drop in the pound (now 15% below late-2015 levels, in trade weighted terms), it would have been reasonable to expect a material improvement in net exports.
+…but despite strong eurozone demand, UK net trade has been weak
+In the event, net trade has not made any gains at all. 
+Export growth has been remarkably lacklustre and has not managed to outstrip import growth (Chart 8). 
+One possibility is that given the underlying level of economic uncertainty, business did not invest as much as they normally would to expand capacity to meet export demand, raising prices instead of output. 
+Another is that competitiveness gains were offset by a shift in foreign demand away from the UK, given the prospect of post-Brexit trade barriers.
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[357]/w_r[1]"/>Eurozone growth has been stronger <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[357]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[357]/w_r[2]"/>than expected…<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[357]/w_r[2]"/>
+…but despite that, and the weaker pound, net trade has disappointed
+% Qtr
+1.0
+0.8
+0.6
+0.4
+Eurozone GDP
+Average error = 0.23ppts
+% Qtr
+1.0
+0.8
+0.6
+0.4
+% change
+since Q4 15
+20
+15
+10
+5
+0
+-5
+Trade- weighted sterling
+and UK exports
+% change
+since Q4 15
+-20
+-15
+-10
+-5
+0
+5
+0.2
+0.2
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[406]/w_r[2]"/>Q4<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[406]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[406]/w_r[3]"/>Q2Q4<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[406]/w_r[3]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[407]/w_r[2]"/>15<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[407]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[407]/w_r[4]"/>16<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[407]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[407]/w_r[6]"/>16<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[407]/w_r[6]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[408]/w_r[2]"/>Q2<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[408]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[408]/w_r[3]"/>Q4Q2<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[408]/w_r[3]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[409]/w_r[1]"/>17<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[409]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[409]/w_r[3]"/>17<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[409]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[409]/w_r[5]"/>18<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[409]/w_r[5]"/>
+0.0
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[413]/w_r[1]"/>14<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[413]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[413]/w_r[3]"/>15<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[413]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[413]/w_r[5]"/>16<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[413]/w_r[5]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[413]/w_r[7]"/>17<span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[413]/w_r[7]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[413]/w_r[9]"/>18<span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[413]/w_r[9]"/>
+0.0
+Exports (LHS) Imports (LHS)
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[417]/w_r[4]"/>Consensus Economics (Sep 2016)<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[417]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[417]/w_r[5]"/>O<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[417]/w_r[5]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[417]/w_r[6]"/>utturn<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[417]/w_r[6]"/>
+Sterling, inverted (RHS)
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[420]/w_r[4]"/>Source: Eurostat, Consensus Economics<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[420]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[420]/w_r[6]"/>Source: Refinitiv, ONS, HSBC calculations<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[420]/w_r[6]"/>
+The real income squeeze has been bigger than expected
+While the fall in sterling didn't appear to provide a fillip to net exports, it did put significant upward pressure on import prices. 
+UK inflation rose sharply through 2016 and 2017 (Chart 9).
+Real income growth has been much weaker than expected
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[429]/w_r[1]"/>The big surprise is the extent to which household incomes have failed to keep pace with higher inflation. 
+Real household income growth has flat-lined <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[429]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[429]/w_r[2]"/>– <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[429]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[429]/w_r[3]"/>it has been much weaker even than the BoE's August 2016 forecast (Chart 10). 
+One possibility is that Brexit-related uncertainty has depressed wage demands.<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[429]/w_r[3]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[434]/w_r[1]"/>Inflation has been higher than <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[434]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[434]/w_r[2]"/>expected…<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[434]/w_r[2]"/>
+and real household income much, much weaker than expected
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[437]/w_r[2]"/>% y-o-y<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[437]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[437]/w_r[4]"/>UK CPI inflation <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[437]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[437]/w_r[5]"/>4<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[437]/w_r[5]"/>
+3
+2
+1
+0
+-1
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[448]/w_r[1]"/>2013<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[448]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[448]/w_r[3]"/>2014<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[448]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[448]/w_r[5]"/>2015<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[448]/w_r[5]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[448]/w_r[7]"/>2016<span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[448]/w_r[7]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[448]/w_r[9]"/>2017<span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[448]/w_r[9]"/><span class="xml-tag docx-tag open-tag" data-id="6" data-tag="w_r" data-xpath="/w_document/w_body/w_p[448]/w_r[11]"/>2018<span class="xml-tag docx-tag close-tag" data-id="6" data-tag="w_r" data-xpath="/w_document/w_body/w_p[448]/w_r[11]"/>
+% y-o-y
+4
+3
+2
+1
+0
+-1
+% change
+since 2015
+6
+5
+4
+3
+2
+1
+0
+-1
+BoE forecasts for real household
+income
+% change
+since 2015
+6
+5
+4
+3
+2
+1
+0
+-1
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[488]/w_r[4]"/>BoE (Aug 2016)<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[488]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[488]/w_r[6]"/>Consensus (Sep 2016) Outturn<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[488]/w_r[6]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[489]/w_r[2]"/>2015<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[489]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[489]/w_r[4]"/>2016<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[489]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[489]/w_r[6]"/>2017<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[489]/w_r[6]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[489]/w_r[8]"/>2018<span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[489]/w_r[8]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[490]/w_r[4]"/>May-16<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[490]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[490]/w_r[6]"/>Aug-16<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[490]/w_r[6]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[490]/w_r[8]"/>Nov-18<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[490]/w_r[8]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[492]/w_r[3]"/>Source: ONS, Consensus Economics, Bank of England<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[492]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[492]/w_r[5]"/>Source: Bank of England, HSBC calculations<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[492]/w_r[5]"/>
+The income squeeze outweighed the net trade boost from the weaker pound
+The sterling depreciation was net negative for growth
+Taking (3) and (4) together, it appears that the 2016 sterling depreciation provided hardly any boost to net exports, but acted as a major drag on household incomes. 
+While economists tend to think that exchange rate depreciations act as a form of stimulus, we think this decline in the pound has turned out to be (significantly) net negative.
+Lessons for a 'no deal' Brexit
+What can we learn from how the economy has performed since the referendum, relative to expectations? 
+As a starting point, we think the experience over the past couple of years can tell us something about how the economy would respond to a 'no deal' Brexit.
+Disruption would become real
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[513]/w_r[2]"/>Of course, a 'no deal' Brexit would differ from the post-referendum period. 
+In 2016, nothing about the UK's trading relationship with the EU actually changed. 
+This March it would significantly <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[513]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[513]/w_r[3]"/>– <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[513]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[513]/w_r[4]"/>for one, there would be no 'status quo' transition period. 
+And, while we do think the UK and the EU would be able to cobble together a range of small-scale emergency agreements on aspects of trade, including aviation, food and medicines, we do think there would be a level of disruption that would hit economic output materially <span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[513]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="4" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[513]/w_hyperlink[1]"/>(Brexit Strategies: What<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="4" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[513]/w_hyperlink[1]"/><span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="5" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[513]/w_hyperlink[2]"/>if it's no deal? 
+<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="5" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[513]/w_hyperlink[2]"/><span class="xml-tag docx-tag open-tag" data-id="6" data-tag="w_r" data-xpath="/w_document/w_body/w_p[513]/w_r[6]"/>10 September 2018).<span class="xml-tag docx-tag close-tag" data-id="6" data-tag="w_r" data-xpath="/w_document/w_body/w_p[513]/w_r[6]"/>
+Brexit uncertainty can bite over time
+But alongside this likely disruption, many of the Brexit related headwinds that have weighed on growth since 2016 would probably intensify. 
+We have learnt that economic uncertainty can be a large and persistent constraint on business investment. 
+But, even in the event of 'no deal' the effect might take a few months to show up in the data.
+Like in 2016, another drop in sterling might have a net negative impact
+Exchange rate depreciations can hurt
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[524]/w_r[1]"/>If the post-referendum experience is to be repeated, we think the likely fall in sterling that would could come with 'no deal' Brexit would hinder, rather than help, growth. 
+Our FX strategists reckon that 'no deal' would see GBP-USD fall to 1.10 and EUR-USD rise to around parity <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[524]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[524]/w_hyperlink[1]"/>(Brexit<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[524]/w_hyperlink[1]"/><span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="3" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[524]/w_hyperlink[2]"/>Strategies: What if it's no deal? 
+<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="3" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[524]/w_hyperlink[2]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[524]/w_r[3]"/>10 September 2018). 
+We think that would push CPI inflation back to the 3% mark (Chart 1), renewing the real income squeeze. 
+But, in light of the post- referendum experience, and especially given the likely imposition of significant trade barriers between the UK and the EU, we would be very surprised to see the depreciation providing a material boost to net exports.<span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[524]/w_r[3]"/>
+The world economy won't come to the rescue
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[527]/w_r[1]"/>Finally, unlike in 2016, the global growth environment has become much less supportive. 
+For example, our forecast is for the eurozone to grow by 1.4% in 2019, significantly slower than the 2.5% expansion seen in 2017 (Table 12<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[527]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[527]/w_hyperlink[1]"/>) (European Economics Quarterly Q2 2019: Closed<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[527]/w_hyperlink[1]"/><span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="3" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[527]/w_hyperlink[2]"/>windows, <span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="3" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[527]/w_hyperlink[2]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[527]/w_r[3]"/>14 January 2019). 
+So this time, there will be less strength in the global economy to offset Brexit-related uncertainty and disruption.<span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[527]/w_r[3]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[532]/w_r[1]"/>A 'no deal'-driven sterling slump could <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[532]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[532]/w_r[2]"/>see UK inflation surge again…<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[532]/w_r[2]"/>
+…which is particularly unhelpful while world growth continues to slow
+4.0
+3.5
+3.0
+2.5
+2.0
+1.5
+1.0
+0.5
+0.0
+-0.5
+HSBC
+*
+*
+forecast
+4.0
+3.5
+3.0
+2.5
+2.0
+1.5
+1.0
+0.5
+0.0
+-0.5
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[561]/w_r[4]"/>Year<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[561]/w_r[4]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[561]/w_r[5]"/>W<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[561]/w_r[5]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[561]/w_r[6]"/>orld<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[561]/w_r[6]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[561]/w_r[7]"/>Eu<span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[561]/w_r[7]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[561]/w_r[8]"/>rozone <span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[561]/w_r[8]"/>
+2012
+2.3
+-0.8
+2013
+2.3
+-0.2
+2014
+2.7
+1.4
+2015
+2.8
+2.0
+2016
+2.3
+1.9
+2017
+3.0
+2.5
+2018f
+2.9
+1.9
+2019f
+2.6
+1.4
+2020f
+2.4
+1.3
+2012
+2.3
+-0.8
+2013
+2.3
+-0.2
+2014
+2.7
+1.4
+2015
+2.8
+2.0
+2016
+2.3
+1.9
+2017
+3.0
+2.5
+2018f
+2.9
+1.9
+2019f
+2.6
+1.4
+2020f
+2.4
+1.3
+2015   2016   2017   2018   2019   2020   2021
+Baseline forecast
+GBP-USD falls to 1.10 (EUR-GBP rises to 1.00)
+Source: ONS, HSBC forecasts
+*Illustrative longer-run scenarios beyond our published forecast horizon
+Source: HSBC
+'No deal' Brexit might see a recession as big as in the 1990s
+We think 'no deal' would cause a UK recession
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[585]/w_r[1]"/>Last September, we outlined why we think a 'no deal' Brexit would lead to a UK recession, perhaps around the magnitude of the 1990s downturn, which saw a 2% peak-to-trough fall in G<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[585]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-childcount="2" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[585]/w_hyperlink"/><span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[585]/w_hyperlink/w_r[1]"/>DP (<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[585]/w_hyperlink/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[585]/w_hyperlink/w_r[2]"/>Brexit Strategies: What if it's no deal? 
+<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[585]/w_hyperlink/w_r[2]"/><span class="xml-tag docx-tag close-tag" data-childcount="2" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[585]/w_hyperlink"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[585]/w_r[2]"/>10 September 2018). 
+We think the lessons learnt about Brexit headwinds over the past couple of years lend weight to that view.<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[585]/w_r[2]"/>
+What if the deal passes?
+At the time of writing, the Brexit outcome is as uncertain as ever, with the government having lost a parliamentary vote on its Brexit deal on 15 January <span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[590]/w_hyperlink"/>(UK Brexit deal rejected: A resounding<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[590]/w_hyperlink"/>
+<span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[591]/w_hyperlink"/> n o …  so  n o w  wha t? 
+<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[591]/w_hyperlink"/>15 January 2019). 
+Still, it is our central view that 'no deal' Brexit will be
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[592]/w_r[1]"/>avoided and that the UK will enter a multi-year post-Brexit transition period. 
+In this scenario, we would expect a reduction in Brexit-related uncertainty and a sharp rise in sterling. 
+Our FX strategists' end-year GBP-USD forecast, which weights together different Brexit scenarios, stands at 1.37. 
+They see a 'deal' outcome lifting GBP-USD to <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[592]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-childcount="2" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[592]/w_hyperlink[1]"/><span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[592]/w_hyperlink[1]/w_r[1]"/>1.45 (<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[592]/w_hyperlink[1]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[592]/w_hyperlink[1]/w_r[2]"/>GBP gets our vote: Revising<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[592]/w_hyperlink[1]/w_r[2]"/><span class="xml-tag docx-tag close-tag" data-childcount="2" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[592]/w_hyperlink[1]"/><span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="3" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[592]/w_hyperlink[2]"/>our GBP stronger on shifting Brexit probabilities, <span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="3" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[592]/w_hyperlink[2]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[592]/w_r[3]"/>16 January 2019).<span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[592]/w_r[3]"/>
+Business investment might strengthen, gradually
+If and when the UK enters a transition period, Brexit-related uncertainty would by no means disappear entirely because long term trading arrangements would still need to be thrashed out. 
+But we do think uncertainty would decline, providing at least a modest boost to business investment. 
+It is worth noting, though, that just as the uncertainty hit to investment took a few months to show up after the referendum, the improvement associated with a transition deal might take a few months to come through.
+A sterling appreciation might be net positive for growth
+If the post-referendum sterling depreciation had a negative impact on growth, a post-deal sterling rally might have a positive impact. 
+In particular, households would get a real income fillip via lower import prices. 
+And with 'no deal' off the table, net trade might not take a major hit.
+We think a transition deal would see the MPC raising Bank Rate…
+There's still reason to remain dovish
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[607]/w_r[1]"/>If or when a smooth transition is assured, the Bank of England might be minded to raise rates again. 
+Indeed, in its December MPC meeting minutes, the MPC continued to see gradual rate rises as appropriate in order to 'return inflation sustainably to the 2% targ<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[607]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-childcount="2" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[607]/w_hyperlink[1]"/><span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[607]/w_hyperlink[1]/w_r[1]"/>et' (<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[607]/w_hyperlink[1]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[607]/w_hyperlink[1]/w_r[2]"/>UK MPC<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[607]/w_hyperlink[1]/w_r[2]"/><span class="xml-tag docx-tag close-tag" data-childcount="2" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[607]/w_hyperlink[1]"/><span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="3" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[607]/w_hyperlink[2]"/>announcement (Dec): A softer tone, <span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="3" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[607]/w_hyperlink[2]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[607]/w_r[3]"/>20 December 2018). 
+An important motivation for the MPC, we think, is that wage growth has now climbed above the 3% mark, in the face of still-sluggish productivity. 
+In other words, despite Brexit-related headwinds, labour cost growth has picked up, with possibly some impact from Brexit-related labour supply shortages <span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[607]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="5" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[607]/w_hyperlink[3]"/>(Brexodus: Lower<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="5" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[607]/w_hyperlink[3]"/><span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="6" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[607]/w_hyperlink[4]"/>migration, higher UK inflation? 
+<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="6" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[607]/w_hyperlink[4]"/><span class="xml-tag docx-tag open-tag" data-id="7" data-tag="w_r" data-xpath="/w_document/w_body/w_p[607]/w_r[5]"/>6 December 2018).<span class="xml-tag docx-tag close-tag" data-id="7" data-tag="w_r" data-xpath="/w_document/w_body/w_p[607]/w_r[5]"/>
+The problem is, with just over two months until the UK is set to leave the EU, a transition deal looks far from assured. 
+And the longer the uncertainty goes on, the bigger the likely drag on the economy, via business investment in particular.
+…but only gradually, given soft inflation and world growth
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[615]/w_r[1]"/>But even under a 'transition' scenario, we do not think an aggressive series of UK rate rises would be in prospect. 
+One reason is that, for reasons discussed above, we suspect the improvement in business investment would only be modest and gradual. 
+Moreover, stronger sterling would, all else equal, push down on headline inflation. 
+And Brexit notwithstanding, we think the case for significant policy tightening is limited. 
+Despite recent gains in labour costs, our broader range of domestically generated inflation indicators remains subdued (Chart 13). 
+Meanwhile, our latest forecasts assume only one more rate rise from the Fed and no tightening from the ECB this year (Chart 14) <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[615]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[615]/w_r[2]"/>– <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[615]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[615]/w_r[3]"/>not an environment that's conducive to significant rises in Bank Rate, in our view.<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[615]/w_r[3]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[624]/w_r[1]"/>UK domestically-generated inflation <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[624]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[624]/w_r[2]"/>remains in check…<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[624]/w_r[2]"/>
+and the global policy rate outlook looks very dovish
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[627]/w_r[1]"/>%    UK domestically generated inflation (DGI) measures    %<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[627]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[627]/w_r[3]"/>%<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[627]/w_r[3]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[628]/w_r[2]"/>8<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[628]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[628]/w_r[3]"/>8 <span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[628]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[628]/w_r[4]"/>4<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[628]/w_r[4]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[629]/w_r[1]"/>6<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[629]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[629]/w_r[2]"/>6<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[629]/w_r[2]"/>
+3
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[631]/w_r[1]"/>4<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[631]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[631]/w_r[2]"/>4<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[631]/w_r[2]"/>
+2
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[633]/w_r[1]"/>2<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[633]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[633]/w_r[2]"/>2<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[633]/w_r[2]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[634]/w_r[1]"/>0<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[634]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[634]/w_r[2]"/>0<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[634]/w_r[2]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[634]/w_r[4]"/>1<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[634]/w_r[4]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[636]/w_r[1]"/>-2<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[636]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[636]/w_r[3]"/>-2<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[636]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[636]/w_r[5]"/>0<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[636]/w_r[5]"/>
+Key policy rates
+%
+4
+Forecasts
+3
+2
+1
+0
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[651]/w_r[1]"/>2002<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[651]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[651]/w_r[3]"/>2005<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[651]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[651]/w_r[5]"/>2008<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[651]/w_r[5]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[651]/w_r[7]"/>2011<span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[651]/w_r[7]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[651]/w_r[9]"/>2014<span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[651]/w_r[9]"/><span class="xml-tag docx-tag open-tag" data-id="6" data-tag="w_r" data-xpath="/w_document/w_body/w_p[651]/w_r[11]"/>2017<span class="xml-tag docx-tag close-tag" data-id="6" data-tag="w_r" data-xpath="/w_document/w_body/w_p[651]/w_r[11]"/>
+Swathe of DGI measures
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[653]/w_r[4]"/> CPI<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[653]/w_r[4]"/>
+DGI average
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[655]/w_r[4]"/>02-06 average<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[655]/w_r[4]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[657]/w_r[1]"/>-1<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[657]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[657]/w_r[3]"/>-1<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[657]/w_r[3]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[658]/w_r[1]"/>15<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[658]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[658]/w_r[3]"/>16<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[658]/w_r[3]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[658]/w_r[5]"/>17<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[658]/w_r[5]"/><span class="xml-tag docx-tag open-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[658]/w_r[7]"/>18<span class="xml-tag docx-tag close-tag" data-id="4" data-tag="w_r" data-xpath="/w_document/w_body/w_p[658]/w_r[7]"/><span class="xml-tag docx-tag open-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[658]/w_r[9]"/>19<span class="xml-tag docx-tag close-tag" data-id="5" data-tag="w_r" data-xpath="/w_document/w_body/w_p[658]/w_r[9]"/><span class="xml-tag docx-tag open-tag" data-id="6" data-tag="w_r" data-xpath="/w_document/w_body/w_p[658]/w_r[11]"/>20<span class="xml-tag docx-tag close-tag" data-id="6" data-tag="w_r" data-xpath="/w_document/w_body/w_p[658]/w_r[11]"/>
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[659]/w_r[5]"/>Eurozone<span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[659]/w_r[5]"/><span class="xml-tag docx-tag open-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[659]/w_r[7]"/>US<span class="xml-tag docx-tag close-tag" data-id="2" data-tag="w_r" data-xpath="/w_document/w_body/w_p[659]/w_r[7]"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[659]/w_r[9]"/>UK<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[659]/w_r[9]"/>
+Source: Refinitiv, HSBC forecasts
+Source: ONS, IHS Markit, Refinitiv, HSBC calculations
+Note: The measures include unit labour cost growth, services producer and
+consumer prices and the GDP deflator. 
+For full details see <span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[661]/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_tbl/w_tr[3]/w_tc/w_p/w_hyperlink"/>UK underlying inflation:<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[661]/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_tbl/w_tr[3]/w_tc/w_p/w_hyperlink"/>
+<span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[661]/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_tbl/w_tr[4]/w_tc[1]/w_p/w_hyperlink"/>Close to average, but set to hold steady, <span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[661]/w_r[1]/mc_AlternateContent/mc_Choice/w_drawing/wp_anchor/a_graphic/a_graphicData/wps_wsp/wps_txbx/w_txbxContent/w_tbl/w_tr[4]/w_tc[1]/w_p/w_hyperlink"/>12 January 2018
+Source: ONS, IHS Markit, Refinitiv, HSBC calculations
+Note: The measures include unit labour cost growth, services producer and
+consumer prices and the GDP deflator. 
+For full details see <span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[661]/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_tbl/w_tr[3]/w_tc/w_p/w_hyperlink"/>UK underlying inflation:<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[661]/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_tbl/w_tr[3]/w_tc/w_p/w_hyperlink"/>
+<span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[661]/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_tbl/w_tr[4]/w_tc[1]/w_p/w_hyperlink"/>Close to average, but set to hold steady, <span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[661]/w_r[1]/mc_AlternateContent/mc_Fallback/w_pict/v_shape/v_textbox/w_txbxContent/w_tbl/w_tr[4]/w_tc[1]/w_p/w_hyperlink"/>12 January 2018
+Disclosure appendix
+Analyst Certification
+The following analyst(s), economist(s), or strategist(s) who is(are) primarily responsible for this report, including any analyst(s) whose name(s) appear(s) as author of an individual section or sections of the report and any analyst(s) named as the covering analyst(s) of a subsidiary company in a sum-of-the-parts valuation certifies(y) that the opinion(s) on the subject security(ies) or issuer(s), any views or forecasts expressed in the section(s) of which such individual(s) is(are) named as author(s), and any other views or forecasts expressed herein, including any views expressed on the back page of the research report, accurately reflec t their personal view(s) and that no part of their compensation was, is or will be directly or indirectly related to the specific recommendation(s) or views contained in this research report: Chris Hare
+Important disclosures
+This document has been prepared and is being distributed by the Research Department of HSBC and is intended solely for the clients of HSBC and is not for publication to other persons, whether through the press or by other means.
+This document is for information purposes only and it should not be regarded as an offer to sell or as a solicitation of an offer to buy the securities or other investment products mentioned in it and/or to participate in any trading strategy. 
+Advice in this document is general and should not be construed as personal advice, given it has been prepared without taking account of the objectives, financial situation or needs of any particular investor. 
+Accordingly, investors should, before acting on the advice, consider the appropriateness of the advice, having regard to their objectives, financial situation and needs. 
+If necessary, seek professio nal investment and tax advice.
+Certain investment products mentioned in this document may not be eligible for sale in some states or countries, and they may not be suitable for all types of investors. 
+Investors should consult with their HSBC representative regarding the suitability of the investment products mentioned in this document and take into account their specific investment objectives, financial situation or particular needs before making a commitment to purchase investment products.
+The value of and the income produced by the investment products mentioned in this document may fluctuate, so that an investor may get back less than originally invested. 
+Certain high-volatility investments can be subject to sudden and large falls in value that could equal or exceed the amount invested. 
+Value and income from investment products may be adversely affected by exchange rates, interest rates, or other factors. 
+Past performance of a particular investment product is not indicative of future results.
+HSBC and its affiliates will from time to time sell to and buy from customers the securities/instruments, both equity and debt (including derivatives) of companies covered in HSBC Research on a principal or agency basis or act as a market maker or liquidity provider in the securities/instruments mentioned in this report.
+Analysts, economists, and strategists are paid in part by reference to the profitability of HSBC which includes investment banking, sales &amp; trading, and principal trading revenues.
+Whether, or in what time frame, an update of this analysis will be published is not determined in advance.
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[691]/w_r[1]"/>For disclosures in respect of any company mentioned in this report, please see the most recently published report on that company available at <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[691]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[691]/w_hyperlink"/>www.hsbcnet.com/research. 
+<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[691]/w_hyperlink"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[691]/w_r[2]"/>HSBC Private Banking clients should contact their Relationship Manager for queries regarding other research reports. 
+In order to find out more about the proprietary models used to produce this report, please contact the authoring analyst.<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[691]/w_r[2]"/>
+Additional disclosures
+This report is dated as at 23 January 2019.
+All market data included in this report are dated as at close 22 January 2019, unless a different date and/or a specific time of day is indicated in the report.
+HSBC has procedures in place to identify and manage any potential conflicts of interest that arise in connection with its Research business. 
+HSBC's analysts and its other staff who are involved in the preparation and dissemination of Research operate and have a management reporting line independent of HSBC's Investment Banking business. 
+Information Barrier procedures are in place between the Investment Banking, Principal Trading, and Research businesses to ensure that any confidential and/or price sensitive information is handled in an appropriate manner.
+You are not permitted to use, for reference, any data in this document for the purpose of (i) determining the interest payable, or other sums due, under loan agreements or under other financial contracts or instruments, (ii) determining the price at which a financial instrument may be bought or sold or traded or redeemed, or the value of a financial instrument, and/or (iii) measuring the performance of a financial instrument.
+Disclaimer
+Legal entities as at 30 November 2017
+‘UAE’ HSBC Bank Middle East Limited, Dubai; ‘HK’ The Hongkong and Shanghai Banking Corporation Limited, Hong Kong; ‘TW’ HSBC Securities (Taiwan) Corporation Limited; 'CA' HSBC Securities (Canada) Inc.; HSBC Bank, Paris Branch; HSBC France; ‘DE’ HSBC Trinkaus &amp; Burkhardt AG, Düsseldorf; 000 HSBC Bank (RR), Moscow; ‘IN’ HSBC Securities and Capital Markets (India) Private Limited, Mumbai; ‘JP’ HSBC Securities (Japan) Limited, Tokyo; ‘EG’ HSBC Securities Egypt SAE, Cairo; ‘CN’ HSBC Investment Bank Asia Limited, Beijing Representative Office; The Hongkong and Shanghai Banking Corporation Limited, Singapore Branch; The Hongkong and Shanghai Banking Corporation Limited, Seoul Securities Branch; The Hongkong and Shanghai Banking Corporation Limited, Seoul Branch; HSBC Securities (South Africa) (Pty) Ltd, Johannesburg; HSBC Bank plc, London, Madrid, Milan, Stockholm, Tel Aviv; ‘US’ HSBC Securities (USA) Inc, New York; HSBC Yatirim Menkul Degerler AS, Istanbul; HSBC México, SA, Institución de Banca Múltiple, Grupo Financiero HSBC; HSBC Bank Australia Limited; HSBC Bank Argentina SA; HSBC Saudi Arabia Limited; The Hongkong and Shanghai Banking Corporation Limited, New Zealand Branch incorporated in Hong Kong SAR; The Hongkong and Shanghai Banking Corporation Limited, Bangkok Branch; PT Bank HSBC Indonesia; HSBC Qianhai Securities Limited
+Issuer of report HSBC Bank plc
+8 Canada Square, London E14 5HQ, United Kingdom Telephone: +44 20 7991 8888
+Fax: +44 20 7992 4880
+Website: <span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[721]/w_hyperlink"/>www.research.hsbc.com<span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="1" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[721]/w_hyperlink"/>
+This document is issued and approved in the United Kingdom by HSBC Bank plc for the information of its Clients (as defined in the Rules of FCA) and those of its affiliates only. 
+If this research is received by a customer of an affiliate of HSBC, its provision to the recipient is subject to the terms of business in place between the recipient and such affiliate. 
+In Australia, this publication has been distributed by The Hongkong and Shanghai Banking Corporation Limited (ABN 65 117 925 970, AFSL 301737) for the gener al information of its “wholesale” customers (as defined in the Corporations Act 2001). 
+Where distributed to retail customers, this research is distributed by HSBC Bank Australia Limited (ABN 48 006 434 162, AFSL No. 232595). 
+These respective entities make no representations that the products or services mentioned in this document are available to persons in Australia or are necessarily suitable for any particular person or appropriate in accordance with local law. No consideration has been given to the particular investment objectives, financial situation or particular needs of any recipient.
+The document is distributed in Hong Kong by The Hongkong and Shanghai Banking Corporation Limited and in Japan by HSBC Securi ties (Japan) Limited. 
+Each of the companies listed above (the “Participating Companies”) is a member of the HSBC Group of Companies, any member of which may trade for its own account as Principal, may have underwritten an issue within the last 36 months or, together with its Directors, officers and employees, may have a long or short position in securities or instruments or in any related instrument mentioned in the document. 
+Brokerage or fees may be earned by the Participating Companies or persons associated with them in respect of any business transacted by them in all or any of the securities or instruments referred to in this document. 
+In Korea, this publication is distributed by either The Hongkong and Shanghai Banking Corporation Limited, Seoul Securities Branch ("HBAP SLS") or The Hongkong and Shanghai Banking Corporation Limited, Seoul Branch ("HBAP SEL") for the general information of professional investors specified in Article 9 of the Financial Investment Services and Capital Markets Act (“FSCMA”). 
+This publication is not a prospectus as defined in the FSCMA. 
+It may not be further distributed in whole or in part for any purpose. 
+Both HBAP SLS and HBAP SEL are regulated by the Financial Services Commission and the Financial Supervisory Service of Korea. 
+This publication is distributed in New Zealand by The Hongkong and Shanghai Banking Corporation Limited, New Zealand Branch incorporated in Hong Kong SAR.
+The information in this document is derived from sources the Participating Companies believe to be reliable but which have not been independently verified. 
+The Participating Companies make no guarantee of its accuracy and completeness and are not responsible for errors of transmission of factual or analytical data, nor shall the Participating Companies be liable for damages arising out of any person’s reliance upon this information. 
+All charts and graphs are from publicly available sources or proprietary data. 
+The opinions in this document constitute the present judgement of the Participating Companies, which is subject to change without notice. 
+From time to time research analysts conduct site visits of covered issuers. 
+HSBC policies prohibit research analysts from accepting payment or reimbursement for travel expenses from the issuer for such visits.
+This document is neither an offer to sell, purchase or subscribe for any investment nor a solicitation of such an offer. 
+HSBC Securities (USA) Inc. accepts responsibility for the content of this research report prepared by its non-US foreign affiliate. 
+All US persons receiving and/or accessing this report and intending to effect transactions in any security discussed herein should do so with HSBC Securities (USA) Inc. in the United States and not with its non-US foreign affiliate, the issuer of this report. 
+In Singapore, this publication is distributed by The Hongkong and Shanghai Banking Corporation Limited, Singapore Branch for the general information of institutional investors or other persons specified in Sections 274 and 304 of the Securities and Futures Act (Chapter
+<span class="xml-tag docx-tag open-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[727]/w_r[1]"/>289) (“SFA”) and accredited investors and other persons in accordance with the conditions specified in Sections 275 and 305 of the SFA. 
+Only Economics or Currencies reports are intended for distribution to a person who is not an Accredited Investor, Expert Investor or Institutional Investor as defi ned in SFA. 
+The Hongkong and Shanghai Banking Corporation Limited, Singapore Branch accepts legal responsibility for the contents of reports pursuant to Regulation 32C(1)(d) of the Financial Advisers Regulations. 
+This publication is not a prospectus as defined in the SFA. 
+This publication is not a prospectus as defined in the SFA. 
+It may not be further distributed in whole or in part for any pur pose. 
+The Hongkong and Shanghai Banking Corporation Limited Singapore Branch is regulated by the Monetary Authority of Singapore. 
+Recipients in Singapore should contact a "Hongkong and Shanghai Banking Corporation Limited, Singapore Branch" representative in respect of any matters arising from, or in connection with this report. 
+Please refer to The Hongkong and Shanghai Banking Corporation Limited Singapore Branch’s website at <span class="xml-tag docx-tag close-tag" data-id="1" data-tag="w_r" data-xpath="/w_document/w_body/w_p[727]/w_r[1]"/><span class="xml-tag docx-tag open-tag" data-childcount="0" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[727]/w_hyperlink"/>www.business.hsbc.com.sg <span class="xml-tag docx-tag close-tag" data-childcount="0" data-id="2" data-nested="1" data-tag="w_hyperlink" data-xpath="/w_document/w_body/w_p[727]/w_hyperlink"/><span class="xml-tag docx-tag open-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[727]/w_r[2]"/>for contact details. 
+HSBC México, S.A., Institución de Banca Múltiple, Grupo Financiero HSBC is authorized and regulated by Secretaría de Hacienda y Crédito Público and Comisión Nacional Bancaria y de Valores (CNBV).<span class="xml-tag docx-tag close-tag" data-id="3" data-tag="w_r" data-xpath="/w_document/w_body/w_p[727]/w_r[2]"/>
+The document is intended to be distributed in its entirety. 
+Unless governing law permits otherwise, you must contact a HSBC Group member in your home jurisdiction if you wish to use HSBC Group services in effecting a transaction in any investment mentioned in this document. 
+HSBC Bank plc is registered in England No 14259, is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority and is a member of the London Stock Exchange. 
+(070905)
+In Canada, this document has been distributed by HSBC Securities (Canada) Inc. (member IIROC), and/or its affiliates. 
+The in formation contained herein is under no circumstances to be construed as investment advice in any province or territory of Canada and is not tailored to the needs of the recipient. 
+No securities commission or similar regulatory authority in Canada has reviewed or in any way passed judgment upon these materials, the information contained herein or the merits of the securities described herein, and any representation to the contrary is an offense.
+If you are an HSBC Private Banking (“PB”) customer with approval for receipt of relevant research publications by an applicable HSBC legal entity, you are eligible to receive this publication. 
+To be eligible to receive such publications, you must have agreed to the applicable HSBC entity’s terms and conditions (“KRC Terms”) for access to the KRC, and the terms and conditions of any other internet banking service offered by that HSBC entity through which you will access research publications using the KRC. 
+Distribution of this publication is the sole responsibility of the HSBC entity with whom you have agreed the KRC Terms.
+If you do not meet the aforementioned eligibility requirements please disregard this publication and, if you are a customer of PB, please notify your Relationship Manager. 
+Receipt of research publications is strictly subject to the KRC Terms, which can be found at https://research.privatebank.hsbc.com/ – we draw your attention also to the provisions contained in the Important Notes section therein.
+© Copyright 2019, HSBC Bank plc, ALL RIGHTS RESERVED. 
+No part of this publication may be reproduced, stored in a retrieval system, or transmitted, on any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior written permission of HSBC Bank plc. 
+MCI (P) 065/01/2019, MCI (P) 016/02/2018
+[1112150]
+2
+2
+3
+3
+8
+8
+7
+7

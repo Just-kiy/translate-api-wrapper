@@ -6,6 +6,8 @@ from environs import Env
 from translate_wrapper.engines.yandex import YandexEngine
 from translate_wrapper.translators import Translator, translate_engines
 
+from .utils import read_from_file
+
 TEST_TEXT = [
     'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
     'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty',
@@ -14,14 +16,17 @@ TEST_TEXT = [
 
 
 async def main():
+    text = read_from_file('resource.txt')
     translate_engines.register(translator_name='Yandex', engine=YandexEngine)
     yandex_translator = Translator.get_translator('Yandex', env.str('YANDEX_API_KEY'))
     langs = await yandex_translator.get_languages('ru')
     translate_one_string = await yandex_translator.translate('one', source='en', target='ru')
-    translate_list = await yandex_translator.translate(TEST_TEXT, source='en', target='ru')
+    translate_list_one = await yandex_translator.translate(TEST_TEXT, source='en', target='ru')
+    translate_list_two = await yandex_translator.translate(text, source='en', target='ru')
     pprint(langs)
     pprint(translate_one_string)
-    pprint(translate_list)
+    pprint(translate_list_one)
+    pprint(translate_list_two)
 
 
 if __name__ == '__main__':
