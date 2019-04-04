@@ -21,12 +21,12 @@ class Translator:
     def __init__(self, engine: BaseEngine):
         self._engine = engine
 
-    def get_languages(self, target_language: t.Optional[str]) -> t.List[str]:
-        response = self._engine.get_languages(target_language)
+    async def get_languages(self, target_language: t.Optional[str]) -> t.List[str]:
+        response = await self._engine.get_languages(target_language)
         return response
 
-    def translate(self, *text: str, source: t.Optional[str], target: str) -> t.List[str]:
-        response = self._engine.translate(source=source, target=target, text=text)
+    async def translate(self, *text: str, source: t.Optional[str], target: str) -> t.List[str]:
+        response = await self._engine.translate(source=source, target=target, text=text)
         # for chunk in funcy.chunk(*text, chunk_size=10):
         #     pass
         return response
