@@ -87,6 +87,7 @@ class GoogleEngineTest:
             'params': {
                 'q': text,
                 'target': target,
+                'format': 'html',
             }
         }
         if source:

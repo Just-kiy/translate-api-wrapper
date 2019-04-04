@@ -76,6 +76,7 @@ class YandexEngineTest:
             'url': ENDPOINT + '/translate',
             'params': {
                 'lang': f'{source}-{target}',
+                'format': 'html',
             },
             'body': {
                 'text': text

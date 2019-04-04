@@ -92,6 +92,7 @@ class BingEngineTest:
             'url': ENDPOINT + '/translate',
             'params': {
                 'to': target,
+                'textType': 'html',
             },
             'body': [
                 {
