@@ -6,7 +6,7 @@ from environs import Env
 from translate_wrapper.engines.bing import BingEngine
 from translate_wrapper.translators import Translator, translate_engines
 
-from .utils import read_from_file
+from translate_wrapper.research.utils import read_from_file
 
 TEST_TEXT = [
     'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
