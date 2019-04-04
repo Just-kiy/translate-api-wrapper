@@ -28,9 +28,10 @@ class Translator:
         return response
 
     async def translate(self, *text: str, source: t.Optional[str], target: str) -> t.List[str]:
+        response = []
         for chunk in funcy.chunks(self.TRANSLATE_TEXT_CHUNK_SIZE, *text):
-            print(chunk)
-        response = await self._engine.translate(source=source, target=target, text=text)
+            response_chunk = self._engine.translate(chunk, source=source, target=target)
+            response.append(await response_chunk)
         return response
 
     @classmethod
