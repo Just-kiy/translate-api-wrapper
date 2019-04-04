@@ -43,6 +43,7 @@ class YandexEngine(BaseEngine):
             lang = f'{source}-{target}'
         params = {
             'lang': lang,
+            'format': 'html',
         }
         body = {'text': text}
         response = await self._send_request(url, params, body)

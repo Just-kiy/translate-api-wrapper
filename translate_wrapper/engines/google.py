@@ -38,6 +38,7 @@ class GoogleEngine(BaseEngine):
         params = {
             'q': text,
             'target': target,
+            'format': 'html',
             }
         if source:
             params['source'] = source

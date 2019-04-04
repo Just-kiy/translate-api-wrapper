@@ -58,6 +58,7 @@ class BingEngine(BaseEngine):
         url = f'{self.endpoint}/translate'
         params = {
             'to': target,
+            'textType': 'html',
         }
         if source:
             params['from'] = source
