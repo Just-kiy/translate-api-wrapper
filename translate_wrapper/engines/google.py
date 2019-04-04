@@ -20,28 +20,29 @@ class GoogleEngine(BaseEngine):
 
     async def _send_request(self,
                             url: str,
-                            params: t.Dict[str, str]) -> t.Dict:
+                            params: t.List[t.Tuple[str, str]]) -> t.Dict:
         async with aiohttp.ClientSession(loop=self.event_loop) as session:
-            params['key'] = self.api_key
+            params.append(('key', self.api_key))
             response = await session.post(url, params=params)
             body = await response.json()
             return body
 
     async def translate(self,
-                        text: str,
+                        *text: str,
                         target: str,
                         source: str = None) -> t.List[str]:
         """
         reference: https://cloud.google.com/translate/docs/reference/translate
         """
         url = f'{self.endpoint}'
-        params = {
-            'q': text,
-            'target': target,
-            'format': 'html',
-            }
+        params = [
+            ('target', target),
+            ('format', 'html'),
+            ]
+        for line in text:
+            params.append(('q', ' '.join(line)))
         if source:
-            params['source'] = source
+            params.append(('source', source))
         response = await self._send_request(url, params)
         return self.convert_response('translate', response)
 
@@ -52,10 +53,10 @@ class GoogleEngine(BaseEngine):
         reference: https://cloud.google.com/translate/docs/reference/languages
         """
         url = f'{self.endpoint}/languages'
-        params = {
-            'target': language,
-            'model': model,
-            }
+        params = [
+            ('target', language),
+            ('model', model),
+            ]
         response = await self._send_request(url, params)
         return self.convert_response('get_langs', response)
 
