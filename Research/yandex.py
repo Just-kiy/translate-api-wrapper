@@ -3,7 +3,7 @@ from pprint import pprint
 
 from environs import Env
 
-from translate_wrapper.engines.google import GoogleEngine
+from translate_wrapper.engines.yandex import YandexEngine
 from translate_wrapper.translators import Translator, translate_engines
 
 TEST_TEXT = [
@@ -14,11 +14,11 @@ TEST_TEXT = [
 
 
 async def main():
-    translate_engines.register(translator_name='Google', engine=GoogleEngine)
-    google_translator = Translator.get_translator('Google', env.str('GOOGLE_API_KEY'))
-    langs = await google_translator.get_languages('ru')
-    translate_one_string = await google_translator.translate('one', source='en', target='ru')
-    translate_list = await google_translator.translate(TEST_TEXT, source='en', target='ru')
+    translate_engines.register(translator_name='Yandex', engine=YandexEngine)
+    yandex_translator = Translator.get_translator('Yandex', env.str('YANDEX_API_KEY'))
+    langs = await yandex_translator.get_languages('ru')
+    translate_one_string = await yandex_translator.translate('one', source='en', target='ru')
+    translate_list = await yandex_translator.translate(TEST_TEXT, source='en', target='ru')
     pprint(langs)
     pprint(translate_one_string)
     pprint(translate_list)
