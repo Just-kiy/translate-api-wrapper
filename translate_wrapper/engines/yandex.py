@@ -31,7 +31,7 @@ class YandexEngine(BaseEngine):
             return body
 
     async def translate(self,
-                        text: str,
+                        *text: t.List[str],
                         target: str,
                         source: t.Optional[str]) -> t.List:
         """
@@ -45,7 +45,9 @@ class YandexEngine(BaseEngine):
             'lang': lang,
             'format': 'html',
         }
-        body = {'text': text}
+        body = []
+        for line in text:
+            body.append(('text', line))
         response = await self._send_request(url, params, body)
         return self.convert_response('translate', response)
 

@@ -24,11 +24,11 @@ class GoogleEngine(BaseEngine):
         async with aiohttp.ClientSession(loop=self.event_loop) as session:
             params.append(('key', self.api_key))
             response = await session.post(url, params=params)
-            body = await response.json()
+            body = await response.json(content_type=None)
             return body
 
     async def translate(self,
-                        *text: str,
+                        *text: t.List[str],
                         target: str,
                         source: str = None) -> t.List[str]:
         """
@@ -40,7 +40,7 @@ class GoogleEngine(BaseEngine):
             ('format', 'html'),
             ]
         for line in text:
-            params.append(('q', ' '.join(line)))
+            params.append(('q', line))
         if source:
             params.append(('source', source))
         response = await self._send_request(url, params)

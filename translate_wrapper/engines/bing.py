@@ -17,7 +17,7 @@ class BingEngine(BaseEngine):
                  event_loop=None):
         self.api_key = api_key
         self.endpoint = api_endpoint or os.getenv('BING_API_ENDPOINT')
-        self.api_v = api_v or os.getenv('BING_API_V_ENDPOINT')
+        self.api_v = api_v or os.getenv('BING_API_V')
 
         self.event_loop = event_loop
 
@@ -25,7 +25,7 @@ class BingEngine(BaseEngine):
                             method: str,
                             url: str,
                             params: t.Optional[t.Dict[str, str]] = None,
-                            body: t.Optional[t.List[t.Dict[str, str]]] = None) -> t.Dict:
+                            body: t.Optional[t.List[t.Dict[str, str]]] = {}) -> t.Dict:
         async with aiohttp.ClientSession(loop=self.event_loop) as session:
             headers = {
                 'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ class BingEngine(BaseEngine):
             return body
 
     async def translate(self,
-                        text: str,
+                        *text: str,
                         target: str,
                         source: t.Optional[str] = None) -> t.List[str]:
         """
@@ -62,7 +62,9 @@ class BingEngine(BaseEngine):
         }
         if source:
             params['from'] = source
-        body = [{'Text': text}]
+        body = []
+        for line in text:
+            body.append({'Text': line})
         response = await self._send_request('post', url, params, body)
         return self.convert_response('translate', response)
 

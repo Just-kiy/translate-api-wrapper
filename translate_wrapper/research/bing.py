@@ -1,5 +1,4 @@
 import asyncio
-from pprint import pprint
 
 from environs import Env
 
@@ -23,10 +22,10 @@ async def main():
     translate_one_string = await bing_translator.translate('one', source='en', target='ru')
     translate_list_one = await bing_translator.translate(TEST_TEXT, source='en', target='ru')
     translate_list_two = await bing_translator.translate(text, source='en', target='ru')
-    pprint(langs)
-    pprint(translate_one_string)
-    pprint(translate_list_one)
-    pprint(translate_list_two)
+    print(langs)
+    print(translate_one_string)
+    print(translate_list_one)
+    print(translate_list_two)
 
 
 if __name__ == '__main__':
