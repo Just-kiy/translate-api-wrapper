@@ -1,6 +1,6 @@
 def read_from_file(filename: str):
-    result = ''
+    result = []
     with open(filename) as f:
         for line in f:
-            result += line
+            result.append(line)
     return result
