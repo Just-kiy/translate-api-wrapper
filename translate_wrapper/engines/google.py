@@ -10,7 +10,7 @@ from translate_wrapper.exceptions import TranslationServiceError
 from .engine import BaseEngine
 
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('GoogleEngine')
 
 
 class GoogleEngine(BaseEngine):

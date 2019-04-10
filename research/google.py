@@ -19,30 +19,34 @@ TEST_TEXT = [
 
 async def main(env):
     logging.config.fileConfig('/home/user/projects/translate-api-wrapper/logging.conf')
-    logger = logging.getLogger('researchApp')
+    logger = logging.getLogger('GoogleTest')
 
-    logging.info('Going to read text from file')
+    logger.info('Going to read text from file')
     text = read_from_file('resource.txt')
-    logging.info('Creating translator')
+    logger.info('Creating translator')
     translate_engines.register(translator_name='Google', engine=GoogleEngine)
     google_translator = Translator.get_translator('Google', env.str('GOOGLE_API_KEY'))
 
-    logging.info('Pulling languages from Service')
+    logger.info('Pulling languages from Service')
     langs = await google_translator.get_languages('ru')
+    logger.info('Pulling languages from Service - DONE')
 
-    logging.info('Translating one string')
+    logger.info('Translating one string')
     translate_one_string = await google_translator.translate('one', source='en', target='ru')
+    logger.info('Translating one string - DONE')
 
-    logging.info('Translating test list')
+    logger.info('Translating test list')
     translate_list_one = await google_translator.translate(*TEST_TEXT, source='en', target='ru')
+    logger.info('Translating test list - DONE')
 
-    logging.info('Translating real file example')
+    logger.info('Translating real file example')
     translate_list_two = await google_translator.translate(*text, source='en', target='ru', chunk_size=8)
+    logger.info('Translating real file example - DONE')
 
     print(langs)
     print(translate_one_string)
     print(translate_list_one)
-    print(translate_list_two)
+    # print(translate_list_two)
 
 
 if __name__ == '__main__':
