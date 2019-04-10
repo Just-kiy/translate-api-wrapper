@@ -1,9 +1,11 @@
 from setuptools import setup, find_packages
 from translate_wrapper import __version__
 
+
 def readme():
     with open('README.rst') as f:
         return f.read()
+
 
 setup(
     name="translate-api-wrapper",

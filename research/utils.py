@@ -1,3 +1,5 @@
+
+
 def read_from_file(filename: str):
     result = []
     with open(filename) as f:

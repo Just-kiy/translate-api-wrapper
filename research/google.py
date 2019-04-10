@@ -4,6 +4,7 @@ from environs import Env
 
 import logging
 import logging.config
+import pathlib  # TODO: use it
 
 from translate_wrapper.engines.google import GoogleEngine
 from translate_wrapper.translators import Translator, translate_engines
@@ -18,7 +19,8 @@ TEST_TEXT = [
 
 
 async def main(env):
-    logging.config.fileConfig('/home/user/projects/translate-api-wrapper/logging.conf')
+    # TODO: fix hardcoded path
+    logging.config.fileConfig('/home/kornov/PycharmProjects/translate-api-wrapper/logging.conf')
     logger = logging.getLogger('GoogleTest')
 
     logger.info('Going to read text from file')
@@ -39,13 +41,14 @@ async def main(env):
     translate_list_one = await google_translator.translate(*TEST_TEXT, source='en', target='ru')
     logger.info('Translating test list - DONE')
 
-    logger.info('Translating real file example from resourse.txt')
-    translate_list_two = await google_translator.translate(*text, source='en', target='ru', chunk_size=8)
+    text *= 10
+    logger.info(f'Translating real file example from resourse.txt (x10 == {len(text)})')
+    translate_list_two = await google_translator.translate(*text, source='en', target='ru', chunk_size=20)
     logger.info('Translating real file example - DONE')
 
-    print(langs)
-    print(translate_one_string)
-    print(translate_list_one)
+    # print(langs)
+    # print(translate_one_string)
+    # print(translate_list_one)
     # print(translate_list_two)
 
 

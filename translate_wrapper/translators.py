@@ -1,9 +1,11 @@
-from .engines.engine import BaseEngine
 import typing as t
 import funcy
 import asyncio
 
 import logging
+
+if t.TYPE_CHECKING:
+    from .engines.engine import BaseEngine
 
 logger = logging.getLogger('Translator')
 
@@ -22,7 +24,7 @@ class Translator:
     'Hola palabra'
     """
 
-    def __init__(self, engine: BaseEngine):
+    def __init__(self, engine: 'BaseEngine'):
         self._engine = engine
 
     async def get_languages(self, target_language: t.Optional[str]) -> t.List[str]:

@@ -87,6 +87,7 @@ class BingEngine(BaseEngine):
         elif method == 'translate':
             return self._convert_translate(response)
 
+    # TODO: staticmethod
     def _convert_langs(self, response: t.Dict) -> t.List:
         result = list(response['translation'].keys())
         return result
