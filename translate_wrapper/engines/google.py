@@ -21,7 +21,7 @@ class GoogleEngine(BaseEngine):
                  api_endpoint: t.Optional[str] = None,
                  *,
                  event_loop=None):
-        logger.debug(f'Creating Google Engine with api key {api_key}')
+        logger.debug(f'Creating {self.name} Engine with api key {api_key}')
         self.api_key = api_key
         self.endpoint = api_endpoint or os.getenv('GOOGLE_API_ENDPOINT')
         self.event_loop = event_loop
@@ -32,7 +32,7 @@ class GoogleEngine(BaseEngine):
         logger.debug('In _send_request')
         async with aiohttp.ClientSession(loop=self.event_loop) as session:
             params.append(('key', self.api_key))
-            logger.debug('Sending request to Google')
+            logger.debug(f'Sending request to {self.name}')
             response = await session.post(url, params=params)
             logger.debug('Retrieving json body from response')
             body = await response.json(content_type=None)

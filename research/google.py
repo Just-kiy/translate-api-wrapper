@@ -24,7 +24,7 @@ async def main(env):
     logger.info('Going to read text from file')
     text = read_from_file('resource.txt')
     logger.info('Creating translator')
-    translate_engines.register(translator_name='Google', engine=GoogleEngine)
+    translate_engines.register(engine=GoogleEngine)
     google_translator = Translator.get_translator('Google', env.str('GOOGLE_API_KEY'))
 
     logger.info('Pulling languages from Service')
@@ -39,7 +39,7 @@ async def main(env):
     translate_list_one = await google_translator.translate(*TEST_TEXT, source='en', target='ru')
     logger.info('Translating test list - DONE')
 
-    logger.info('Translating real file example')
+    logger.info('Translating real file example from resourse.txt')
     translate_list_two = await google_translator.translate(*text, source='en', target='ru', chunk_size=8)
     logger.info('Translating real file example - DONE')
 

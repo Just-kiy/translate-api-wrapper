@@ -26,16 +26,25 @@ class Translator:
         self._engine = engine
 
     async def get_languages(self, target_language: t.Optional[str]) -> t.List[str]:
+        logger.info(f'{self._engine.name}: Pulling languages for {target_language}')
         response = await self._engine.get_languages(target_language)
         return response
 
     async def translate(self, one_line_text: str, *multiline_text: str, source: t.Optional[str],
                         target: str, chunk_size: t.Optional[int] = 10) -> t.List[str]:
+
         text = [one_line_text, *multiline_text]
-        aws = []
-        for chunk in funcy.chunks(chunk_size, chunk_size, text):
-            aws.append(self._engine.translate(*chunk, source=source, target=target))
-        results = await asyncio.gather(*aws)
+        logger.info(f'{self._engine.name}: Translating from {source} to {target}, total strings - {len(text)}')
+        tasks = []
+
+        logger.info(f'{self._engine.name}: Creating translations tasks, chunk size: {chunk_size}')
+        for chunk in funcy.chunks(chunk_size, text):
+            tasks.append(self._engine.translate(*chunk, source=source, target=target))
+
+        logger.info(f'{self._engine.name}: running all tasks, tasks count = {len(tasks)}')
+        results = await asyncio.gather(*tasks)
+
+        logger.info(f'{self._engine.name}: merging translations results')
         funcy.merge(*results)
         return results
 
