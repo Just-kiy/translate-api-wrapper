@@ -2,6 +2,7 @@ import typing as t
 
 
 class BaseEngine:
+
     """
     Base class for all translate machines.
 
@@ -11,6 +12,8 @@ class BaseEngine:
 
     Subclasses must implement convert response strategy and method to send request to proper Translation Service
     """
+    name = 'BaseEngine'
+
     def translate(self, text: t.Union[str, t.List[str]], target: str, source: t.Optional[str]) -> t.List[str]:
         """
         Translate given text (single string or list of strings) from source (optional) language to target one.

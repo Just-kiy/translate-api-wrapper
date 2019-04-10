@@ -9,6 +9,8 @@ from .engine import BaseEngine
 
 
 class YandexEngine(BaseEngine):
+    name = 'Yandex'
+
     def __init__(self,
                  api_key: str,
                  api_endpoint: t.Optional[str] = None,
