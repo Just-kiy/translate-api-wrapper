@@ -26,12 +26,14 @@ class Translator:
         response = await self._engine.get_languages(target_language)
         return response
 
-    async def translate(self, *text: str, source: t.Optional[str],
+    async def translate(self, one_line_text: str, *multiline_text: str, source: t.Optional[str],
                         target: str, chunk_size: t.Optional[int] = 10) -> t.List[str]:
+        text = [one_line_text, *multiline_text]
         aws = []
-        for chunk in funcy.chunks(chunk_size, chunk_size, *text):
-            aws.append(self._engine.translate(chunk, source=source, target=target))
+        for chunk in funcy.chunks(chunk_size, chunk_size, text):
+            aws.append(self._engine.translate(*chunk, source=source, target=target))
         results = await asyncio.gather(*aws)
+        funcy.merge(*results)
         return results
 
     @classmethod
