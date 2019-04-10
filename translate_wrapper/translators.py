@@ -1,8 +1,11 @@
+from .engines.engine import BaseEngine
 import typing as t
 import funcy
 import asyncio
 
-from .engines.engine import BaseEngine
+import logging
+
+logger = logging.getLogger('Translator')
 
 
 class Translator:
@@ -12,7 +15,7 @@ class Translator:
     It has knowledge of engines, their types, their responses and response handlers.
     It delegates responsibility to communicate with real outer translation services to engines.
 
-    >>> translator = Translator.get_translator('yandex', api_key='some_key')
+    >>> translator = Translator.get_translator('Yandex', api_key='some_key')
     >>> translator.get_languages('es')  # NOTE: (Only BCP-47 codes!)
     ['en', 'ru']
     >>> translator.translate(source='en', target='es', text='Hello, word!')
@@ -67,8 +70,8 @@ class _TranslateEngines:
     def __getitem__(self, key):
         return self._translator_machines[key]
 
-    def register(self, *, translator_name: str, engine: t.Type['BaseEngine']):
-        self._translator_machines[translator_name] = engine
+    def register(self, *, engine: t.Type['BaseEngine']):
+        self._translator_machines[engine.name] = engine
 
 
 translate_engines = _TranslateEngines()
