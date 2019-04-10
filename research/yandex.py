@@ -21,8 +21,8 @@ async def main(env):
 
     langs = await yandex_translator.get_languages('ru')
     translate_one_string = await yandex_translator.translate('one', source='en', target='ru')
-    translate_list_one = await yandex_translator.translate(TEST_TEXT, source='en', target='ru')
-    translate_list_two = await yandex_translator.translate(text, source='en', target='ru')
+    translate_list_one = await yandex_translator.translate(*TEST_TEXT, source='en', target='ru')
+    translate_list_two = await yandex_translator.translate(*text, source='en', target='ru')
 
     print(langs)
     print(translate_one_string)

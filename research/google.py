@@ -21,8 +21,8 @@ async def main(env):
 
     langs = await google_translator.get_languages('ru')
     translate_one_string = await google_translator.translate('one', source='en', target='ru')
-    translate_list_one = await google_translator.translate(TEST_TEXT, source='en', target='ru')
-    translate_list_two = await google_translator.translate(text, source='en', target='ru')
+    translate_list_one = await google_translator.translate(*TEST_TEXT, source='en', target='ru')
+    translate_list_two = await google_translator.translate(*text, source='en', target='ru')
 
     print(langs)
     print(translate_one_string)
