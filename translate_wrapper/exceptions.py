@@ -6,7 +6,7 @@ class TranslateWrapperBaseError(Exception):
 
 
 class BaseEngineError(TranslateWrapperBaseError):
-    detail: str = 'Ahtung'
+    detail: str = 'Error!'
 
     def get_template(self):
         raise NotImplementedError
@@ -15,26 +15,10 @@ class BaseEngineError(TranslateWrapperBaseError):
         return self.detail
 
 
-class EngineGetLangsError(BaseEngineError):
-    tmp = ''
-    
-    def __init__(self, service_name: str = '',
-                 code: str = None,
-                 msg: t.Dict = None):
-        self.original_response = msg
-        self.detail = self.get_template().format(service_name=service_name, code=code, msg=str(msg))
+class TranslationServiceError(BaseEngineError):
+    def __init__(self, service_name: str = '', code: str = None, msg: t.Dict = None):
+            self.original_response = msg
+            self.detail = self.get_template().format(service_name=service_name, code=code, msg=str(msg))
 
     def get_template(self):
-        return '{service_name}-{code}: ' \
-               'failed to get available languages. Original message: {msg}.'
-
-
-class EngineTranslationError(BaseEngineError):
-    def __init__(self, service_name: str = '', code: str = None,
-                 msg: t.Dict = None):
-        self.original_response = msg
-        self.detail = self.get_template().format(service_name=service_name, code=code, msg=str(msg))
-
-    def get_template(self):
-        return '{service_name}-{code}: ' \
-               'Translation error. Original message: {msg}.'
+        return '{service_name}-{code}. Message from server: {msg}'
