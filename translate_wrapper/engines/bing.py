@@ -3,7 +3,7 @@ import typing as t
 
 import aiohttp
 
-from translate_wrapper.exceptions import EngineGetLangsError, EngineTranslationError
+from translate_wrapper.exceptions import TranslationServiceError
 
 from .engine import BaseEngine
 
@@ -44,7 +44,7 @@ class BingEngine(BaseEngine):
                 headers=headers
             )
 
-            body = await response.json()
+            body = await response.json(content_type=None)
             return body
 
     async def translate(self,
@@ -66,6 +66,7 @@ class BingEngine(BaseEngine):
         for line in text:
             body.append({'Text': line})
         response = await self._send_request('post', url, params, body)
+        self._check_response_on_errors(response)
         return self.convert_response('translate', response)
 
     async def get_languages(self, *ignore) -> t.List[str]:
@@ -75,6 +76,7 @@ class BingEngine(BaseEngine):
         """
         url = f'{self.endpoint}/languages'
         response = await self._send_request('get', url)
+        self._check_response_on_errors(response)
         return self.convert_response('get_langs', response)
 
     def convert_response(self, method: str, response: t.Dict) -> t.List:
@@ -84,13 +86,13 @@ class BingEngine(BaseEngine):
             return self._convert_translate(response)
 
     def _convert_langs(self, response: t.Dict) -> t.List:
-        if 'error' in response:
-            raise EngineGetLangsError('Bing', response['error']['code'], response['error']['message'])
         result = list(response['translation'].keys())
         return result
 
     def _convert_translate(self, response: t.Dict) -> t.List[str]:
-        if 'error' in response:
-            raise EngineTranslationError('Bing', response['error']['code'], response['error']['message'])
         result = [item['translations'][0]['text'] for item in response]
         return result
+
+    def _check_response_on_errors(self, response: t.Dict):
+        if 'error' in response:
+            raise TranslationServiceError('Bing', response['error']['code'], response['error']['message'])

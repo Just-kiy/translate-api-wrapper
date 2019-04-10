@@ -3,7 +3,7 @@ import typing as t
 
 import aiohttp
 
-from translate_wrapper.exceptions import EngineGetLangsError, EngineTranslationError
+from translate_wrapper.exceptions import TranslationServiceError
 
 from .engine import BaseEngine
 
@@ -44,6 +44,7 @@ class GoogleEngine(BaseEngine):
         if source:
             params.append(('source', source))
         response = await self._send_request(url, params)
+        self._check_response_on_errors(response)
         return self.convert_response('translate', response)
 
     async def get_languages(self,
@@ -58,6 +59,7 @@ class GoogleEngine(BaseEngine):
             ('model', model),
             ]
         response = await self._send_request(url, params)
+        self._check_response_on_errors(response)
         return self.convert_response('get_langs', response)
 
     def convert_response(self, method: str, response: t.Dict) -> t.List:
@@ -67,13 +69,13 @@ class GoogleEngine(BaseEngine):
             return self._convert_translate(response)
 
     def _convert_langs(self, response: t.Dict) -> t.List:
-        if 'error' in response:
-            raise EngineGetLangsError('Google', response['error']['code'], response['error']['errors'][0])
         result = [language['language'] for language in response['data']['languages']]
         return result
 
     def _convert_translate(self, response: t.Dict) -> t.List[str]:
-        if 'error' in response:
-            raise EngineTranslationError('Google', response['error']['code'], response['error']['errors'][0])
         result = [translation['translatedText'] for translation in response['data']['translations']]
         return result
+
+    def _check_response_on_errors(self, response: t.Dict):
+        if 'error' in response:
+            raise TranslationServiceError('Google', response['error']['code'], response['error']['errors'][0])

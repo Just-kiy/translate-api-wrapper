@@ -3,7 +3,7 @@ import typing as t
 
 import aiohttp
 
-from translate_wrapper.exceptions import EngineGetLangsError, EngineTranslationError
+from translate_wrapper.exceptions import TranslationServiceError
 
 from .engine import BaseEngine
 
@@ -69,13 +69,13 @@ class YandexEngine(BaseEngine):
             return self._convert_translate(response)
 
     def _convert_langs(self, response: t.Dict) -> t.List:
-        if 'code' in response and response['code'] in self.error_codes:
-            raise EngineGetLangsError('Yandex', response['code'], response['message'])
         result = list(response['langs'].keys())
         return result
 
     def _convert_translate(self, response: t.Dict) -> t.List[str]:
-        if 'code' in response and response['code'] in self.error_codes:
-            raise EngineTranslationError('Yandex', response['code'], response['message'])
         result = response['text']
         return result
+
+    def _check_response_on_errors(self, response: t.Dict):
+        if 'code' in response and response['code'] in self.error_codes:
+            raise TranslationServiceError('Yandex', response['code'], response['message'])
