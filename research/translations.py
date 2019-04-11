@@ -32,8 +32,6 @@ BASE_PATH = Path('.').absolute()
 
 
 async def make_research(env: t.Dict, chunk_size: int, *engines: 'BaseEngine'):
-    print(BASE_PATH)
-    print(os.path.join(BASE_PATH, '../logging.conf'))
     logging.config.fileConfig(os.path.join(BASE_PATH, 'logging.conf'))
     logger = logging.getLogger('Research')
 
@@ -49,7 +47,7 @@ async def make_research(env: t.Dict, chunk_size: int, *engines: 'BaseEngine'):
         logger.info('Translating one string - DONE')
 
         logger.info(f'{engine_name}: Translating test list')
-        await translator.translate(*TEST_TEXT, source='en', target='ru')
+        await translator.translate(*TEST_TEXT, source='en', target='ru', chunk_size=chunk_size)
         logger.info('Translating test list - DONE')
 
         logger.info(f'{engine_name}: Translating real file example from resourse.txt')
