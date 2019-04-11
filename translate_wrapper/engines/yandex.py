@@ -51,6 +51,7 @@ class YandexEngine(BaseEngine):
         for line in text:
             body.append(('text', line))
         response = await self._send_request(url, params, body)
+        self._check_response_on_errors(response)
         return self.convert_response('translate', response)
 
     async def get_languages(self, lang: str) -> t.List:
@@ -62,6 +63,7 @@ class YandexEngine(BaseEngine):
             'ui': lang
         }
         response = await self._send_request(url, params)
+        self._check_response_on_errors(response)
         return self.convert_response('get_langs', response)
 
     def convert_response(self, method: str, response: t.Dict) -> t.List:
@@ -70,11 +72,13 @@ class YandexEngine(BaseEngine):
         elif method == 'translate':
             return self._convert_translate(response)
 
-    def _convert_langs(self, response: t.Dict) -> t.List:
+    @staticmethod
+    def _convert_langs(response: t.Dict) -> t.List:
         result = list(response['langs'].keys())
         return result
 
-    def _convert_translate(self, response: t.Dict) -> t.List[str]:
+    @staticmethod
+    def _convert_translate(response: t.Dict) -> t.List[str]:
         result = response['text']
         return result
 
