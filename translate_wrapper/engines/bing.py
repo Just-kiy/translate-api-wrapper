@@ -62,11 +62,14 @@ class BingEngine(BaseEngine):
             'to': target,
             'textType': 'html',
         }
+
         if source:
             params['from'] = source
+
         body = []
         for line in text:
             body.append({'Text': line})
+
         response = await self._send_request('post', url, params, body)
         self._check_response_on_errors(response)
         return self.convert_response('translate', response)
@@ -77,6 +80,7 @@ class BingEngine(BaseEngine):
         https://docs.microsoft.com/ru-ru/azure/cognitive-services/translator/reference/v3-0-languages?tabs=curl
         """
         url = f'{self.endpoint}/languages'
+
         response = await self._send_request('get', url)
         self._check_response_on_errors(response)
         return self.convert_response('get_langs', response)
@@ -87,15 +91,17 @@ class BingEngine(BaseEngine):
         elif method == 'translate':
             return self._convert_translate(response)
 
-    # TODO: staticmethod
-    def _convert_langs(self, response: t.Dict) -> t.List:
+    @staticmethod
+    def _convert_langs(response: t.Dict) -> t.List:
         result = list(response['translation'].keys())
         return result
 
-    def _convert_translate(self, response: t.Dict) -> t.List[str]:
+    @staticmethod
+    def _convert_translate(response: t.Dict) -> t.List[str]:
         result = [item['translations'][0]['text'] for item in response]
         return result
 
-    def _check_response_on_errors(self, response: t.Dict):
+    @staticmethod
+    def _check_response_on_errors(response: t.Dict):
         if 'error' in response:
             raise TranslationServiceError('Bing', response['error']['code'], response['error']['message'])

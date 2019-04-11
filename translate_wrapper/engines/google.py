@@ -6,8 +6,6 @@ import aiohttp
 
 from translate_wrapper.exceptions import TranslationServiceError
 
-from sys import getsizeof
-
 from .engine import BaseEngine
 
 logger = logging.getLogger('GoogleEngine')
@@ -43,13 +41,12 @@ class GoogleEngine(BaseEngine):
             response = await session.post(url, params=params, headers=header)
 
             logger.debug('Retrieving json body from response')
-            try:
-                body = await response.json(content_type=None)
-                return body
-            except Exception as exc:
-                print(await response.text())
-                from pprint import pprint
-                pprint(params)
+            body = await response.json(content_type=None)
+            return body
+            # except Exception as exc:
+            #     print(await response.text())
+            #     from pprint import pprint
+            #     pprint(params)
 
             # TODO: Error 411 (Length Required)!!
 

@@ -28,12 +28,14 @@ class YandexEngine(BaseEngine):
                             body: t.Optional[t.Dict[str, str]] = None) -> t.Dict:
         async with aiohttp.ClientSession(loop=self.event_loop) as session:
             params['key'] = self.api_key
+
             response = await session.post(url, params=params, data=body)
+
             body = await response.json()
             return body
 
     async def translate(self,
-                        *text: t.List[str],
+                        *text: str,
                         target: str,
                         source: t.Optional[str]) -> t.List:
         """
@@ -41,15 +43,19 @@ class YandexEngine(BaseEngine):
         """
         url = f'{self.endpoint}/translate'
         lang = target
+
         if source:
             lang = f'{source}-{target}'
+
         params = {
             'lang': lang,
             'format': 'html',
         }
+
         body = []
         for line in text:
             body.append(('text', line))
+
         response = await self._send_request(url, params, body)
         self._check_response_on_errors(response)
         return self.convert_response('translate', response)
@@ -62,6 +68,7 @@ class YandexEngine(BaseEngine):
         params = {
             'ui': lang
         }
+
         response = await self._send_request(url, params)
         self._check_response_on_errors(response)
         return self.convert_response('get_langs', response)
