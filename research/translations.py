@@ -4,7 +4,7 @@ import os
 import typing as t
 from pathlib import Path
 from sys import argv
-
+import datetime
 import asyncio
 
 from environs import Env
@@ -31,6 +31,20 @@ TEST_TEXT = [
 BASE_PATH = Path('.').absolute()
 
 
+def timeit(method):
+    def timed(*args, **kw):
+        ts = time.time()
+        result = method(*args, **kw)
+        te = time.time()
+        if 'log_time' in kw:
+            name = kw.get('log_name', method.__name__.upper())
+            kw['log_time'][name] = int((te - ts) * 1000)
+        else:
+            print ('%r  %2.2f ms' % (method.__name__, (te - ts) * 1000))
+        return result
+    return timed
+
+
 async def make_research(env: t.Dict, chunk_size: int, *engines: 'BaseEngine'):
     logging.config.fileConfig(os.path.join(BASE_PATH, 'logging.conf'))
     logger = logging.getLogger('Research')
@@ -43,15 +57,35 @@ async def make_research(env: t.Dict, chunk_size: int, *engines: 'BaseEngine'):
         translator = Translator.get_translator(engine_name, env.str(f'{engine_name.upper()}_API_KEY'))
 
         logger.info(f'{engine_name}: Translating one string')
+        start = datetime.datetime.now()
         translate_one_string = await translator.translate('one', source='en', target='ru')
+        print(f'Took {datetime.datetime.now()-start} time')
         logger.info('Translating one string - DONE')
 
         logger.info(f'{engine_name}: Translating test list')
+        start = datetime.datetime.now()
         await translator.translate(*TEST_TEXT, source='en', target='ru', chunk_size=chunk_size)
+        print(f'Took {datetime.datetime.now() - start} time')
         logger.info('Translating test list - DONE')
 
         logger.info(f'{engine_name}: Translating real file example from resourse.txt')
+        start = datetime.datetime.now()
         await translator.translate(*text, source='en', target='ru', chunk_size=chunk_size)
+        print(f'Took {datetime.datetime.now() - start} time')
+        logger.info('Translating real file example - DONE')
+
+        logger.info(f'{engine_name}: x10 resourse.txt')
+        text *= 10
+        start = datetime.datetime.now()
+        await translator.translate(*text, source='en', target='ru', chunk_size=chunk_size)
+        print(f'Took {datetime.datetime.now() - start} time')
+        logger.info('Translating real file example - DONE')
+
+        logger.info(f'{engine_name}: x100 resourse.txt')
+        text *= 10
+        start = datetime.datetime.now()
+        await translator.translate(*text, source='en', target='ru', chunk_size=chunk_size)
+        print(f'Took {datetime.datetime.now() - start} time')
         logger.info('Translating real file example - DONE')
 
         logger.info(f'{engine_name}: Made full research')
