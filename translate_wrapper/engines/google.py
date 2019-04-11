@@ -6,6 +6,8 @@ import aiohttp
 
 from translate_wrapper.exceptions import TranslationServiceError
 
+from sys import getsizeof
+
 from .engine import BaseEngine
 
 logger = logging.getLogger('GoogleEngine')
@@ -33,15 +35,24 @@ class GoogleEngine(BaseEngine):
         logger.debug('In _send_request')
         async with aiohttp.ClientSession(loop=self.event_loop) as session:
             params.append(('key', self.api_key))
+            header = {
+                'Content-Length': '0'
+            }
 
             logger.debug(f'Sending request to {self.name}')
-            response = await session.post(url, params=params)
+            response = await session.post(url, params=params, headers=header)
 
             logger.debug('Retrieving json body from response')
-            body = await response.json(content_type=None)
+            try:
+                body = await response.json(content_type=None)
+                return body
+            except Exception as exc:
+                print(await response.text())
+                from pprint import pprint
+                pprint(params)
 
             # TODO: Error 411 (Length Required)!!
-            return body
+
 
     async def translate(self,
                         *text: str,
@@ -67,13 +78,13 @@ class GoogleEngine(BaseEngine):
             logger.debug('Appending source language')
             params.append(('source', source))
 
-        logger.info(f'{self.name}: Sending response')
+        logger.debug(f'{self.name}: Sending response')
         response = await self._send_request(url, params)
 
-        logger.info(f'{self.name}: checking response')
+        logger.debug(f'{self.name}: checking response')
         self._check_response_on_errors(response)
 
-        logger.info(f'{self.name}: Converting response')
+        logger.debug(f'{self.name}: Converting response')
         return self.convert_response('translate', response)
 
     async def get_languages(self,
@@ -91,13 +102,13 @@ class GoogleEngine(BaseEngine):
             ('model', model),
             ]
 
-        logger.info(f'{self.name}: Sending response')
+        logger.debug(f'{self.name}: Sending response')
         response = await self._send_request(url, params)
 
-        logger.info(f'{self.name}: checking response')
+        logger.debug(f'{self.name}: checking response')
         self._check_response_on_errors(response)
 
-        logger.info(f'{self.name}: Converting response')
+        logger.debug(f'{self.name}: Converting response')
         return self.convert_response('translate', response)
 
     def convert_response(self, method: str, response: t.Dict) -> t.List:
