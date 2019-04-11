@@ -58,7 +58,7 @@ if __name__ == '__main__':
     engines = ['Google', 'Yandex', 'Bing']
     chunk_size = 5
     if len(argv) > 1:
-        engines = [argv[1]]
+        engines = [argv[1].capitalize()]
     if len(argv) > 2:
         chunk_size = argv[2]
     loop = asyncio.get_event_loop()
