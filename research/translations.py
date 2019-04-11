@@ -11,11 +11,16 @@ from sys import argv
 import os
 from pathlib import Path
 
-from research.utils import read_from_file
-
 if t.TYPE_CHECKING:
     from translate_wrapper.engines import BaseEngine
 
+
+def read_from_file(filename: str):
+    result = []
+    with open(filename) as f:
+        for line in f:
+            result.append(line)
+    return result
 
 TEST_TEXT = [
     'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
@@ -27,11 +32,13 @@ BASE_PATH = Path('.').absolute()
 
 
 async def make_research(env: t.Dict, chunk_size: int, *engines: 'BaseEngine'):
-    logging.config.fileConfig(os.path.join(BASE_PATH, '../logging.conf'))
+    print(BASE_PATH)
+    print(os.path.join(BASE_PATH, '../logging.conf'))
+    logging.config.fileConfig(os.path.join(BASE_PATH, 'logging.conf'))
     logger = logging.getLogger('Research')
 
     logger.debug('Going to read text from file')
-    text = read_from_file('resource.txt')
+    text = read_from_file(os.path.join(BASE_PATH, 'research/resource.txt'))
 
     for engine_name in engines:
         logger.info(f'Creating {engine_name} translator')
@@ -60,6 +67,6 @@ if __name__ == '__main__':
     if len(argv) > 1:
         engines = [argv[1].capitalize()]
     if len(argv) > 2:
-        chunk_size = argv[2]
+        chunk_size = int(argv[2])
     loop = asyncio.get_event_loop()
     loop.run_until_complete(make_research(env, chunk_size, *engines))
