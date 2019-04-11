@@ -5,7 +5,6 @@ from environs import Env
 import logging
 import logging.config
 
-from translate_wrapper.engines.google import GoogleEngine
 from translate_wrapper.translators import Translator, translate_engines
 
 from research.utils import read_from_file
@@ -24,7 +23,6 @@ async def main(env):
     logger.info('Going to read text from file')
     text = read_from_file('resource.txt')
     logger.info('Creating translator')
-    translate_engines.register(engine=GoogleEngine)
     google_translator = Translator.get_translator('Google', env.str('GOOGLE_API_KEY'))
 
     logger.info('Pulling languages from Service')
