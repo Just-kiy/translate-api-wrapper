@@ -5,9 +5,15 @@ from environs import Env
 import logging
 import logging.config
 
-from translate_wrapper.translators import Translator, translate_engines
+from translate_wrapper.translators import Translator
+import typing as t
+from sys import argv
 
 from research.utils import read_from_file
+
+
+if t.TYPE_CHECKING:
+    from translate_wrapper.engines import BaseEngine
 
 TEST_TEXT = [
     'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
@@ -16,40 +22,40 @@ TEST_TEXT = [
 ]
 
 
-async def main(env):
+async def make_research(env: t.Dict, chunk_size: int, *engines: 'BaseEngine'):
     logging.config.fileConfig('/home/user/projects/translate-api-wrapper/logging.conf')
-    logger = logging.getLogger('GoogleTest')
+    logger = logging.getLogger('Research')
 
-    logger.info('Going to read text from file')
+    logger.debug('Going to read text from file')
     text = read_from_file('resource.txt')
-    logger.info('Creating translator')
-    google_translator = Translator.get_translator('Google', env.str('GOOGLE_API_KEY'))
 
-    logger.info('Pulling languages from Service')
-    langs = await google_translator.get_languages('ru')
-    logger.info('Pulling languages from Service - DONE')
+    for engine_name in engines:
+        logger.info(f'Creating {engine_name} translator')
+        translator = Translator.get_translator(engine_name, env.str(f'{engine_name.upper()}_API_KEY'))
 
-    logger.info('Translating one string')
-    translate_one_string = await google_translator.translate('one', source='en', target='ru')
-    logger.info('Translating one string - DONE')
+        logger.info(f'{engine_name}: Translating one string')
+        translate_one_string = await translator.translate('one', source='en', target='ru')
+        logger.info('Translating one string - DONE')
 
-    logger.info('Translating test list')
-    translate_list_one = await google_translator.translate(*TEST_TEXT, source='en', target='ru')
-    logger.info('Translating test list - DONE')
+        logger.info(f'{engine_name}: Translating test list')
+        await translator.translate(*TEST_TEXT, source='en', target='ru')
+        logger.info('Translating test list - DONE')
 
-    logger.info('Translating real file example from resourse.txt')
-    translate_list_two = await google_translator.translate(*text, source='en', target='ru', chunk_size=8)
-    logger.info('Translating real file example - DONE')
+        logger.info(f'{engine_name}: Translating real file example from resourse.txt')
+        await translator.translate(*text, source='en', target='ru', chunk_size=8)
+        logger.info('Translating real file example - DONE')
 
-    print(langs)
-    print(translate_one_string)
-    print(translate_list_one)
-    # print(translate_list_two)
+        logger.info(f'{engine_name}: Made full research')
 
 
 if __name__ == '__main__':
     env = Env()
     env.read_env()
-
+    engines = ['Google', 'Yandex', 'Bing']
+    chunk_size = 5
+    if len(argv) > 1:
+        engines = [argv[1]]
+    if len(argv) > 2:
+        chunk_size = argv[2]
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(main(env))
+    loop.run_until_complete(make_research(env, chunk_size, *engines))
