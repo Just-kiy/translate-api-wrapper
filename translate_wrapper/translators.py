@@ -1,8 +1,9 @@
+import logging
 import typing as t
-import funcy
+
 import asyncio
 
-import logging
+import funcy
 
 if t.TYPE_CHECKING:
     from .engines.engine import BaseEngine

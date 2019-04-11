@@ -1,15 +1,15 @@
+import logging
+import logging.config
+import os
+import typing as t
+from pathlib import Path
+from sys import argv
+
 import asyncio
 
 from environs import Env
 
-import logging
-import logging.config
-
 from translate_wrapper.translators import Translator
-import typing as t
-from sys import argv
-import os
-from pathlib import Path
 
 if t.TYPE_CHECKING:
     from translate_wrapper.engines import BaseEngine
