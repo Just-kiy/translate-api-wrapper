@@ -1,6 +1,5 @@
 import os
 import typing as t
-
 import aiohttp
 
 import logging
@@ -14,6 +13,9 @@ logger = logging.getLogger('GoogleEngine')
 
 
 class GoogleEngine(BaseEngine):
+    """
+    TODO:
+    """
     name = 'Google'
 
     def __init__(self,
@@ -33,24 +35,29 @@ class GoogleEngine(BaseEngine):
         async with aiohttp.ClientSession(loop=self.event_loop) as session:
             params.append(('key', self.api_key))
             logger.debug(f'Sending request to {self.name}')
-            response = await session.post(url, params=params)
+
             logger.debug('Retrieving json body from response')
+            response = await session.post(url, params=params)
             body = await response.json(content_type=None)
+
+            # TODO: Error 411 (Length Required)!!
             return body
 
     async def translate(self,
-                        *text: t.List[str],
+                        *text: str,
                         target: str,
                         source: str = None) -> t.List[str]:
         """
         reference: https://cloud.google.com/translate/docs/reference/translate
         """
+        # TODO: adjust your code, mate, there's no \n
+
         logger.debug('In translate')
         url = f'{self.endpoint}'
         params = [
             ('target', target),
             ('format', 'html'),
-            ]
+        ]
         for line in text:
             params.append(('q', line))
         if source:
@@ -82,17 +89,20 @@ class GoogleEngine(BaseEngine):
         elif method == 'translate':
             return self._convert_translate(response)
 
-    def _convert_langs(self, response: t.Dict) -> t.List:
+    @staticmethod
+    def _convert_langs(response: t.Dict) -> t.List:
         logger.debug('In _convert_langs')
         result = [language['language'] for language in response['data']['languages']]
         return result
 
-    def _convert_translate(self, response: t.Dict) -> t.List[str]:
+    @staticmethod
+    def _convert_translate(response: t.Dict) -> t.List[str]:
         logger.debug('In _convert_translate')
         result = [translation['translatedText'] for translation in response['data']['translations']]
         return result
 
-    def _check_response_on_errors(self, response: t.Dict):
+    @staticmethod
+    def _check_response_on_errors(response: t.Dict):
         logger.debug('In _check_response_on_error')
         if 'error' in response:
             raise TranslationServiceError('Google', response['error']['code'], response['error']['errors'][0])
