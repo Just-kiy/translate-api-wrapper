@@ -1,13 +1,12 @@
+import logging
 import os
 import typing as t
-import aiohttp
 
-import logging
+import aiohttp
 
 from translate_wrapper.exceptions import TranslationServiceError
 
 from .engine import BaseEngine
-
 
 logger = logging.getLogger('GoogleEngine')
 
@@ -34,10 +33,11 @@ class GoogleEngine(BaseEngine):
         logger.debug('In _send_request')
         async with aiohttp.ClientSession(loop=self.event_loop) as session:
             params.append(('key', self.api_key))
+
             logger.debug(f'Sending request to {self.name}')
+            response = await session.post(url, params=params)
 
             logger.debug('Retrieving json body from response')
-            response = await session.post(url, params=params)
             body = await response.json(content_type=None)
 
             # TODO: Error 411 (Length Required)!!
@@ -50,20 +50,30 @@ class GoogleEngine(BaseEngine):
         """
         reference: https://cloud.google.com/translate/docs/reference/translate
         """
-        # TODO: adjust your code, mate, there's no \n
-
         logger.debug('In translate')
+
+        logger.debug('Making url and params')
         url = f'{self.endpoint}'
         params = [
             ('target', target),
             ('format', 'html'),
         ]
+
+        logger.debug('Appending each given line of the text to a query')
         for line in text:
             params.append(('q', line))
+
         if source:
+            logger.debug('Appending source language')
             params.append(('source', source))
+
+        logger.info(f'{self.name}: Sending response')
         response = await self._send_request(url, params)
+
+        logger.info(f'{self.name}: checking response')
         self._check_response_on_errors(response)
+
+        logger.info(f'{self.name}: Converting response')
         return self.convert_response('translate', response)
 
     async def get_languages(self,
@@ -73,14 +83,22 @@ class GoogleEngine(BaseEngine):
         reference: https://cloud.google.com/translate/docs/reference/languages
         """
         logger.debug('In get_languages')
+
+        logger.debug('Making url and params')
         url = f'{self.endpoint}/languages'
         params = [
             ('target', language),
             ('model', model),
             ]
+
+        logger.info(f'{self.name}: Sending response')
         response = await self._send_request(url, params)
+
+        logger.info(f'{self.name}: checking response')
         self._check_response_on_errors(response)
-        return self.convert_response('get_langs', response)
+
+        logger.info(f'{self.name}: Converting response')
+        return self.convert_response('translate', response)
 
     def convert_response(self, method: str, response: t.Dict) -> t.List:
         logger.debug('In convert_response')
