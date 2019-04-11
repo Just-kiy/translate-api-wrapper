@@ -8,12 +8,14 @@ import logging.config
 from translate_wrapper.translators import Translator
 import typing as t
 from sys import argv
+import os
+from pathlib import Path
 
 from research.utils import read_from_file
 
-
 if t.TYPE_CHECKING:
     from translate_wrapper.engines import BaseEngine
+
 
 TEST_TEXT = [
     'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
@@ -21,9 +23,11 @@ TEST_TEXT = [
     'twenty one', 'twenty two'
 ]
 
+BASE_PATH = Path('.').absolute()
+
 
 async def make_research(env: t.Dict, chunk_size: int, *engines: 'BaseEngine'):
-    logging.config.fileConfig('/home/user/projects/translate-api-wrapper/logging.conf')
+    logging.config.fileConfig(os.path.join(BASE_PATH, '../logging.conf'))
     logger = logging.getLogger('Research')
 
     logger.debug('Going to read text from file')
@@ -42,7 +46,7 @@ async def make_research(env: t.Dict, chunk_size: int, *engines: 'BaseEngine'):
         logger.info('Translating test list - DONE')
 
         logger.info(f'{engine_name}: Translating real file example from resourse.txt')
-        await translator.translate(*text, source='en', target='ru', chunk_size=8)
+        await translator.translate(*text, source='en', target='ru', chunk_size=chunk_size)
         logger.info('Translating real file example - DONE')
 
         logger.info(f'{engine_name}: Made full research')
