@@ -5,7 +5,7 @@ import os
 import typing as t
 from pathlib import Path
 from sys import argv
-
+from statistics import mean, median
 import asyncio
 
 from environs import Env
@@ -59,10 +59,15 @@ async def make_research(env: 'Env', chunk_size: int, *engines: 'BaseEngine'):
         logger.info(f'DONE - Took {datetime.datetime.now()-start} time')
 
         logger.info(f'{engine_name}: x10 resourse.txt')
-        text *= 10
-        start = datetime.datetime.now()
-        await translator.translate(*text, source='en', target='ru', chunk_size=chunk_size)
-        logger.info(f'DONE - Took {datetime.datetime.now()-start} time')
+        timespans = []
+        for i in range(10):
+            logger.info(f'Attempt {i} of 10:')
+            start = datetime.datetime.now()
+            await translator.translate(*text, source='en', target='ru', chunk_size=chunk_size)
+            stop = datetime.datetime.now()
+            timespans.append(stop-start)
+            logger.info(f'DONE - Took {stop-start} time')
+        logger.info(f'DONE - x10, average: {mean(timespans)}, median: {median(timespans)}')
 
         logger.info(f'{engine_name}: x100 resourse.txt')
         text *= 10
