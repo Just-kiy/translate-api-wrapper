@@ -30,9 +30,11 @@ class GoogleEngine(BaseEngine):
     async def _send_request(self,
                             url: str,
                             params: t.List[t.Tuple[str, str]]) -> t.Dict:
+
         logger.debug('In _send_request')
         async with aiohttp.ClientSession(loop=self.event_loop) as session:
             params.append(('key', self.api_key))
+
             header = {
                 'Content-Length': '0'
             }
@@ -45,11 +47,7 @@ class GoogleEngine(BaseEngine):
             return body
             # except Exception as exc:
             #     print(await response.text())
-            #     from pprint import pprint
-            #     pprint(params)
-
             # TODO: Error 411 (Length Required)!!
-
 
     async def translate(self,
                         *text: str,
@@ -75,10 +73,10 @@ class GoogleEngine(BaseEngine):
             logger.debug('Appending source language')
             params.append(('source', source))
 
-        logger.debug(f'{self.name}: Sending response')
+        logger.debug(f'{self.name}: Sending request')
         response = await self._send_request(url, params)
 
-        logger.debug(f'{self.name}: checking response')
+        logger.debug(f'{self.name}: Checking response')
         self._check_response_on_errors(response)
 
         logger.debug(f'{self.name}: Converting response')
@@ -99,14 +97,14 @@ class GoogleEngine(BaseEngine):
             ('model', model),
             ]
 
-        logger.debug(f'{self.name}: Sending response')
+        logger.debug(f'{self.name}: Sending request')
         response = await self._send_request(url, params)
 
-        logger.debug(f'{self.name}: checking response')
+        logger.debug(f'{self.name}: Checking response')
         self._check_response_on_errors(response)
 
         logger.debug(f'{self.name}: Converting response')
-        return self.convert_response('translate', response)
+        return self.convert_response('get_langs', response)
 
     def convert_response(self, method: str, response: t.Dict) -> t.List:
         logger.debug('In convert_response')
