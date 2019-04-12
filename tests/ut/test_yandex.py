@@ -3,7 +3,7 @@ import pytest
 import asyncio
 
 from translate_wrapper.engines.yandex import YandexEngine
-from translate_wrapper.exceptions import EngineGetLangsError, EngineTranslationError
+from translate_wrapper.exceptions import TranslationServiceError
 
 pytestmark = [
     pytest.mark.ut,
@@ -71,16 +71,16 @@ class YandexEngineTest:
 
         yandex_engine._send_request = mocked_send_request
         yandex_engine.convert_response = mocked_convert_response
-        assert await yandex_engine.translate(source=source, target=target, text=text)
+        assert await yandex_engine.translate(text, source=source, target=target)
         expected = {
             'url': ENDPOINT + '/translate',
             'params': {
                 'lang': f'{source}-{target}',
                 'format': 'html',
             },
-            'body': {
-                'text': text
-            },
+            'body': [
+                ('text', text)
+            ]
         }
         mocked_send_request.assert_called_once_with(expected['url'], expected['params'], expected['body'])
         mocked_convert_response.assert_called_once()
@@ -100,8 +100,8 @@ class YandexEngineTest:
             'code': 401,
             'message': 'API key is invalid'
         }
-        with pytest.raises(EngineGetLangsError):
-            yandex_engine.convert_response('get_langs', response_from_server)
+        with pytest.raises(TranslationServiceError):
+            yandex_engine._check_response_on_errors(response_from_server)
 
     def test_convert_response_translate(self, yandex_engine):
         response_from_server = {
@@ -120,5 +120,5 @@ class YandexEngineTest:
             'code': 501,
             'message': 'The specified translation direction is not supported'
         }
-        with pytest.raises(EngineTranslationError):
-            yandex_engine.convert_response('translate', response_from_server)
+        with pytest.raises(TranslationServiceError):
+            yandex_engine._check_response_on_errors(response_from_server)

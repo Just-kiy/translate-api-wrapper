@@ -3,7 +3,7 @@ import pytest
 import asyncio
 
 from translate_wrapper.engines.google import GoogleEngine
-from translate_wrapper.exceptions import EngineGetLangsError, EngineTranslationError
+from translate_wrapper.exceptions import TranslationServiceError
 
 pytestmark = [
     pytest.mark.ut,
@@ -60,10 +60,10 @@ class GoogleEngineTest:
         assert await google_engine.get_languages(target, model)
         expected = {
             'url': ENDPOINT + '/languages',
-            'params': {
-                'target': target,
-                'model': model,
-            }
+            'params': [
+                ('target', target),
+                ('model', model),
+            ]
         }
         mocked_send_request.assert_called_once_with(expected['url'], expected['params'])
         mocked_convert_response.assert_called_once()
@@ -81,19 +81,19 @@ class GoogleEngineTest:
 
         google_engine._send_request = mocked_send_request
         google_engine.convert_response = mocked_convert_response
-        assert await google_engine.translate(text, target, source)
+        assert await google_engine.translate(text, target=target, source=source)
         expected = {
             'url': ENDPOINT,
-            'params': {
-                'q': text,
+            'body': {
+                'q': [text],
                 'target': target,
                 'format': 'html',
             }
         }
         if source:
-            expected['params']['source'] = source
+            expected['body']['source'] = source
 
-        mocked_send_request.assert_called_once_with(expected['url'], expected['params'])
+        mocked_send_request.assert_called_once_with(expected['url'], body=expected['body'], params=[])
         mocked_convert_response.assert_called_once()
 
     def test_convert_response_get_langs(self, google_engine):
@@ -129,8 +129,8 @@ class GoogleEngineTest:
                 'status': 'INVALID_ARGUMENT'
             }
         }
-        with pytest.raises(EngineGetLangsError):
-            google_engine.convert_response('get_langs', response_from_server)
+        with pytest.raises(TranslationServiceError):
+            google_engine._check_response_on_errors(response_from_server)
 
     def test_convert_response_translate(self, google_engine):
         response_from_server = {
@@ -161,5 +161,5 @@ class GoogleEngineTest:
                 'status': 'INVALID_ARGUMENT'
             }
         }
-        with pytest.raises(EngineTranslationError):
-            google_engine.convert_response('translate', response_from_server)
+        with pytest.raises(TranslationServiceError):
+            google_engine._check_response_on_errors(response_from_server)

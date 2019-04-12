@@ -3,7 +3,7 @@ import pytest
 import asyncio
 
 from translate_wrapper.engines.bing import BingEngine
-from translate_wrapper.exceptions import EngineGetLangsError, EngineTranslationError
+from translate_wrapper.exceptions import TranslationServiceError
 
 pytestmark = [
     pytest.mark.ut,
@@ -85,7 +85,7 @@ class BingEngineTest:
         bing_engine._send_request = mocked_send_request
         bing_engine.convert_response = mocked_convert_response
 
-        assert await bing_engine.translate(text, target, source)
+        assert await bing_engine.translate(text, target=target, source=source)
 
         expected = {
             'method': 'post',
@@ -132,8 +132,8 @@ class BingEngineTest:
                 'message': 'The API version parameter is not valid.'
             }
         }
-        with pytest.raises(EngineGetLangsError):
-            bing_engine.convert_response('get_langs', response_from_server)
+        with pytest.raises(TranslationServiceError):
+            bing_engine._check_response_on_errors(response_from_server)
 
     def test_convert_response_translate(self, bing_engine):
         response_from_server = [
@@ -160,5 +160,5 @@ class BingEngineTest:
                 'message': 'The To field is required.'
             }
         }
-        with pytest.raises(EngineTranslationError):
-            bing_engine.convert_response('translate', response_from_server)
+        with pytest.raises(TranslationServiceError):
+            bing_engine._check_response_on_errors(response_from_server)
