@@ -14,6 +14,10 @@ logger = logging.getLogger('GoogleEngine')
 class GoogleEngine(BaseEngine):
     """
     Implementation of the Google Translation API
+    https://cloud.google.com/translate/
+
+    All documentations are here: https://cloud.google.com/translate/docs/reference/rest/
+    HINT: https://developers.google.com/apis-explorer
 
     NOTE: Translation API is optimized for translation of short requests.
     The recommended maximum length for each request is 2K.
@@ -24,8 +28,6 @@ class GoogleEngine(BaseEngine):
     The error message says Daily Limit Exceeded if you exceeded the daily limit or User Rate Limit Exceeded
     if you exceeded either of the "Characters per 100 seconds" quotas.
 
-    HINT: https://developers.google.com/apis-explorer
-    All documentations are here: https://cloud.google.com/translate/docs/reference/rest/
     """
     name = 'Google'
 

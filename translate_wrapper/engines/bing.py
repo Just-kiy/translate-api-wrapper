@@ -1,6 +1,7 @@
 import logging
 import os
 import typing as t
+import uuid
 
 import aiohttp
 
@@ -12,6 +13,20 @@ logger = logging.getLogger('BingEngine')
 
 
 class BingEngine(BaseEngine):
+    """
+    Implementation of Microsoft Translator API
+    https://www.microsoft.com/en-us/translator/business/
+
+    All documentations are here: https://docs.microsoft.com/ru-ru/azure/cognitive-services/translator/
+    API reference: https://docs.microsoft.com/ru-ru/azure/cognitive-services/translator/reference/v3-0-reference
+
+    NOTE: Each request is limited to 5,000 character. You're charged per character, not by the number of requests
+    It's recommended to send shorter requests, and to have some requests outstanding at any given time.
+
+    The Translator Text API has a maximum latency of 15 seconds using standard models
+    By this time you'll have received a result or a timeout response.
+    Typically, responses are returned in 150 milliseconds to 300 milliseconds
+    """
     name = 'Bing'
 
     def __init__(self,
@@ -38,6 +53,7 @@ class BingEngine(BaseEngine):
             headers = {
                 'Content-Type': 'application/json',
                 'Ocp-Apim-Subscription-Key': self.api_key,
+                'X-ClientTraceID': str(uuid.uuid4())
             }
 
             if not params:

@@ -12,6 +12,16 @@ logger = logging.getLogger('YandexEngine')
 
 
 class YandexEngine(BaseEngine):
+    """
+    Implementation of Yandex.Translate
+    https://tech.yandex.ru/translate/
+
+    All documentations are here: https://tech.yandex.ru/translate/doc/dg/concepts/about-docpage/
+
+    POST-requests are limited by 10 000 characters
+    GET-requests are limited only by query string, from 2 to 10 kbs (depending on browser)
+
+    """
     name = 'Yandex'
 
     def __init__(self,
