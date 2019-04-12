@@ -13,7 +13,19 @@ logger = logging.getLogger('GoogleEngine')
 
 class GoogleEngine(BaseEngine):
     """
-    TODO:
+    Implementation of the Google Translation API
+
+    NOTE: Translation API is optimized for translation of short requests.
+    The recommended maximum length for each request is 2K.
+    Translation API will reject very large requests (with a 400 INVALID_ARGUMENT error)
+    regardless of the available quota
+
+    NOTE: If you exceed your quota, Translation API returns a 403 error.
+    The error message says Daily Limit Exceeded if you exceeded the daily limit or User Rate Limit Exceeded
+    if you exceeded either of the "Characters per 100 seconds" quotas.
+
+    HINT: https://developers.google.com/apis-explorer
+    All documentations are here: https://cloud.google.com/translate/docs/reference/rest/
     """
     name = 'Google'
 
@@ -29,25 +41,20 @@ class GoogleEngine(BaseEngine):
 
     async def _send_request(self,
                             url: str,
-                            params: t.List[t.Tuple[str, str]]) -> t.Dict:
+                            params: t.Optional[t.List[t.Tuple[str, str]]] = None,
+                            body: t.Optional[t.Dict[str, str]] = None) -> t.Dict:
 
         logger.debug('In _send_request')
         async with aiohttp.ClientSession(loop=self.event_loop) as session:
-            params.append(('key', self.api_key))
-
-            header = {
-                'Content-Length': '0'
-            }
+            if not params:
+                params = [('key', self.api_key)]
 
             logger.debug(f'Sending request to {self.name}')
-            response = await session.post(url, params=params, headers=header)
+            response = await session.post(url, params=params, json=body)
 
             logger.debug('Retrieving json body from response')
             body = await response.json(content_type=None)
             return body
-            # except Exception as exc:
-            #     print(await response.text())
-            # TODO: Error 411 (Length Required)!!
 
     async def translate(self,
                         *text: str,
@@ -55,26 +62,27 @@ class GoogleEngine(BaseEngine):
                         source: str = None) -> t.List[str]:
         """
         reference: https://cloud.google.com/translate/docs/reference/translate
+        APIs-explorer: https://developers.google.com/apis-explorer/#p/translate/v2/language.translations.translate
         """
         logger.debug('In translate')
 
         logger.debug('Making url and params')
         url = f'{self.endpoint}'
-        params = [
-            ('target', target),
-            ('format', 'html'),
-        ]
+        body = {
+            'target': target,
+            'format': 'html'
+        }
 
         logger.debug('Appending each given line of the text to a query')
-        for line in text:
-            params.append(('q', line))
+        q = [line for line in text]
+        body['q'] = q
 
         if source:
             logger.debug('Appending source language')
-            params.append(('source', source))
+            body['source'] = source
 
         logger.debug(f'{self.name}: Sending request')
-        response = await self._send_request(url, params)
+        response = await self._send_request(url, params=[], body=body)
 
         logger.debug(f'{self.name}: Checking response')
         self._check_response_on_errors(response)
@@ -87,6 +95,7 @@ class GoogleEngine(BaseEngine):
                             model: str = 'nmt') -> t.List[str]:
         """
         reference: https://cloud.google.com/translate/docs/reference/languages
+        APIs-explorer: https://developers.google.com/apis-explorer/#p/translate/v2/language.languages.list
         """
         logger.debug('In get_languages')
 
