@@ -1,0 +1,22 @@
+variables:
+  IMAGE_NAME: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+
+before_script:
+  - env
+  - docker network connect build-network `cat /proc/self/cgroup | head -n 1 | cut -d '/' -f3`
+
+stages:
+  - test
+
+run-tests:
+  only:
+    - develop
+    - tags
+    - feature/gitlab-integration
+  image: $DOCKER_PYTHON_TEST_IMAGE
+  stage: test
+  tags: ["python"]
+  script:
+    - mkdir -p /tmp/packages
+    - pip install --no-cache-dir --src /tmp/packages -r requirements.txt
+    - pytest -c pytest.ini
