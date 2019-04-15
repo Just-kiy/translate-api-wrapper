@@ -3,7 +3,7 @@ from translate_wrapper import __version__
 
 
 def readme():
-    with open('README.rst') as f:
+    with open('README.md') as f:
         return f.read()
 
 
@@ -24,5 +24,5 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
-    install_requires=['aiohttp>=3.3.2']
+    install_requires=['aiohttp>=3.3.2', 'funcy>=1.11']
 )
