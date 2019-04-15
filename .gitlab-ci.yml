@@ -12,7 +12,6 @@ run-tests:
   only:
     - develop
     - tags
-    - feature/gitlab-integration
   image: $DOCKER_PYTHON_TEST_IMAGE
   stage: test
   tags: ["python"]
