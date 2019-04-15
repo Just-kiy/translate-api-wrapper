@@ -2,6 +2,7 @@ import logging
 import os
 import typing as t
 
+import asyncio
 import aiohttp
 
 from translate_wrapper.exceptions import TranslationServiceError
@@ -35,11 +36,22 @@ class GoogleEngine(BaseEngine):
                  api_key: str,
                  api_endpoint: t.Optional[str] = None,
                  *,
-                 event_loop=None):
+                 event_loop=None,
+                 session=None):
         logger.debug(f'Creating {self.name} Engine with api key {api_key}')
         self.api_key = api_key
         self.endpoint = api_endpoint or os.getenv('GOOGLE_API_ENDPOINT')
         self.event_loop = event_loop
+        self.session = session
+
+    @classmethod
+    async def create(cls, api_key: str):
+        self = cls(api_key)
+        self.session = aiohttp.ClientSession(loop=self.event_loop)
+        return self
+
+    async def release(self):
+        await self.session.close()
 
     async def _send_request(self,
                             url: str,
@@ -47,16 +59,16 @@ class GoogleEngine(BaseEngine):
                             body: t.Optional[t.Dict[str, str]] = None) -> t.Dict:
 
         logger.debug('In _send_request')
-        async with aiohttp.ClientSession(loop=self.event_loop) as session:
-            if not params:
-                params = [('key', self.api_key)]
 
-            logger.debug(f'Sending request to {self.name}')
-            async with session.post(url, params=params, json=body) as response:
+        if not params:
+            params = [('key', self.api_key)]
 
-                logger.debug('Retrieving json body from response')
-                body = await response.json(content_type=None)
-                return body
+        logger.debug(f'Sending request to {self.name}')
+        async with self.session.post(url, params=params, json=body) as response:
+
+            logger.debug('Retrieving json body from response')
+            body = await response.json(content_type=None)
+            return body
 
     async def translate(self,
                         *text: str,

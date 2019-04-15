@@ -34,13 +34,23 @@ class BingEngine(BaseEngine):
                  api_endpoint: t.Optional[str] = None,
                  api_v: t.Optional[str] = None,
                  *,
-                 event_loop=None):
+                 event_loop=None,
+                 session=None):
         logger.debug(f'Creating {self.name} Engine with api key {api_key}')
         self.api_key = api_key
         self.endpoint = api_endpoint or os.getenv('BING_API_ENDPOINT')
         self.api_v = api_v or os.getenv('BING_API_V')
-
+        self.session = None
         self.event_loop = event_loop
+
+    @classmethod
+    async def create(cls, api_key: str):
+        self = cls(api_key)
+        self.session = aiohttp.ClientSession(loop=self.event_loop)
+        return self
+
+    async def release(self):
+        await self.session.close()
 
     async def _send_request(self,
                             method: str,
@@ -49,29 +59,29 @@ class BingEngine(BaseEngine):
                             body: t.Optional[t.List[t.Dict[str, str]]] = {}) -> t.Dict:
 
         logger.debug('In _send_request')
-        async with aiohttp.ClientSession(loop=self.event_loop) as session:
-            headers = {
-                'Content-Type': 'application/json',
-                'Ocp-Apim-Subscription-Key': self.api_key,
-                'X-ClientTraceID': str(uuid.uuid4())
-            }
 
-            if not params:
-                params = {}
-            params['api-version'] = self.api_v
+        headers = {
+            'Content-Type': 'application/json',
+            'Ocp-Apim-Subscription-Key': self.api_key,
+            'X-ClientTraceID': str(uuid.uuid4())
+        }
 
-            logger.debug(f'Sending request to {self.name}')
-            async with session.request(
-                method=method,
-                url=url,
-                params=params,
-                json=body,
-                headers=headers
-            ) as response:
+        if not params:
+            params = {}
+        params['api-version'] = self.api_v
 
-                logger.debug('Retrieving json body from response')
-                body = await response.json(content_type=None)
-                return body
+        logger.debug(f'Sending request to {self.name}')
+        async with self.session.request(
+            method=method,
+            url=url,
+            params=params,
+            json=body,
+            headers=headers
+        ) as response:
+
+            logger.debug('Retrieving json body from response')
+            body = await response.json(content_type=None)
+            return body
 
     async def translate(self,
                         *text: str,
