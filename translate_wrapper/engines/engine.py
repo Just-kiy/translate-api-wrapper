@@ -1,5 +1,5 @@
 import typing as t
-
+from aiohttp import ClientSession
 
 class BaseEngine:
 
@@ -17,6 +17,12 @@ class BaseEngine:
     Subclasses must implement convert response strategy and method to send request to proper Translation Service
     """
     name = 'BaseEngine'
+
+    @classmethod
+    async def create(cls, api_key: str, loop=None):
+        self = cls(api_key, event_loop=loop)
+        self.session = ClientSession(loop=self.event_loop)
+        return self
 
     def translate(self, text: t.Union[str, t.List[str]], target: str, source: t.Optional[str]) -> t.List[str]:
         """

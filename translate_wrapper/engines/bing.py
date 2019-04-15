@@ -43,12 +43,6 @@ class BingEngine(BaseEngine):
         self.session = None
         self.event_loop = event_loop
 
-    @classmethod
-    async def create(cls, api_key: str):
-        self = cls(api_key)
-        self.session = aiohttp.ClientSession(loop=self.event_loop)
-        return self
-
     async def release(self):
         await self.session.close()
 

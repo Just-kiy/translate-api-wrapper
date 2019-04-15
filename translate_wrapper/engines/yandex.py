@@ -37,12 +37,6 @@ class YandexEngine(BaseEngine):
         self.session = sesion
         self.error_codes = [401, 402, 404, 413, 422, 501]
 
-    @classmethod
-    async def create(cls, api_key: str):
-        self = cls(api_key)
-        self.session = aiohttp.ClientSession(loop=self.event_loop)
-        return self
-
     async def release(self):
         await self.session.close()
 
