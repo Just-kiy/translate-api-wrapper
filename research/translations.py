@@ -41,41 +41,46 @@ async def make_research(env: 'Env', chunk_size: int, *engines: 'BaseEngine'):
 
     for engine_name in engines:
         logger.info(f'Creating {engine_name} translator')
-        translator = Translator.get_translator(engine_name, env.str(f'{engine_name.upper()}_API_KEY'))
+        translator = await Translator.get_translator(engine_name, env.str(f'{engine_name.upper()}_API_KEY'))
+        try:
 
-        logger.info(f'{engine_name}: Translating one string')
-        start = datetime.datetime.now()
-        await translator.translate('one', source='en', target='ru', chunk_size=chunk_size)
-        logger.info(f'DONE - Took {datetime.datetime.now()-start} time')
+            logger.info(f'{engine_name}: Translating one string')
+            start = datetime.datetime.now()
+            await translator.translate('one', source='en', target='ru', chunk_size=chunk_size)
+            logger.info(f'DONE - Took {datetime.datetime.now()-start} time')
 
-        logger.info(f'{engine_name}: Translating test list')
-        start = datetime.datetime.now()
-        await translator.translate(*TEST_TEXT, source='en', target='ru', chunk_size=chunk_size)
-        logger.info(f'DONE - Took {datetime.datetime.now()-start} time')
+            logger.info(f'{engine_name}: Translating test list')
+            start = datetime.datetime.now()
+            await translator.translate(*TEST_TEXT, source='en', target='ru', chunk_size=chunk_size)
+            logger.info(f'DONE - Took {datetime.datetime.now()-start} time')
 
-        logger.info(f'{engine_name}: Translating real file example from resourse.txt')
-        start = datetime.datetime.now()
-        await translator.translate(*text, source='en', target='ru', chunk_size=chunk_size)
-        logger.info(f'DONE - Took {datetime.datetime.now()-start} time')
-
-        logger.info(f'{engine_name}: x10 resourse.txt')
-        timespans = []
-        for i in range(10):
-            logger.info(f'Attempt {i} of 10:')
+            logger.info(f'{engine_name}: Translating real file example from resourse.txt')
             start = datetime.datetime.now()
             await translator.translate(*text, source='en', target='ru', chunk_size=chunk_size)
-            stop = datetime.datetime.now()
-            timespans.append(stop-start)
-            logger.info(f'DONE - Took {stop-start} time')
-        logger.info(f'DONE - x10, average: {mean(timespans)}, median: {median(timespans)}')
+            logger.info(f'DONE - Took {datetime.datetime.now()-start} time')
 
-        logger.info(f'{engine_name}: x100 resourse.txt')
-        text *= 10
-        start = datetime.datetime.now()
-        await translator.translate(*text, source='en', target='ru', chunk_size=chunk_size)
-        logger.info(f'DONE - Took {datetime.datetime.now()-start} time')
+            logger.info(f'{engine_name}: x10 resourse.txt')
+            timespans = []
+            for i in range(10):
+                logger.info(f'Attempt {i} of 10:')
+                start = datetime.datetime.now()
+                await translator.translate(*text, source='en', target='ru', chunk_size=chunk_size)
+                stop = datetime.datetime.now()
+                timespans.append(stop-start)
+                logger.info(f'DONE - Took {stop-start} time')
+            logger.info(f'DONE - x10, average: {mean(timespans)}, median: {median(timespans)}')
 
-        logger.info(f'{engine_name}: Made full research')
+            logger.info(f'{engine_name}: x100 resourse.txt')
+            text *= 10
+            start = datetime.datetime.now()
+            await translator.translate(*text, source='en', target='ru', chunk_size=chunk_size)
+            logger.info(f'DONE - Took {datetime.datetime.now()-start} time')
+
+            logger.info(f'{engine_name}: Made full research')
+        except Exception as exc:
+            logger.error(str(exc))
+        finally:
+            await translator.release()
 
 
 if __name__ == '__main__':

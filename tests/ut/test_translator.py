@@ -16,11 +16,12 @@ def engines():
 
 
 class TranslatorTest:
+    @pytest.mark.asyncio
     @pytest.mark.parametrize('translator_name, engine', [
         ('Yandex', YandexEngine),
         ('Google', GoogleEngine),
         ('Bing', BingEngine),
     ])
-    def test_get_translator(self, engines, translator_name, engine):
-        translator = Translator.get_translator(translator_name=translator_name, api_key='some_api_key')
+    async def test_get_translator(self, engines, translator_name, engine):
+        translator = await Translator.get_translator(translator_name=translator_name, api_key='some_api_key')
         isinstance(translator._engine, engine)

@@ -1,5 +1,5 @@
 import typing as t
-
+from aiohttp import ClientSession
 
 class BaseEngine:
 
@@ -8,11 +8,21 @@ class BaseEngine:
 
     All subclasses should be able to interact with an appropriate translation service.
 
-    All specific settings instances of `TranslateMachine` should get from ENV.
+    All subclasses should have aiohttp.ClientSession as attribute to speed up performance.
+    Btw, subclasses can still use session context manager (async with) instead.
+    If ClientSession is an attribute, then subclass must implement 'release' method to close session gracefully.
+
+    All specific settings instances of `TranslateEngine` should get from ENV.
 
     Subclasses must implement convert response strategy and method to send request to proper Translation Service
     """
     name = 'BaseEngine'
+
+    @classmethod
+    async def create(cls, api_key: str, loop=None):
+        self = cls(api_key, event_loop=loop)
+        self.session = ClientSession(loop=self.event_loop)
+        return self
 
     def translate(self, text: t.Union[str, t.List[str]], target: str, source: t.Optional[str]) -> t.List[str]:
         """

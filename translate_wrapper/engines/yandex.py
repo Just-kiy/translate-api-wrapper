@@ -28,13 +28,17 @@ class YandexEngine(BaseEngine):
                  api_key: str,
                  api_endpoint: t.Optional[str] = None,
                  *,
-                 event_loop=None):
+                 event_loop=None,
+                 sesion=None):
         logger.debug(f'Creating {self.name} Engine with api key {api_key}')
         self.api_key = api_key
         self.endpoint = api_endpoint or os.getenv('YANDEX_API_ENDPOINT')
         self.event_loop = event_loop
-
+        self.session = sesion
         self.error_codes = [401, 402, 404, 413, 422, 501]
+
+    async def release(self):
+        await self.session.close()
 
     async def _send_request(self,
                             url: str,
@@ -42,11 +46,11 @@ class YandexEngine(BaseEngine):
                             body: t.Optional[t.Dict[str, str]] = None) -> t.Dict:
 
         logger.debug('In _send_request')
-        async with aiohttp.ClientSession(loop=self.event_loop) as session:
-            params['key'] = self.api_key
 
-            logger.debug(f'Sending request to {self.name}')
-            response = await session.post(url, params=params, data=body)
+        params['key'] = self.api_key
+
+        logger.debug(f'Sending request to {self.name}')
+        async with self.session.post(url, params=params, data=body) as response:
 
             logger.debug('Retrieving json body from response')
             body = await response.json()

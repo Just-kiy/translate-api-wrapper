@@ -52,14 +52,17 @@ class Translator:
         return results
 
     @classmethod
-    def get_translator(cls, translator_name: str, api_key: str) -> 'Translator':
+    async def get_translator(cls, translator_name: str, api_key: str) -> 'Translator':
 
         assert translator_name in translate_engines, \
             f"{translator_name} is not registered Translate Engine! Use translate_engines.register first."
 
         engine_class = translate_engines[translator_name]
-        engine = engine_class(api_key)
+        engine = await engine_class.create(api_key)
         return cls(engine=engine)
+
+    async def release(self):
+        await self._engine.release()
 
 
 class _TranslateEngines:
