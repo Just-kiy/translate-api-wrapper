@@ -4,7 +4,7 @@ import os
 
 from environs import Env
 
-from translate_wrapper.yandex import YandexEngine
+from translate_wrapper.engines.yandex import YandexEngine
 
 pytestmark = [
     pytest.mark.asyncio,
@@ -25,12 +25,12 @@ def yandex_engine(event_loop):
 
 @pytest.mark.skipif(not os.getenv('TESTING_E2E'), reason='expensive tests')
 async def test_get_langs(yandex_engine):
-    response = await yandex_engine.get_langs('ru')
-    assert 'dirs' in response
-    assert 'langs' in response
+    response = await yandex_engine.get_languages('ru')
+    assert 'en' in response
 
 
 @pytest.mark.skipif(not os.getenv('TESTING_E2E'), reason='expensive tests')
 async def test_translate(yandex_engine):
-    response = await yandex_engine.translate('Hello, World!', 'en-ru')
-    assert response['code'] == 200
+    response = await yandex_engine.translate(text='Hello, World!', source='en', target='ru')
+    assert len(response) == 1
+    assert response[0].lower() == 'привет, мир!'
