@@ -61,17 +61,17 @@ class BingEngine(BaseEngine):
             params['api-version'] = self.api_v
 
             logger.debug(f'Sending request to {self.name}')
-            response = await session.request(
+            async with session.request(
                 method=method,
                 url=url,
                 params=params,
                 json=body,
                 headers=headers
-            )
+            ) as response:
 
-            logger.debug('Retrieving json body from response')
-            body = await response.json(content_type=None)
-            return body
+                logger.debug('Retrieving json body from response')
+                body = await response.json(content_type=None)
+                return body
 
     async def translate(self,
                         *text: str,

@@ -52,11 +52,11 @@ class GoogleEngine(BaseEngine):
                 params = [('key', self.api_key)]
 
             logger.debug(f'Sending request to {self.name}')
-            response = await session.post(url, params=params, json=body)
+            async with session.post(url, params=params, json=body) as response:
 
-            logger.debug('Retrieving json body from response')
-            body = await response.json(content_type=None)
-            return body
+                logger.debug('Retrieving json body from response')
+                body = await response.json(content_type=None)
+                return body
 
     async def translate(self,
                         *text: str,

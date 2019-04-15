@@ -46,11 +46,11 @@ class YandexEngine(BaseEngine):
             params['key'] = self.api_key
 
             logger.debug(f'Sending request to {self.name}')
-            response = await session.post(url, params=params, data=body)
+            async with session.post(url, params=params, data=body) as response:
 
-            logger.debug('Retrieving json body from response')
-            body = await response.json()
-            return body
+                logger.debug('Retrieving json body from response')
+                body = await response.json()
+                return body
 
     async def translate(self,
                         *text: str,
